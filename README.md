@@ -1,5 +1,5 @@
 install git 
-
+//changed in master from github.com
 //get source code
 git clone https://github.com/tanishka21067/sojar-website.git
 
