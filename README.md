@@ -12,4 +12,4 @@ git branch branchname
 //checkout to the specific branch
 git checkout tanishka_development
 
-//this is checking.
+//this is checking.of commit
