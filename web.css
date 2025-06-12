@@ -1,6 +1,6 @@
 :root {
     --primary-color: #fb7915;
-    --secondary-color: #1e45b9;
+    --secondary-color: #000080;
     --white: #ffffff;
     --dark: #1a1a1a;
     --transition: all 0.3s ease;
@@ -64,7 +64,57 @@ body {
         margin-top: 5px;
     }
 }
+/* Container for dropdown */
+ul.dropdown-menu {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+/* Each dropdown item */
+ul.dropdown-menu li {
+    padding: 0;
+}
+
+/* Links inside dropdown */
+ul.dropdown-menu .dropdown-item {
+    display: block;
+    padding: 10px 18px;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect */
+ul.dropdown-menu .dropdown-item:hover {
+    background-color: #1b9199;
+    color: lab(100% 0.01 -0.01);
+}
+
+/* Optional: Add slight animation when appearing */
+ul.dropdown-menu {
+    opacity: 0;
+    transform: translateY(10px);
+    visibility: hidden;
+    position: absolute;
+    z-index: 1000;
+}
+
+/* When menu is shown (example class to toggle) */
+ul.dropdown-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
 /* Hero Section */
 .hero-section {
     position: relative;
@@ -183,6 +233,8 @@ body {
 .fadeOut {
     animation: fadeOut 0.7s ease forwards;
 }
+
+
 
 /* Update Owl Carousel Navigation */
 .main-slider .owl-nav {
@@ -354,7 +406,7 @@ body {
 
 .service-block .inner-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(162, 40, 40, 0.15);
 }
 
 .service-block .icon-box {
@@ -426,11 +478,11 @@ body {
 /* why and running nums */
 .why-section {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(to right, #f9f9f9, #ffffff);
+    background: linear-gradient(to right, #d2e1e9, #438b91);
     padding: 60px 20px;
     text-align: center;
-    border-radius: 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 29px;
+    box-shadow: 0 38px 24px rgba(30, 255, 0, 0.1);
     max-width: 1000px;
     margin: 40px auto;
 }
@@ -459,7 +511,7 @@ body {
 }
 
 .stat-box {
-    background: #95b9ef;
+    background: #c8daf5;
     padding: 25px 20px;
     border-radius: 16px;
     width: 220px;
@@ -541,7 +593,7 @@ body {
 /* Footer */
 /* Footer background */
 .main-footer {
-    background-color: #1e1e2f;
+    background-color: #30305a;
     color: #ffffff;
     position: relative;
     padding: 48px 0 10px; /* reduced padding to shrink footer height */
@@ -575,6 +627,7 @@ body {
     position: relative;
     z-index: 2;
     padding-left: 32px; /* Adjust this value as needed */
+    margin-left: -21px; /* Adjust this value as needed */
 }
 
 /* Footer widgets section */
@@ -591,6 +644,7 @@ body {
     font-weight: 600;
     margin-bottom: 10px; /* reduced margin under headings */
     color: #ffffff;
+    margin-left: -55px; /* slight adjustment to align with other text */
 }
 
 /* About text */
@@ -608,10 +662,12 @@ body {
 }
 
 .footer-widget ul.list-link li {
-    margin-bottom: 5px; /* reduced spacing between list items */
+    margin-bottom: 6px; /* reduced spacing between list items */
     position: relative;
-    padding-left: 18px;
+    padding-left: 17px;
     font-size: 13px;
+    /* move more to lleft */
+    margin-left: -68px; /* slight adjustment to align with other text */
 }
 
 .footer-widget ul.list-link li::before {
@@ -638,6 +694,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-left: -55px;
 }
 
 .contact-widget ul li {
@@ -650,6 +707,7 @@ body {
     display: block;
     color: #ffffff;
     margin-bottom: 3px;
+    font-weight: 500;
 }
 
 .contact-widget ul li a {
@@ -737,7 +795,7 @@ font-size: 13px;
 
 /* Contact Info Section */
 .contact-info-section {
-    padding: 80px 0;
+    padding: 30px 0;
     background: #f8f9fa;
 }
 
@@ -779,7 +837,7 @@ font-size: 13px;
     background: var(--white);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(165, 11, 11, 0.1);
     height: 100%;
     transition: var(--transition);
 }
@@ -828,6 +886,7 @@ font-size: 13px;
     color: var(--secondary-color);
     font-weight: 700;
     margin-bottom: 15px;
+    
 }
 
 .contact-map-section .sec-title .text {
@@ -1169,9 +1228,15 @@ body {
 /* Service Page Styles */
 .service-page {
     position: relative;
-    padding: 120px 0 90px;
+    padding: 120px 10 90px;
     overflow: hidden;
     background-color: #f8f9fa;
+    /* want to reduce padding,height and width of boxes */
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 7px 30px rgba(207, 216, 255, 0.872);
+        
 }
 
 .service-page__bg {
@@ -1198,7 +1263,7 @@ body {
 
 .sec-title__img {
     margin: 0 10px;
-    height: 15px;
+    height: 12px;
 }
 
 .sec-title__title {
@@ -1219,7 +1284,16 @@ body {
     border-radius: 10px;
     overflow: hidden;
     transition: all 0.4s ease;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 10 10 20px rgba(0, 0, 0, 0.05);
+         height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 98%;
+    /* padding: 20px;
+     height: 100%;
+    justify-content: space-between;  */
+
 }
 
 .service-card:hover .service-card__inner {
@@ -1356,3 +1430,6 @@ body {
 .neu-button i {
     transition: transform 0.3s ease;
 }
+
+/* carer css */
+
