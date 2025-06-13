@@ -1374,7 +1374,35 @@ body {
     width: 100%;
     display: block;
 }
+.Discover {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px; /* Increased padding for a wider button */
+    border-radius: 50px; /* Rounded corners to match the image */
+    background: linear-gradient(90deg, #fc824d, #7c52fc); /* Blue-to-purple gradient */
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    font-size: 16px;
+    font-weight: 600; /* Slightly bold text */
+    font-family: 'Inter', sans-serif; /* Matches the Google Font in your web.html */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
 
+.Discover:hover {
+    background: linear-gradient(90deg, #8E2DE2, #4A00E0); /* Reverse gradient on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    color: #ffffff;
+}
+.text-center {
+    text-align: center;
+}
+
+.mt-4 {
+    margin-top: 1.5rem; /* Adds spacing above the button */
+}
 /* Animation Classes */
 @keyframes fadeInUp {
     from {
