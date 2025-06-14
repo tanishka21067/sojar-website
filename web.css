@@ -69,15 +69,66 @@ ul.dropdown-menu {
     list-style: none;
     margin: 0;
     padding: 8px 0;
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
+    background: #fffffff0;
+    align-content: center;
+    border: 1px solid #aeaeae;
+    height: 495px;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    width: 220px;
+    box-shadow: 0 28px 24px rgb(0, 0, 0);
+    width: 395px;
     transition: all 0.3s ease-in-out;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    /* font color as white */
+    
+
+}
+.dropdown-menu {
+    max-height: 520px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #626262 #f8f9fa;
 }
 
+.dropdown-menu::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background: #626262;
+    border-radius: 10px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background: #626262;
+}
+
+/* Add horizontal line after each dropdown item */
+.dropdown-menu li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: linear-gradient(90deg, #232323, #8E2DE2);
+    opacity: 0.8;
+}
+
+/* Remove the line after the last dropdown item */
+.dropdown-menu li:last-child::after {
+    content: none;
+}
+
+/* Ensure the li has relative positioning for the ::after element */
+.dropdown-menu li {
+    position: relative;
+}
 /* Each dropdown item */
 ul.dropdown-menu li {
     padding: 0;
