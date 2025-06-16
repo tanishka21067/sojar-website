@@ -1,4 +1,5 @@
-// Modern interactive enhancements for Medical Services page
+// No specific JS in DOSSIER.html, but ensure file exists and is ready for future enhancements.
+// You can add interactivity here if needed for medicalservices.html.
 
 document.addEventListener('DOMContentLoaded', function() {
     // Animate service cards on scroll

@@ -1,10 +1,11 @@
 /* Modern, responsive, and visually appealing styles for Medical Services page */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-     background: #91c4e7;
+    background: #f8fafc;
+    color: #111;
 }
 header {
     background: linear-gradient(90deg, #003087 0%, #0056b3 100%);
@@ -31,79 +32,86 @@ nav a:hover {
     color: #0056b3;
 }
 .hero {
-    background: linear-gradient(90deg, #e6f0fa 60%, #f4f8fb 100%);
-    padding: 48px 20px 32px 20px;
+    background: #2563eb;
+    color: #fff;
+    padding: 64px 0 48px 0;
     text-align: center;
     border-bottom: 1px solid #e0e7ef;
 }
 .hero h1 {
-    color: #003087;
-    font-size: 2.7em;
-    margin: 0;
-    letter-spacing: 1px;
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 0.5em;
 }
-.content {
+.hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+.section {
     max-width: 1200px;
-    margin: 28px auto 0 auto;
-    padding: 24px;
-     background: #91c4e7;
-    border-radius: 12px;
-    box-shadow: 0 2px 16px rgba(0,48,135,0.06);
+    margin: 0 auto;
+    padding: 40px 16px 0 16px;
 }
-.content h2 {
-    color: #003087;
-    font-size: 1.7em;
-    margin-bottom: 10px;
-}
-.content p {
-    color: #333;
-    font-size: 1.08em;
+.section h2 {
+    color: #1746a2;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2em;
 }
 .services {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 28px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    justify-items: center;
     margin: 32px 0 18px 0;
 }
-.service-box {
-    background: #fff;
+.service-card {
+    background: #f4f7fa;
     border-radius: 18px;
-    box-shadow: 0 8px 24px 0 rgba(0, 64, 160, 0.12), 0 1.5px 6px 0 rgba(0,0,0,0.08);
-    padding: 32px 24px;
-    width: 320px;
-    margin-bottom: 24px;
-    transition: transform 0.22s cubic-bezier(.4,2,.6,1), box-shadow 0.22s;
-    position: relative;
-    text-align: center;
+    box-shadow: 0 4px 18px 0 rgba(30, 64, 175, 0.10);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    text-align: left;
+    min-width: 260px;
+    max-width: 350px;
+    width: 100%;
+    color: #111;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.service-card h3 {
+    color: #1746a2;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.7em;
+}
+.service-card p {
+    color: #222;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    font-weight: 400;
+}
+.service-card:hover {
+    box-shadow: 0 8px 32px 0 rgba(30, 64, 175, 0.18);
+    transform: translateY(-6px) scale(1.03);
+}
+.service-box {
+    background: #f4f7fa;
+    border-radius: 18px;
+    box-shadow: 0 3px 10px 0 rgba(30, 64, 175, 0.10), 0 1px 2px 0 rgba(0,0,0,0.05);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    text-align: left;
+    min-width: 260px;
+    max-width: 350px;
+    width: 100%;
+    color: #111;
+    transition: box-shadow 0.3s, transform 0.3s;
+    transform: perspective(600px) translateZ(0);
 }
 .service-box:hover {
-    transform: translateY(-18px) scale(1.04);
-    box-shadow: 0 24px 48px 0 rgba(0, 64, 160, 0.22), 0 6px 18px 0 rgba(0,0,0,0.13);
-    z-index: 3;
-}
-.service-box h3 {
-    color: #003087;
-    margin-bottom: 12px;
-    font-size: 1.2em;
-    font-weight: 700;
-}
-.service-box p {
-    color: #333;
-    font-size: 1em;
-}
-.why-sojar-list, .content ul {
-    max-width: 700px;
-    margin: 0 auto 20px auto;
-    list-style: disc inside;
-    color: #003087;
-    text-align: left;
-    font-size: 1.08em;
-    padding-left: 18px;
-}
-.why-sojar-list li, .content ul li {
-    margin-bottom: 10px;
-    line-height: 1.5;
+    box-shadow: 0 6px 18px 0 rgba(30, 64, 175, 0.14), 0 2px 6px 0 rgba(0,0,0,0.08);
+    transform: perspective(600px) translateY(-4px) scale(1.015) rotateX(2deg);
 }
 .theme-btn, .btn-style-one {
     background: linear-gradient(90deg, #003087 60%, #0056b3 100%);
@@ -137,26 +145,12 @@ footer {
     box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
 }
 @media (max-width: 900px) {
-    .services {
-        flex-direction: column;
-        align-items: center;
-    }
-    .service-box {
-        width: 90%;
-        min-width: 220px;
-    }
-    .content {
-        padding: 12px;
+    .service-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 @media (max-width: 600px) {
-    .hero h1 {
-        font-size: 1.7em;
-    }
-    .service-box {
-        padding: 16px 8px 14px 8px;
-    }
-    .content h2 {
-        font-size: 1.2em;
+    .service-grid {
+        grid-template-columns: 1fr;
     }
 }
