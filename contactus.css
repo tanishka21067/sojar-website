@@ -459,6 +459,422 @@ body, html {
     .submit__input {
       width: 40px;
     }
+
+    /* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.1;
+}
+
+/* Header Styles */
+.topbar {
+    background-color: var(--secondary-color);
+    padding: 4px 0;
+    color: var(--white);
+    transition: var(--transition);
+    font-size: 16px;
+}
+
+.topbar p {
+    margin: 0;
+}
+
+.topbar a {
+    color: var(--white);
+    margin-left: 20px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.topbar a:hover {
+    color: var(--primary-color);
+}
+
+.topbar .left-content {
+    display: flex;
+    align-items: center;
+}
+
+.topbar .right-content {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.topbar i {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+@media (max-width: 991px) {
+    .topbar .left-content,
+    .topbar .right-content {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .topbar .right-content {
+        margin-top: 5px;
+    }
+}
+/* Container for dropdown */
+ul.dropdown-menu {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Each dropdown item */
+ul.dropdown-menu li {
+    padding: 0;
+}
+
+/* Links inside dropdown */
+ul.dropdown-menu .dropdown-item {
+    display: block;
+    padding: 10px 18px;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect */
+ul.dropdown-menu .dropdown-item:hover {
+    background-color: #1b9199;
+    color: lab(100% 0.01 -0.01);
+}
+
+/* Optional: Add slight animation when appearing */
+ul.dropdown-menu {
+    opacity: 0;
+    transform: translateY(10px);
+    visibility: hidden;
+    position: absolute;
+    z-index: 1000;
+}
+
+/* When menu is shown (example class to toggle) */
+ul.dropdown-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Footer */
+/* Footer background */
+.main-footer {
+    background-color: #30305a;
+    color: #ffffff;
+    position: relative;
+    padding: 48px 0 10px; /* reduced padding to shrink footer height */
+   /* reduced padding between lists(Quick Links and logo )to make map large in width */
+    padding-left: 32px; /* Adjust this value as needed */
+    padding-right: 32px; /* Adjust this value as needed */
+    width: 100%; 
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Background pattern layers */
+.pattern-layer-one,
+.pattern-layer-two {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    opacity: 0.05;
+}
+
+
+.main-footer .auto-container {
+    position: relative;
+    z-index: 2;
+    padding-left: 32px; /* Adjust this value as needed */
+    margin-left: -21px; /* Adjust this value as needed */
+}
+
+/* Footer widgets section */
+.widgets-section {
+    padding-bottom: 10px; /* slightly less padding */
+}
+
+.footer-widget {
+    margin-bottom: 10px; /* less margin between widgets */
+}
+
+.footer-widget h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px; /* reduced margin under headings */
+    color: #ffffff;
+    margin-left: -55px; /* slight adjustment to align with other text */
+}
+
+/* About text */
+.logo-widget .text {
+    font-size: 12px;
+    line-height: 1.4; /* tighter line height */
+    color: #cccccc;
+}
+
+/* Footer links with double arrows */
+.footer-widget ul.list-link {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-widget ul.list-link li {
+    margin-bottom: 6px; /* reduced spacing between list items */
+    position: relative;
+    padding-left: 17px;
+    font-size: 13px;
+    /* move more to lleft */
+    margin-left: -68px; /* slight adjustment to align with other text */
+}
+
+.footer-widget ul.list-link li::before {
+    content: "»";
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+}
+
+.footer-widget ul.list-link li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.footer-widget ul.list-link li a:hover {
+    color: #00bcd4;
+}
+
+/* Contact info list */
+.contact-widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: -55px;
+}
+
+.contact-widget ul li {
+    margin-bottom: 7px; /* reduced spacing */
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.contact-widget ul li strong {
+    display: block;
+    color: #ffffff;
+    margin-bottom: 3px;
+    font-weight: 500;
+}
+
+.contact-widget ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.contact-widget ul li a:hover {
+    color: #00bcd4;
+}
+
+/* Social Icons */
+.social-box {
+    margin-top: 15px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.social-box li a {
+    display: inline-block;
+    width: 28px;  /* smaller icons */
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #d6d1d1;
+    background-color: #2d2d3d;
+    border-radius: 55%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-box li a:hover {
+    background-color: #00bcd4;
+    color: #ffffff;
+}
+/* Social icons */
+.social-box li a i {
+    font-size: 14px; /* smaller icon size */
+}
+
+/* Footer bottom */
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 15px; /* reduced padding */
+    margin-top: 20px;  /* less margin to reduce height */
+    text-align: center;
+    font-size: 13px;
+    color: #aaaaaa;
+}
+
+.copyright {
+font-size: 13px;
+}
+
+
+/* Contact Button */
+.contact-btn {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 8px 20px;
+    margin-left: 15px;
+    transition: var(--transition);
+}
+
+.contact-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Contact Modal Styles */
+.modal-content {
+    border-radius: 10px;
+    border: none;
+}
+
+.modal-header {
+    border: none;
+    padding: 20px;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+/* Contact Info Section */
+.contact-info-section {
+    padding: 30px 0;
+    background: #f8f9fa;
+}
+
+.contact-info-section .auto-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.contact-info-section .title-box {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-info-section .title-box h2 {
+    font-size: 36px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.contact-info-section .title-box .text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contact-info-section .title-box .text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-info-section .title-box .text a:hover {
+    color: var(--secondary-color);
+}
+
+.contact-info-section .inner-column {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(165, 11, 11, 0.1);
+    height: 100%;
+    transition: var(--transition);
+}
+
+.contact-info-section .inner-column:hover {
+    transform: translateY(-5px);
+}
+
+.contact-info-section .icon-box {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-info-section .content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.contact-info-section .content ul li {
+    margin-bottom: 10px;
+}
+
+.contact-info-section .content ul li strong {
+    display: block;
+    color: var(--secondary-color);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Contact Map Section */
+.contact-map-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.contact-map-section .sec-title {
+    margin-bottom: 40px;
+}
+
+.contact-map-section .sec-title h2 {
+    font-size: 32px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+    
+}
+
+.contact-map-section .sec-title .text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+/*end of footer  */
     
 }
 
