@@ -7,6 +7,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="web.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <!-- Custom CSS -->
     <link rel="stylesheet" href="web.css">
     
@@ -20,41 +23,73 @@
     <!-- Custom Icon Font -->
     <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    <style>
+        body { background: #f8fafc; color: #111; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }
+        .hero.pvservices-hero { background: #2563eb; color: #fff; padding: 64px 0 48px 0; text-align: center; }
+        .hero.pvservices-hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 0.5em; }
+        .hero.pvservices-hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto; font-weight: 400; }
+        .section { max-width: 1200px; margin: 0 auto; padding: 40px 16px 0 16px; }
+        .section h2 { color: #1746a2; text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 2em; }
+        .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; justify-items: center; }
+        .service-card { background: #f4f7fa; border-radius: 18px; box-shadow: 0 4px 18px 0 rgba(30, 64, 175, 0.10); padding: 2rem 1.5rem 1.5rem 1.5rem; text-align: left; min-width: 260px; max-width: 350px; width: 100%; color: #111; transition: box-shadow 0.3s, transform 0.3s; }
+        .service-card h3 { color: #1746a2; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.7em; }
+        .service-card p { color: #222; font-size: 1.05rem; line-height: 1.7; font-weight: 400; }
+        .service-card:hover { box-shadow: 0 8px 32px 0 rgba(30, 64, 175, 0.18); transform: translateY(-6px) scale(1.03); }
+        @media (max-width: 900px) { .service-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 600px) { .service-grid { grid-template-columns: 1fr; } }
+    </style>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
 
 </head>
-<body class="bg-gray-100 font-sans">
-  
-  <!-- Hero Section -->
-  <section id="home" class="bg-gradient-to-r from-indigo-700 to-indigo-900 text-white py-20">
-    <div class="container mx-auto text-center px-6">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4 fade-in">PV System and SOPs Services</h2>
-      <p class="text-lg md:text-xl mb-6 fade-in">Robust pharmacovigilance systems and SOPs for regulatory compliance and operational excellence.</p>
+<body>
+    <div class="hero pvservices-hero">
+        <h1>PV System and SOPs Services</h1>
     </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="py-16 bg-white">
-    <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center text-indigo-900 mb-12 fade-in">Why Our PV System and SOPs Services?</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition fade-in">
-          <h4 class="text-xl font-semibold text-indigo-900 mb-4">System Design</h4>
-          <p class="text-gray-700">We develop tailored PV systems to streamline safety monitoring and ensure regulatory compliance.</p>
+    <div class="section">
+        <h2>PV System and SOPs Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>SOP Development</h3>
+                <p>Creation and maintenance of Standard Operating Procedures (SOPs) tailored to your pharmacovigilance system and regulatory requirements.</p>
+            </div>
+            <div class="service-card">
+                <h3>System Implementation</h3>
+                <p>Support for the implementation and validation of pharmacovigilance systems, including database setup and workflow design.</p>
+            </div>
+            <div class="service-card">
+                <h3>Compliance Audits</h3>
+                <p>Preparation for and support during regulatory audits and inspections, ensuring your PV system and SOPs meet all requirements.</p>
+            </div>
+            <div class="service-card">
+                <h3>Process Optimization</h3>
+                <p>Continuous improvement and optimization of PV processes for efficiency, compliance, and quality.</p>
+            </div>
+            <div class="service-card">
+                <h3>Training & Support</h3>
+                <p>Comprehensive training and ongoing support for your team on PV systems, SOPs, and best practices.</p>
+            </div>
+            <div class="service-card">
+                <h3>Documentation Management</h3>
+                <p>Robust documentation management solutions to ensure audit readiness and regulatory compliance.</p>
+            </div>
+            <div class="service-card">
+                <h3>System Integration</h3>
+                <p>Integration of PV systems with other business and regulatory platforms for seamless data flow and compliance.</p>
+            </div>
+            <div class="service-card">
+                <h3>Quality Assurance</h3>
+                <p>Ongoing quality assurance and control to maintain the integrity and compliance of your PV system and SOPs.</p>
+            </div>
+            <div class="service-card">
+                <h3>Regulatory Intelligence</h3>
+                <p>Monitoring and implementation of regulatory changes affecting PV systems and SOPs to ensure ongoing compliance.</p>
+            </div>
         </div>
-        <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition fade-in">
-          <h4 class="text-xl font-semibold text-indigo-900 mb-4">SOP Development</h4>
-          <p class="text-gray-700">Our experts create clear, compliant SOPs to standardize your pharmacovigilance processes.</p>
-        </div>
-        <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition fade-in">
-          <h4 class="text-xl font-semibold text-indigo-900 mb-4">Training and Support</h4>
-          <p class="text-gray-700">We provide training and ongoing support to ensure effective implementation of PV systems and SOPs.</p>
-        </div>
-      </div>
     </div>
-  </section>
-  </section>
+    <script src="ServicesJSFile.js"></script>
 </body>
 </html>
