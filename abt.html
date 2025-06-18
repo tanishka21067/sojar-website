@@ -366,6 +366,7 @@
       text-decoration: none;
       cursor: pointer;
       transition: background 0.2s;
+      
     }
     .close-btn:hover {
       background: #f0f0f0;
@@ -376,15 +377,26 @@
 </head>
 <body>
 
+  <!-- Close Button sholud go to home pg when clicked -->
+   
+
+<!-- JS Script -->
+<script>
+  function closeMenu() {
+    document.querySelector('.your-menu-class').style.display = 'none';
+  }
+</script>
+
+
   <div class="sidebar-nav">
     <div class="sidebar-logo" style="margin-bottom: 30px; text-align: left; width: 100%; padding-left: 24px;">
       <span style="font-size: 38px; font-weight: bold; color: #fff; letter-spacing: 2px;">Sojar</span>
     </div>
-    <a href="#">Home</a>
-    <a href="#">About Us</a>
-    <a href="#">Services</a>
-    <a href="#">Career</a>
-    <a href="#">Contact Us</a>
+    <a href="web.html">Home</a>
+    <a href="abt.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="career.html">Career</a>
+    <a href="contact.html">Contact Us</a>
     <div class="sidebar-contact-info">
       <p>UK: +44 (0)1483 503 205<br>US: +1 (919) 841 3005</p>
       <p><a href="mailto:info@sojar.com">info@sojar.com</a></p>
@@ -410,9 +422,9 @@
 
       <div class="column">
         <h3>Get in touch</h3>
-        <a href="#">Contact Us</a>
+        <a href="contact.html">Contact Us</a>
         <a href="#" onclick="window.location.href='our-office.html'; return false;">Our Office</a>
-        <a href="#">Career</a>
+        <a href="career1.html">Career</a>
       </div>
     </div>
   </div>
@@ -529,7 +541,9 @@
   </a>
 
   <!-- Add this before </body> to ensure abt.js is loaded -->
-  <script src="abt.js"></script>
+  <script src="abt.js">
+    
+  </script>
 
 </body>
 </html>
