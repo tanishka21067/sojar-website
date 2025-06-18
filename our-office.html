@@ -7,14 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Custom Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .fade-in {
-            animation: fadeIn 1s ease-out forwards;
-        }
+        
         .gallery-img:hover {
             transform: scale(1.05);
             transition: transform 0.3s ease;
@@ -28,34 +21,35 @@
 <body class="font-sans bg-gray-100 text-gray-800">
 
     <!-- Hero Section -->
-    <section id="home" class="relative bg-gradient-to-r from-blue-800 to-blue-600 text-white h-[50vh] flex items-center justify-center">
-        <div class="text-center max-w-3xl mx-auto px-4 fade-in">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Our Office</h2>
-            <p class="text-lg md:text-xl mb-6">Discover the heart of Sojar Research, where innovation meets safety in pharmacovigilance.</p>
+    <section id="home" class="relative bg-gradient-to-r from-blue-900 to-blue-600 h-[50vh] flex items-center justify-center"> 
+        <div class="container text-center max-w-3xl mx-auto px-4" style="position:relative; z-index:1;">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4" style="color:#fff;">Welcome to Our Office</h2>
+            <p class="text-lg md:text-xl mb-6" style="color:#fff;">Discover the heart of Sojar Research, where innovation meets safety in pharmacovigilance.</p>
         </div>
-        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="absolute inset-0" style="background:rgba(0,0,0,0.30);"></div>
     </section>
 
     <!-- Office Details Section -->
     <section id="office" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-blue-900 text-center mb-12 fade-in">Our Workspace</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="fade-in">
-                    <h3 class="text-2xl text-orange-600 text-center font-semibold mb-4">State-of-the-Art Facilities</h3>
-                    <p class="text-gray-600 mb-4">Our office is equipped with cutting-edge technology to support pharmacovigilance research and operations. From advanced data analytics suites to secure data storage, we ensure efficiency and compliance.</p>
+                <div class="">
+                    <h3 class="text-2xl text-orange-600 text-center font-semibold mb-4">Our offices</h3>
+                    <p class="text-gray-600 mb-4">Our Pune-Hinjewadi office is operational with full of its capacity, our UK-London and Mexico-Mexico City offices will start in its operation soon.</p>
+                    <p>Our workspace environment includes...</p>
                     <ul class="list-disc pl-5 text-gray-600">
                         <li>Ergonomic workstations</li>
-                        <li>High-security data centers</li>
                         <li>Collaborative meeting rooms</li>
+                        <li>Clean and clutter-free design to reduce stress</li>
+                        
                     </ul>
                 </div>
-                <div class="fade-in">
+                <div class="">
                     <h3 class="text-2xl text-orange-600 text-center font-semibold mb-4">Our Location</h3>
-                    <p class="text-gray-600 mb-4">Located in the heart of the city, our office is easily accessible and surrounded by vibrant amenities.</p>
-                    <p class="text-gray-600"><strong>Address:</strong> 123 Health Avenue, Wellness City, HC 45678</p>
+                    <p class="text-gray-600 mb-4">Located in the thriving neighbourhood of Punawale, our office offers easy accessibility.</p>
+                    <p class="text-gray-600"><strong>Address:</strong> 201-Creative's Orchid, Punawale-Hinjewadi Link Road, Near Lotus Business School, Pune (411033).</p>
                     <p class="text-gray-600"><strong>Phone:</strong> (123) 456-7890</p>
-                    <p class="text-gray-600"><strong>Email:</strong> info@pharmasafe.com</p>
+                    <p class="text-gray-600"><strong>Email:</strong> info@sojar.com</p>
                 </div>
             </div>
         </div>
@@ -64,7 +58,7 @@
     <!-- Gallery Section -->
     <section id="gallery" class="py-16 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-blue-900 text-center mb-12 fade-in">Office Gallery</h2>
+            <h2 class="text-3xl font-bold text-blue-900 text-center mb-12">Office Gallery</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <img src="https://via.placeholder.com/400x300?text=Office+1" alt="Office Space 1" class="gallery-img rounded-lg shadow-md w-full h-64 object-cover">
                 <img src="https://via.placeholder.com/400x300?text=Office+2" alt="Office Space 2" class="gallery-img rounded-lg shadow-md w-full h-64 object-cover">
