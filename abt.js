@@ -209,4 +209,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   window.addEventListener('scroll', handleSojarStatsScroll);
+
+  // Technology & Engagements Carousel JS
+  $(document).ready(function() {
+    // Engagements Carousel
+    if ($('.engagements-carousel').length && typeof $.fn.owlCarousel === 'function') {
+      $('.engagements-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 900,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        responsive: {
+          0: { items: 1 },
+          600: { items: 1 },
+          900: { items: 2 },
+          1200: { items: 3 }
+        }
+      });
+    }
+  });
 });
