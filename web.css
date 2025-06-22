@@ -173,6 +173,7 @@ ul.dropdown-menu.show {
 .hero-section {
     position: relative;
     height: 100vh;
+    margin-top: -10px;
 }
 
 .hero-slider .slide-item {
@@ -205,6 +206,10 @@ ul.dropdown-menu.show {
     font-weight: 700;
     margin-bottom: 20px;
 }
+
+
+
+
 
 /* Main Slider Styles */
 .main-slider {
@@ -532,7 +537,7 @@ ul.dropdown-menu.show {
 /* why and running nums */
 .why-section {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(to right, #bfdded, #5bbbc4);
+    background: linear-gradient(to right, #cce9f8, #64cfd8);
     padding: 60px 20px;
     text-align: center;
     border-radius: 29px;
@@ -1111,7 +1116,7 @@ font-size: 13px;
 
 /* Add padding to body to prevent content jump */
 body {
-    padding-top: 142px; /* Adjusted for navbar height */
+    padding-top: 76px; /* Adjusted for navbar height */
 }
 
 @media (max-width: 991px) {
@@ -1128,6 +1133,9 @@ body {
     text-decoration: none;
 }
 
+.navbar-nav{
+    margin-right: -10px; /* Aligns the navbar items to the left */
+}
 .btn-style-one {
     position: relative;
     padding: 12px 30px;
@@ -1136,6 +1144,8 @@ body {
     border-radius: 5px;
     font-weight: 500;
     border: 2px solid var(--primary-color);
+    /* shift button to little right  */
+    /* margin-right: -40px;  */
 }
 
 .btn-style-one:hover {
@@ -1222,6 +1232,7 @@ body {
     font-weight: 600;
     transition: var(--transition);
     color: #333;
+    font-size: 18px; /* Increased font size */
 }
 
 .navbar-nav .nav-link:hover {
@@ -1505,7 +1516,7 @@ body {
 }
 
 .neu-button:hover {
-    box-shadow: inset 6px 6px 10px #bebebe, inset -6px -6px 10px #ffffff;
+    box-shadow: inset 6px 6px 10px #b8b7b7, inset -6px -6px 10px #ffffff;
     color: #007bff;
 }
 
@@ -1518,7 +1529,7 @@ body {
     width: 150px;
     margin: 20px auto 0;
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #2780bc;
     color: #ffffff;
     text-align: center;
     text-decoration: none;
@@ -1536,7 +1547,7 @@ body {
 }
 
 .view-all-services-btn:hover {
-    background-color: #06629f;
+    background-color: #005d9b;
     transform: translateY(-2px);
 }
 
@@ -1548,7 +1559,7 @@ body {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #91b4ff, #627bf4, #4c2cff, #4400ff);
+    background: linear-gradient(45deg, #7aa3fd, #627bf4, #4c2cff, #652dff);
     z-index: -1;
     filter: blur(10px);
     animation: glowing 5s linear infinite;
@@ -1661,25 +1672,7 @@ body {
 }
 /* End PSMF Service Page Styles */
 
-/* Aggregate Reporting & MDR Service Page Styles - Sojar Research */
-.aggregate-hero {
-  background: #2563eb;
-  color: #fff;
-  padding: 64px 0 48px 0;
-  text-align: center;
-}
-.aggregate-hero h1 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  margin-bottom: 0.5em;
-}
-.aggregate-hero p {
-  font-size: 1.25rem;
-  max-width: 700px;
-  margin: 0 auto;
-  font-weight: 400;
-}
-/* End Aggregate Reporting & MDR Service Page Styles */
+
 
 /* PV Services for Distributors - Sojar Research */
 .pvservices-hero {
