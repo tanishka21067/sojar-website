@@ -106,19 +106,7 @@ nav a:hover {
     color: #444;
     font-size: 1.04em;
 }
-.why-sojar-list, .content ul, .list-disc {
-    max-width: 700px;
-    margin: 0 auto 20px auto;
-    list-style: disc inside;
-    color: #003087;
-    text-align: left;
-    font-size: 1.08em;
-    padding-left: 18px;
-}
-.why-sojar-list li, .content ul li, .list-disc li {
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
+
 .theme-btn, .btn-style-one, .bg-blue-900 {
     background: linear-gradient(90deg, #003087 60%, #0056b3 100%);
     color: #fff;

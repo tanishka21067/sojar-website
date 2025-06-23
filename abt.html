@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - Sojar</title>
+  <link rel="stylesheet" href="abt.css">
+  <style>
+    html, body {
+      height: 100vh;
+      overflow: hidden !important; /* Force hide all scrollbars */
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      /* overflow-y: hidden;  Already handled above */
+    }
+
+    .sidebar-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 450px; /* Increased width from 380px to 460px */
+      height: 100vh;
+      background: linear-gradient(to right, #1e3a8a, #3b82f6);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 50px 0 100px 70px; /* Reduced left padding from 40px to 20px */
+      z-index: 1000;
+      box-sizing: border-box;
+      margin-bottom: 0;
+    }
+
+    .sidebar-nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 24px;
+      font-size: 20px;
+      transition: background 0.2s;
+      text-align: left;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .sidebar-nav a:hover {
+      background: #005b80;
+    }
+
+    .sidebar-logo {
+      margin-bottom: 30px;
+      text-align: left;
+      width: 100%;
+      padding-left: 24px;
+    }
+
+    .sidebar-logo span {
+      font-size: 38px;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 2px;
+    }
+
+    .sidebar-contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border: none;
+      margin: 80px 0 0 0; /* Reduced top margin from 120px to 30px */
+      padding: 0;
+      background: none;
+      color: #b3e0ff;
+      width: 100%;
+    }
+
+    .sidebar-contact-info p,
+    .sidebar-contact-info a {
+      color: #b3e0ff;
+      font-size: 17px;
+      word-break: break-all;
+      margin: 0 0 10px 0;
+      text-align: left;
+      padding: 0 24px;
+    }
+
+    .sidebar-contact-info a[href^="mailto:"] {
+      padding-left: 2px;
+      font-size: 17px;
+    }
+
+    .sidebar-contact-info a {
+      color: #80dfff;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .sidebar-social-icons {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .sidebar-social-icons img {
+      width: 25px;
+      margin: 0 0.0px;
+      vertical-align: middle;
+    }
+
+    .container {
+      margin-left: 450px; /* Match sidebar width */
+      padding: 30px 30px;
+      background-color: #1e3a8a;
+      color: #fff;
+      min-height: 100vh;
+      box-sizing: border-box;
+      /* Remove any border or box-shadow that could create a white partition */
+    }
+
+    .columns {
+      
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .column {
+      flex: 1;
+      min-width: 200px;
+      margin: 20px;
+      background: none;
+      border-radius: 10px;
+      padding: 24px 18px;
+      box-sizing: border-box;
+    }
+
+    .column h3 {
+      border-bottom: 1px solid #80dfff;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      font-size: 25px;
+    }
+
+    .column a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 30px 0; /* Increased space between sub topics */
+      font-size: 18px;
+    }
+
+    .column a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      .sidebar-nav {
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 0;
+      }
+      .sidebar-nav a {
+        flex: 1;
+        padding: 12px 0;
+        text-align: center;
+        font-size: 15px;
+        width: auto;
+      }
+      .sidebar-contact-info {
+        flex-direction: row;
+        align-items: center;
+        margin: 10px 0 0 0;
+        width: auto;
+      }
+      .container {
+        margin-left: 0;
+      }
+    }
+
+    /* Remove old contact-info and social-icons from main content */
+    .contact-info, .social-icons {
+      display: none !important;
+    }
+
+    .social-neumorphic.mt-2 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 8px;
+      gap: 12px;
+    }
+    .neu-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 8px; /* Square/rectangle shape */
+      background: #00384d;
+      box-shadow: 2px 2px 8px #002233, -2px -2px 8px #005b80;
+      color: #fff;
+      font-size: 18px;
+      transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+      border: none;
+      outline: none;
+      text-decoration: none;
+    }
+    .neu-button:hover {
+      background: #005b80;
+      color: #b3e0ff;
+      box-shadow: 2px 2px 12px #002233, -2px -2px 12px #0077b6;
+    }
+    /* Use a fallback for X (Twitter) icon if Font Awesome 5 doesn't support it */
+    .fa-x-twitter:before {
+      content: "\f099"; /* fallback to fa-twitter icon */
+    }
+
+    /* Add styles for the new navigation bar */
+    .about-navbar {
+      position: fixed;
+      top: 40px;
+      left: 0;
+      width: 100vw;
+      background: #fff; /* Set navbar background to white */
+      z-index: 10000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 0;
+      flex-direction: column;
+    }
+    .about-navbar .right-content {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      padding: 8px 0 8px 50px;
+      background: #fff;
+    }
+    .about-navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 32px;
+      min-height: 54px;
+    }
+    .about-navbar .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+    .about-navbar .navbar-brand img {
+      height: 38px;
+    }
+    .about-navbar .navbar-nav {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 18px;
+    }
+    .about-navbar .nav-item .nav-link {
+      color: #22506a;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .about-navbar .nav-item .nav-link:hover {
+      text-decoration: underline;
+      color: #009FDF;
+    }
+    .about-navbar .nav-item.ms-2 .theme-btn.btn-style-one {
+      background: #22506a;
+      color: #fff;
+    }
+    .about-navbar .nav-item.dropdown {
+      position: relative;
+    }
+    .about-navbar .nav-item.dropdown .dropdown-toggle::after {
+      content: none;
+    }
+    .about-navbar .nav-item.dropdown .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 8px 0;
+      margin: 0;
+      list-style: none;
+      min-width: 210px;
+      z-index: 10001;
+    }
+    .about-navbar .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .about-navbar .nav-item.dropdown .dropdown-item {
+      color: #22506a;
+      padding: 8px 24px;
+      display: block;
+      text-decoration: none;
+    }
+    .about-navbar .nav-item.dropdown .dropdown-item:hover {
+      background: #f0f0f0;
+    }
+
+    .about-section {
+      background: #fff !important;
+    }
+    #about-sojar-section .auto-container {
+      background: #fff !important;
+    }
+    #about-sojar-section .row,
+    #about-sojar-section .content-column,
+    #about-sojar-section .images-column,
+    #about-sojar-section .inner-column {
+      background: #fff !important;
+    }
+    .features-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 0px;
+    }
+    .feature-box {
+      flex: 1;
+      min-width: 450px;
+      margin: 10px;
+      background: #f7fbfd;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 8px 32px 0 rgba(34, 80, 106, 0.18), 0 1.5px 6px 0 rgba(0, 0, 0, 0.10);
+      transition: transform 0.2s;
+    }
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+    .feature-box h2 {
+      font-size: 25px;
+      margin-bottom: 10px;
+      color: #df6824;
+    }
+    .feature-box p {
+      font-size: 18px;
+      color: #464646;
+    }
+
+    /* Close button styles */
+    .close-btn {
+      position: fixed;
+      top: 18px;
+      left: 18px;
+      z-index: 11000;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      
+    }
+    .close-btn:hover {
+      background: #f0f0f0;
+    }
+  </style>
+  <!-- Add Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Close Button sholud go to home pg when clicked -->
+   
+
+<!-- JS Script -->
+<script>
+  function closeMenu() {
+    document.querySelector('.your-menu-class').style.display = 'none';
+  }
+</script>
+
+
+  <div class="sidebar-nav">
+    <div class="sidebar-logo" style="margin-bottom: 30px; text-align: left; width: 100%; padding-left: 24px;">
+      <span style="font-size: 38px; font-weight: bold; color: #fff; letter-spacing: 2px;">Sojar</span>
+    </div>
+    <a href="web.html">Home</a>
+    <a href="abt.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="career.html">Career</a>
+    <a href="contact.html">Contact Us</a>
+    <div class="sidebar-contact-info">
+      <p>UK: +44 (0)1483 503 205<br>US: +1 (919) 841 3005</p>
+      <p><a href="mailto:info@sojar.com">info@sojar.com</a></p>
+      <!-- i want this span to bottom of the page -->
+      <ul class="social-box">
+        <li><a href="https://x.com" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+        <li><a href="mailto:info@sojarresearch.com" class="mail"><i class="fas fa-envelope"></i></a></li>
+        <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h3>About Us</h3>
+        <a href="#" id="about-sojar-link">About Sojar</a>
+        <a href="why-sojar.html" id="why-sojar-link">Why Sojar?</a>
+        <a href="leadership-team.html" id="leadership-team-link">Our Team</a>
+        <a href="our-mission.html">Our Mission</a>
+      </div>
+
+      <div class="column">
+        <h3>Get in touch</h3>
+        <a href="contact.html">Contact Us</a>
+        <a href="#" onclick="window.location.href='our-office.html'; return false;">Our Office</a>
+        <a href="career1.html">Career</a>
+      </div>
+    </div>
+  </div>
+  <!-- About Sojar Section (hidden by default) -->
+  <section class="about-section" id="about-sojar-section" style="display:none;">
+    <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title">
+            <div class="title">ABOUT COMPANY</div>
+            <h2>High quality at the right cost is a new challenge hence Sojar is one stop solution</h2>
+        </div>
+        <div class="row clearfix">
+            <!-- Content Column -->
+            <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="text">
+                        Sojar, offers Pharmaceutical or Biopharmaceutical Companies an efficient, technically advanced and up-to-date service for carrying out end-to-end Pharmacovigilance activities.
+                        Operate as a valid conversational partner and mediator towards the competent Authorities and the pharmaceutical industry with regard to Pharmacovigilance activities.
+                        Advertise and develop the culture of pharmacovigilance in order to promote and encourage the organization of efficient and validated pharmacovigilance systems in the pharmaceutical industry.
+                        Sojar, thanks to the deep experience gained within the associative context and thanks to the collaborations with important medium and small pharmaceutical or biopharmaceutical companies, both domestic and international, proposes itself as a precious and indispensable interlocutor for the performance of the Pharmacovigilance activities of your company.
+                    </div>
+                </div>
+            </div>
+            <div class="features-column col-lg-6 col-md-12 col-sm-12">
+    <div class="features-container">
+      <div class="feature-box">
+        <h2>Experience</h2>
+        <p>Our great team processed more than 50000 plus cases on different Safety Database for Top 10 Pharmaceutical companies. 
+          The exposure to multiple databases and global health authority requirements helped enhance our domain expertise.</p>
+      </div>
+      <div class="feature-box">
+        <h2>Quick Support</h2>
+        <p>We provide round the clock services to our business partners. 
+          Our dedicated team ensures seamless support at every hour to meet urgent business needs. 
+          Whether it's a technical query or operational assistance, 
+          help is always just a call or click away.</p>
+      </div>
+    </div>
+    <div class="inner-column">
+        <!-- Sec Title -->
+        <div class="sec-title light">
+            <h2>Our leaders prioritize customer engagement with a strong focus on patient centricity.</h2>
+            <div class="text">We listen. We advise. We design together. Happy customers and lasting relationships are what we strive for. Success is measured by results — the most important being how our clients feel about their experience with us. These reviews show that we're on the right track.
+</div>
+        </div>
+        <div class="row clearfix">
+            <!-- Feature Block Three -->
+            <div class="feature-block-three col-lg-4 col-md-4 col-sm-12">
+                <div class="inner-box">
+                    <div class="icon-box">
+                        <span class="icon flaticon-web-1"></span>
+                    </div>
+                    <div class="number">50000</div>
+                    <div class="feature-text">ICSRs Processed</div>
+                </div>
+            </div>
+            <div class="feature-block-three col-lg-4 col-md-4 col-sm-12">
+                <div class="inner-box">
+                    <div class="icon-box">
+                        <span class="icon flaticon-web-1"></span>
+                    </div>
+                    <div class="number">230</div>
+                    <div class="feature-text">Aggregate Reports</div>
+                </div>
+            </div>
+            <div class="feature-block-three col-lg-4 col-md-4 col-sm-12">
+                <div class="inner-box">
+                    <div class="icon-box">
+                        <span class="icon flaticon-web-1"></span>
+                    </div>
+                    <div class="number">250</div>
+                    <div class="feature-text">Safety Signals</div>
+                </div>
+            </div>
+            <div class="feature-block-three col-lg-4 col-md-4 col-sm-12">
+                <div class="inner-box">
+                    <div class="icon-box">
+                        <span class="icon flaticon-web-1"></span>
+                    </div>
+                    <div class="number">300</div>
+                    <div class="feature-text">Literature Surveillance </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+            <!-- Images Column -->
+            <div class="images-column col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-column" style="background-image: url(public/new-assets/images/icons/globe.png)">
+                    <div class="pattern-layer" style="background-image: url(public/new-assets/images/background/pattern-1.png)"></div>
+                    <div class="images-outer parallax-scene-1">
+                        <div class="image" data-depth="0.10">
+                            <img src="public/assets/images/about_us/1669297113_b7c0023e56d5ba0e5044.jpg" alt="">
+                        </div>
+                        <div class="image-two" data-depth="0.30">
+                            <img src="public/assets/images/about_us/1669297113_37bdbef3d90417fdb56c.jpg" alt="">
+                        </div>
+                        <div class="image-three" data-depth="0.20">
+                            <img src="public/assets/images/about_us/1669297113_438b318d2654d7799c31.jpg" alt="">
+                        </div>
+                        <div class="image-four" data-depth="0.30">
+                            <img src="public/assets/images/about_us/1669297113_be748ac7d95f223ffbdd.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Close (cross) button -->
+  <a href="web.html" class="close-btn" style="position:fixed;top:18px;left:18px;z-index:11000;width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-decoration:none;cursor:pointer;transition:background 0.2s;">
+    <span style="font-size:28px;line-height:1;color:#1e3a8a;font-weight:bold;">&times;</span>
+  </a>
+
+  <!-- Add this before </body> to ensure abt.js is loaded -->
+  <script src="abt.js">
+    
+  </script>
+
+</body>
+</html>

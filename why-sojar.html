@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Sojar? - Pharmacovigilance Excellence</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .carousel {
+      transition: transform 0.5s ease-in-out;
+    }
+    .stat-counter {
+      display: inline-block;
+      width: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-[250px] flex items-center justify-center bg-gradient-to-r from-blue-800 to-blue-600 text-white py-12 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-6xl font-bold mb-4">Why Sojar?</h2>
+      <p class="text-2xl md:text-xl mb-6">Leading the way in pharmacovigilance with expertise, innovation, and trust.</p>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="py-20 bg-blue">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-center text-blue-900 mb-4">Expert Team</h3>
+          <p class="text-gray-600 text-center">Our highly skilled team of pharmacovigilance experts ensures consistent regulatory compliance and patient safety with unmatched precision, reliability, and domain expertise.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-center text-blue-900 mb-4">Innovative Solutions</h3>
+          <p class="text-gray-600 text-center">Leveraging cutting-edge technology to streamline drug safety monitoring, enhance signal detection, ensure regulatory compliance, and deliver timely and accurate pharmacovigilance reporting.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-center text-blue-900 mb-4">Global Reach</h3>
+          <p class="text-gray-600 text-center">Serving clients worldwide with tailored pharmacovigilance services. Partnering with top pharmaceutical companies, we deliver excellence in global drug safety.</p>
+        </div>
+      </div>
+
+      <!-- New Cards Section -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <!-- Mission-Driven Card -->
+        <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate__animated animate__fadeIn">
+          <h3 class="text-xl font-semibold text-center text-blue-900 mb-4">Mission-Driven</h3>
+          <p class="text-gray-600 text-center">Delivering high-quality PV services with full regulatory compliance. With a focus on excellence, we help clients maintain compliance and build public trust.</p>
+        </div>
+        <!-- Industry Excellence Card -->
+        <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate__animated animate__fadeIn" style="animation-delay: 0.1s;">
+          <h3 class="text-xl font-semibold text-center text-blue-900 mb-4">Industry Excellence</h3>
+          <p class="text-gray-600 text-center">Sojar is committed to advancing pharmacovigilance culture through validated, efficient systems, empowering your organization to stay ahead in a dynamic industry.</p>
+        </div>
+        <!-- Trusted Mediator Card -->
+        <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate__animated animate__fadeIn" style="animation-delay: 0.2s;">
+          <h3 class="text-xl font-semibold text-center text-blue-900 mb-4">Trusted Mediator</h3>
+          <p class="text-gray-600 text-center">We streamline communication with competent authorities, ensuring compliance with global pharmacovigilance standards and acting as a reliable partner for your organization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Close (cross) button -->
+  <a href="abt.html" class="close-btn" style="position:fixed;top:18px;left:18px;z-index:11000;width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-decoration:none;cursor:pointer;transition:background 0.2s;">
+    <span style="font-size:28px;line-height:1;color:#1e40af;font-weight:bold;">&times;</span>
+  </a>
+
+  <!-- JavaScript code -->
+  <script>
+    // Smooth scrolling for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth',
+        });
+      });
+    });
+
+  </script>
+</body>
+</html>
