@@ -537,7 +537,7 @@ ul.dropdown-menu.show {
 /* why and running nums */
 .why-section {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(to right, #cce9f8, #64cfd8);
+    background: linear-gradient(to right, #b7e0f4, #6fe4ef);
     padding: 60px 20px;
     text-align: center;
     border-radius: 29px;
@@ -1231,7 +1231,7 @@ body {
 .navbar-nav .nav-link {
     font-weight: 600;
     transition: var(--transition);
-    color: #333;
+    color: #171717;
     font-size: 18px; /* Increased font size */
 }
 
