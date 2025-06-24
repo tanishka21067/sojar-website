@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Office - PharmaSafe Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        
+        .gallery-img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100 text-gray-800">
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-r from-blue-900 to-blue-600 h-[50vh] flex items-center justify-center"> 
+        <div class="container text-center max-w-3xl mx-auto px-4" style="position:relative; z-index:1;">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4" style="color:#fff;">Welcome to Our Office</h2>
+            <p class="text-lg md:text-xl mb-6" style="color:#fff;">Discover the heart of Sojar Research, where innovation meets safety in pharmacovigilance.</p>
+        </div>
+        <div class="absolute inset-0" style="background:rgba(0,0,0,0.30);"></div>
+    </section>
+
+    <!-- Office Details Section -->
+    <section id="office" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="">
+                    <h3 class="text-2xl text-orange-600 text-center font-semibold mb-4">Our offices</h3>
+                    <p class="text-gray-600 mb-4">Our Pune-Hinjewadi office is operational with full of its capacity, our UK-London and Mexico-Mexico City offices will start in its operation soon.</p>
+                    <p>Our workspace environment includes...</p>
+                    <ul class="list-disc pl-5 text-gray-600">
+                        <li>Ergonomic workstations</li>
+                        <li>Collaborative meeting rooms</li>
+                        <li>Clean and clutter-free design to reduce stress</li>
+                        
+                    </ul>
+                </div>
+                <div class="">
+                    <h3 class="text-2xl text-orange-600 text-center font-semibold mb-4">Our Location</h3>
+                    <p class="text-gray-600 mb-4">Located in the thriving neighbourhood of Punawale, our office offers easy accessibility.</p>
+                    <p class="text-gray-600"><strong>Address:</strong> 201-Creative's Orchid, Punawale-Hinjewadi Link Road, Near Lotus Business School, Pune (411033).</p>
+                    <p class="text-gray-600"><strong>Phone:</strong> (123) 456-7890</p>
+                    <p class="text-gray-600"><strong>Email:</strong> info@sojar.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-blue-900 text-center mb-12">Office Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <img src="https://via.placeholder.com/400x300?text=Office+1" alt="Office Space 1" class="gallery-img rounded-lg shadow-md w-full h-64 object-cover">
+                <img src="https://via.placeholder.com/400x300?text=Office+2" alt="Office Space 2" class="gallery-img rounded-lg shadow-md w-full h-64 object-cover">
+                <img src="https://via.placeholder.com/400x300?text=Office+3" alt="Office Space 3" class="gallery-img rounded-lg shadow-md w-full h-64 object-cover">
+                <img src="https://via.placeholder.com/400x300?text=Office+4" alt="Office Space 4" class="gallery-img rounded-lg shadow-md w-full h-64 object-cover">
+                <img src="https://via.placeholder.com/400x300?text=Office+5" alt="Office Space 5" class="gallery-img rounded-lg shadow-md w-full h-64 object-cover">
+                <img src="https://via.placeholder.com/400x300?text=Office+6" alt="Office Space 6" class="gallery-img rounded-lg shadow-md w-full h-64 object-cover">
+            </div>
+        </div>
+    </section>
+     
+    <!-- Close (cross) button -->
+  <a href="abt.html" class="close-btn" style="position:fixed;top:18px;left:18px;z-index:11000;width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-decoration:none;cursor:pointer;transition:background 0.2s;">
+    <span style="font-size:28px;line-height:1;color:#1e40af;font-weight:bold;">&times;</span>
+  </a>
+
+    <script>
+        // Form Submission Simulation
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const formMessage = document.getElementById('formMessage');
+
+            if (name && email && message) {
+                formMessage.classList.remove('hidden');
+                formMessage.textContent = 'Message sent successfully!';
+                document.getElementById('contactForm').reset();
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 3000);
+            } else {
+                formMessage.classList.remove('hidden');
+                formMessage.classList.add('text-red-600');
+                formMessage.textContent = 'Please fill out all fields.';
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                    formMessage.classList.remove('text-red-600');
+                }, 3000);
+            }
+        }
+
+        // Fade-in on Scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, { threshold: 0.2 });
+
+        fadeElements.forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

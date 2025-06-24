@@ -1,11 +1,10 @@
 /* Modern, responsive, and visually appealing styles for PV Consultancy page */
 body {
-    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: #f8fafc;
-    color: #111;
+    background: #f4f8fb;
 }
 header {
     background: linear-gradient(90deg, #003087 0%, #0056b3 100%);
@@ -32,24 +31,16 @@ nav a:hover {
     color: #0056b3;
 }
 .hero {
-    background: #2563eb;
-    color: #fff;
-    padding: 64px 0 48px 0;
+    background: linear-gradient(90deg, #e6f0fa 60%, #f4f8fb 100%);
+    padding: 48px 20px 32px 20px;
     text-align: center;
     border-bottom: 1px solid #e0e7ef;
 }
 .hero h1 {
-    color: #fff;
-    font-size: 2.8rem;
-    font-weight: 800;
+    color: #003087;
+    font-size: 2.7em;
     margin: 0;
     letter-spacing: 1px;
-}
-.hero p {
-    font-size: 1.25rem;
-    max-width: 700px;
-    margin: 0 auto;
-    font-weight: 400;
 }
 .content {
     max-width: 1200px;
@@ -60,17 +51,13 @@ nav a:hover {
     box-shadow: 0 2px 16px rgba(0,48,135,0.06);
 }
 .content h2 {
-    color: #1746a2;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 2em;
+    color: #003087;
+    font-size: 1.7em;
+    margin-bottom: 10px;
 }
 .content p {
-    color: #222;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    font-weight: 400;
+    color: #333;
+    font-size: 1.08em;
 }
 .grid {
     display: flex;
@@ -78,12 +65,6 @@ nav a:hover {
     gap: 28px;
     justify-content: center;
     margin: 32px 0 18px 0;
-}
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    justify-items: center;
 }
 .bg-white {
     background: #f9f9f9;
@@ -125,47 +106,7 @@ nav a:hover {
     color: #444;
     font-size: 1.04em;
 }
-.service-card {
-    background: #f4f7fa;
-    border-radius: 18px;
-    box-shadow: 0 4px 18px 0 rgba(30, 64, 175, 0.10);
-    padding: 2rem 1.5rem 1.5rem 1.5rem;
-    text-align: left;
-    min-width: 260px;
-    max-width: 350px;
-    width: 100%;
-    color: #111;
-    transition: box-shadow 0.3s, transform 0.3s;
-}
-.service-card h3 {
-    color: #1746a2;
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.7em;
-}
-.service-card p {
-    color: #222;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    font-weight: 400;
-}
-.service-card:hover {
-    box-shadow: 0 8px 32px 0 rgba(30, 64, 175, 0.18);
-    transform: translateY(-6px) scale(1.03);
-}
-.why-sojar-list, .content ul, .list-disc {
-    max-width: 700px;
-    margin: 0 auto 20px auto;
-    list-style: disc inside;
-    color: #003087;
-    text-align: left;
-    font-size: 1.08em;
-    padding-left: 18px;
-}
-.why-sojar-list li, .content ul li, .list-disc li {
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
+
 .theme-btn, .btn-style-one, .bg-blue-900 {
     background: linear-gradient(90deg, #003087 60%, #0056b3 100%);
     color: #fff;
@@ -177,7 +118,7 @@ nav a:hover {
     border: none;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0,48,135,0.08);
-    transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+    /* transition: background 0.2s, box-shadow 0.2s, transform 0.15s; */
     display: inline-block;
 }
 .theme-btn:hover, .btn-style-one:hover, .bg-blue-900:hover {
@@ -202,9 +143,6 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-    .service-grid {
-        grid-template-columns: 1fr 1fr;
-    }
     .bg-white.p-6.rounded-lg.shadow-md {
         width: 90%;
         min-width: 220px;
@@ -222,8 +160,5 @@ footer {
     }
     .content h2 {
         font-size: 1.2em;
-    }
-    .service-grid {
-        grid-template-columns: 1fr;
     }
 }
