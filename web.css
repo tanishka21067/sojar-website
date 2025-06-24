@@ -691,7 +691,7 @@ ul.dropdown-menu.show {
 
 /* Footer widgets section */
 .widgets-section {
-    padding-bottom: 10px; /* slightly less padding */
+    padding-bottom: 1px; /* slightly less padding */
 }
 
 .footer-widget {
@@ -1529,7 +1529,7 @@ body {
     width: 150px;
     margin: 20px auto 0;
     padding: 10px 20px;
-    background-color: #2780bc;
+    background: linear-gradient(90deg, #8E2DE2, #4A00E0);
     color: #ffffff;
     text-align: center;
     text-decoration: none;
