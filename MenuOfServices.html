@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +6,13 @@
   <link rel="stylesheet" href="abt.css">
   <style>
     html, body {
-      height: 100vh;
-      overflow: hidden !important; /* Force hide all scrollbars */
-    }
-    body {
+      height: 90vh; /* Maintain full viewport height */
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #fff;
-      /* overflow-y: hidden;  Already handled above */
+    }
+    body {
+      margin: 0;
     }
 
     .sidebar-nav {
@@ -57,7 +55,7 @@
     }
 
     .sidebar-logo span {
-      font-size: 38px;
+      font-size: 30px;
       font-weight: bold;
       color: #fff;
       letter-spacing: 2px;
@@ -73,6 +71,8 @@
       background: none;
       color: #b3e0ff;
       width: 100%;
+      position: absolute;
+      bottom: 20px; /* Position at the bottom */
     }
 
     .sidebar-contact-info p,
@@ -111,16 +111,18 @@
 
     .container {
       margin-left: 450px; /* Match sidebar width */
-      padding: 30px 30px;
+      padding: 25px 25px;
       background-color: #1e3a8a;
       color: #fff;
-      min-height: 100vh;
+      min-height: 70vh;
       box-sizing: border-box;
+      font-size: 20px;
+      overflow-y: auto; /* Enable vertical scrollbar when content overflows */
       /* Remove any border or box-shadow that could create a white partition */
+      
     }
 
     .columns {
-      
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -142,7 +144,7 @@
       padding-bottom: 5px;
       margin-bottom: 15px;
       margin-top: -20px;
-      font-size: 25px;
+      font-size: 20px;
     }
 
     .column a {
@@ -150,7 +152,7 @@
       color: white;
       text-decoration: none;
       margin: 30px 0; /* Increased space between sub topics */
-      font-size: 18px;
+      font-size: 17px;
     }
 
     .column a:hover {
@@ -179,9 +181,12 @@
         align-items: center;
         margin: 10px 0 0 0;
         width: auto;
+        position: static;
+        bottom: auto;
       }
       .container {
         margin-left: 0;
+        overflow-y: auto; /* Ensure scrollbar works on mobile */
       }
     }
 
@@ -223,7 +228,6 @@
       content: "\f099"; /* fallback to fa-twitter icon */
     }
 
-    
     /* Close button styles */
     .close-btn {
       position: fixed;
@@ -255,15 +259,14 @@
     <div class="sidebar-logo" style="margin-bottom: 30px; text-align: left; width: 100%; padding-left: 24px;">
       <span style="font-size: 38px; font-weight: bold; color: #fff; letter-spacing: 2px;">Sojar</span>
     </div>
-    <a href="#">Home</a>
-    <a href="#">About Us</a>
-    <a href="#">Services</a>
-    <a href="#">Career</a>
-    <a href="#">Contact Us</a>
+    <a href="web.html">Home</a>
+    <a href="abt.html">About Us</a>
+    <a href="MenuOfServices.html">Services</a>
+    <a href="career.html">Career</a>
+    <a href="contactus.html">Contact Us</a>
     <div class="sidebar-contact-info">
       <p>UK: +44 (0)1483 503 205<br>US: +1 (919) 841 3005</p>
       <p><a href="mailto:info@sojar.com">info@sojar.com</a></p>
-      <!-- i want this span to bottom of the page -->
       <ul class="social-box">
         <li><a href="https://x.com" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
         <li><a href="mailto:info@sojarresearch.com" class="mail"><i class="fas fa-envelope"></i></a></li>
@@ -274,7 +277,7 @@
   </div>
 
   <div class="container">
-    <h2>Post Marketing Pharmacovigilance Servies... </h2>
+    <h2>Post Marketing Pharmacovigilance Services... </h2>
     <div class="columns">
       <div class="column">
         <a href="pvsystemandSOPsServices.html">PV Systems and SOP's</a>
@@ -300,10 +303,10 @@
         <a href="Drug Safety Mailbox Management.html">Drug Safety Mailbox Management</a>
       </div>
     </div>
-  </div> 
+  </div>
   <!-- Close (cross) button -->
   <a href="web.html" class="close-btn" style="position:fixed;top:18px;left:18px;z-index:11000;width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-decoration:none;cursor:pointer;transition:background 0.2s;">
-    <span style="font-size:28px;line-height:1;color:#1e3a8a;font-weight:bold;">&times;</span>
+    <span style="font-size:28px;line-height:1;color:#1e3a8a;font-weight:bold;">×</span>
   </a>
 
   <!-- Add this before </body> to ensure abt.js is loaded -->
