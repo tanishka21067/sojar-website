@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Sojar Research</title>
     <link rel="stylesheet" href="contactus.css">
+    
 </head>
 
 <body>
+  
+    
     <div class="contact-page-wrapper">
         <section class="contact-info-section">
             <div class="contact-heading-band"
@@ -24,14 +27,16 @@
                     <li style="color: #fff;">Contact Us</li>
                 </ul>
             </div>
+            <br>
 
             <img src="https://t3.ftcdn.net/jpg/05/30/96/04/360_F_530960431_c8fPd3HansYvrSJ4fJxZqp9OhjQmYoll.jpg" alt="" style="height: 400px;width: 100%;">
             <div class="auto-container">
                 <!-- Sec Title -->
                 <div class="title-box">
+                    <br>
                     <h2>GET IN TOUCH</h2>
-                    <div class="text">For general enquiries you can touch with our front desk supporting team <br> at <a
-                            href="mailto:info@sojarresearch.com">info@sojarresearch.com</a></div>
+                    <div class="text">For general enquiries you can touch with our front desk supporting team <br> at
+                        <a href="mailto:info@sojarresearch.com">info@sojarresearch.com</a></div>
                 </div>
                 <div class="row clearfix">
                     <!-- Info Column -->
@@ -145,38 +150,17 @@
                                 <br>
                                 <div class="row">
                                     <div class="col-md-9 col-sm-9 col-xs-12">
-<form onsubmit="return validateCaptcha()">
-  <label id="captcha-label"></label>
-  <input type="number" id="captcha-answer" required />
-  <button type="submit">Submit</button>
-</form>
-
-<script>
-  let num1, num2;
-
-  function generateCaptcha() {
-    num1 = Math.floor(Math.random() * 10);
-    num2 = Math.floor(Math.random() * 10);
-    document.getElementById('captcha-label').innerText = `${num1} + ${num2} = `;
-  }
-
-  function validateCaptcha() {
-    const userAnswer = parseInt(document.getElementById('captcha-answer').value);
-    if (userAnswer === num1 + num2) {
-      alert("Captcha correct. Form submitted!");
-      return true; // Allow form submission
-    } else {
-      alert("Wrong captcha! Try again.");
-      generateCaptcha(); // Regenerate on wrong attempt
-      return false; // Prevent form submission
-    }
-  }
-
-  // Generate captcha on page load
-  window.onload = generateCaptcha;
-</script>
+                                        <label id="captcha-label"></label>
+                                        <input type="number" id="captcha-answer" required />
                                     </div>
                                     <div class="col-md-3 col-sm-6 col-xs-12">
+                                        
+                                    </div>
+                                </div>
+                                <!-- shift button to left side -->
+
+                                <div class="row submit-row" style="display: flex; justify-content: flex-start; align-items: center; margin-top: 10px;">
+                                    <div>
                                         <input class="submit overlay" type="submit" name="submit" id="submit" value="Submit">
                                         <div class="submit__overlay"></div>
                                     </div>
@@ -192,6 +176,30 @@
     </div>
 
     <script src="contactus.js"></script>
+    <script>
+// Captcha logic: generate random numbers and validate on form submit
+let num1, num2;
+function generateCaptcha() {
+    num1 = Math.floor(Math.random() * 10);
+    num2 = Math.floor(Math.random() * 10);
+    document.getElementById('captcha-label').innerText = `${num1} + ${num2} = `;
+}
+function validateCaptcha(event) {
+    const userAnswer = parseInt(document.getElementById('captcha-answer').value);
+    if (userAnswer !== num1 + num2) {
+        alert('Wrong captcha! Try again.');
+        generateCaptcha();
+        event.preventDefault();
+        return false;
+    }
+    // If correct, allow form submission
+    return true;
+}
+document.addEventListener('DOMContentLoaded', function() {
+    generateCaptcha();
+    document.getElementById('form1').addEventListener('submit', validateCaptcha);
+});
+</script>
 </body>
 
 </html>
