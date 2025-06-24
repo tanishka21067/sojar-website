@@ -6,6 +6,9 @@
   <title>Why Sojar? - Pharmacovigilance Excellence</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-utbXrsoQbKX1u0h+6QK+6QK+6QK+6QK+6QK+6QK+6QK+6QK+6QK+6QK+6QK+6QK+6QK+6QK+6QK+6QK+6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-9CW1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="abt.css">
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -69,6 +72,57 @@
       </div>
     </div>
   </section>
+
+   <!-- Technology Section -->
+    <section id="technology" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center animate__animated animate__fadeIn">Our Technology</h2>
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 hover-scale animate__animated animate__fadeIn">
+                        <h3 class="h5 fw-bold mb-3">Oracle Argus Safety</h3>
+                        <p>Industry-standard database hosted in-house, trusted by top pharma companies.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 hover-scale animate__animated animate__fadeIn" style="animation-delay: 0.1s;">
+                        <h3 class="h5 fw-bold mb-3">PV Edge & Clinevo</h3>
+                        <p>Cloud-based platforms for PV intake, processing, and analytics.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 hover-scale animate__animated animate__fadeIn" style="animation-delay: 0.2s;">
+                        <h3 class="h5 fw-bold mb-3">Database Implementation</h3>
+                        <p>Full setup for user, product, and reporting configurations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Engagements Carousel -->
+    <section id="engagements" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center animate__animated animate__fadeIn">Our Current Engagements</h2>
+            <div class="owl-carousel owl-theme mt-5">
+                <div class="item">
+                    <div class="card p-4 text-center">
+                        <p class="mb-0">Providing ICSR processing, medical review, and writing for US-based pharma companies.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card p-4 text-center">
+                        <p class="mb-0">Delivering 100 ICSRs/day for a leading EU-based client.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card p-4 text-center">
+                        <p class="mb-0">Supporting a top Japanese company's subsidiary in India with PV solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
  
   <!-- Close (cross) button -->
   <a href="abt.html" class="close-btn" style="position:fixed;top:18px;left:18px;z-index:11000;width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-decoration:none;cursor:pointer;transition:background 0.2s;">
@@ -76,6 +130,9 @@
   </a>
 
   <!-- JavaScript code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-3gJwYp6Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q1Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="abt.js"></script>
   <script>
     // Smooth scrolling for nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -87,6 +144,25 @@
       });
     });
 
+    // Initialize Engagements Carousel
+    if ($('.owl-carousel').length && typeof $.fn.owlCarousel === 'function') {
+      $('.owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 900,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        responsive: {
+          0: { items: 1 },
+          600: { items: 1 },
+          900: { items: 2 },
+          1200: { items: 3 }
+        }
+      });
+    }
   </script>
 </body>
 </html>

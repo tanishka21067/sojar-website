@@ -600,3 +600,88 @@ body {
     padding: 28px 10px 22px 10px;
   }
 }
+
+/* --- Technology Section Styles --- */
+#technology .section-title {
+  color: #df6824;
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 36px;
+}
+#technology .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+#technology .card {
+  background: #f7fbfd;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(34,80,106,0.10);
+  transition: box-shadow 0.2s, transform 0.3s;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 350px; /* Decreased width */
+  max-width: 90vw;
+}
+#technology .card:hover {
+  box-shadow: 0 6px 32px rgba(0,159,223,0.13);
+  transform: translateY(-4px) scale(1.03);
+}
+#technology .card h3 {
+  color: #003265;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+#technology .card p {
+  color: #464646;
+  font-size: 1rem;
+}
+
+/* --- Engagements Carousel Styles --- */
+.engagements-carousel .card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(34,80,106,0.10);
+  transition: box-shadow 0.2s, transform 0.2s;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.engagements-carousel .card:hover {
+  box-shadow: 0 6px 32px rgba(0,159,223,0.13);
+  transform: translateY(-4px) scale(1.03);
+}
+.engagements-carousel .h5 {
+  color: #003265;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.engagements-carousel .owl-dots {
+  text-align: center;
+  margin-top: 18px;
+}
+.engagements-carousel .owl-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 6px;
+  background: #009FDF;
+  border-radius: 50%;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.engagements-carousel .owl-dot.active {
+  opacity: 1;
+}
+@media (max-width: 900px) {
+  #technology .row, .engagements-carousel .owl-stage {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
