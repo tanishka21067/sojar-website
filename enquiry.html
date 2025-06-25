@@ -18,6 +18,138 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Custom Icon Font -->
     <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
+    <style>
+        
+/* Contact Form Styles */
+.contact-form-wrapper {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="number"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: var(--transition);
+    font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 10px rgba(251, 109, 21, 0.1);
+}
+
+.contact-form .submit {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.contact-form .submit:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.contact-form .textheading {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/* Form Validation Styles */
+.contact-form input.error {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.contact-form input.error:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.contact-form.submitting {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.submit__error,
+.submit__error--empty {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+.hide {
+    display: none;
+}
+
+/* Improve File Upload Appearance */
+.contact-form input[type="file"] {
+    padding: 8px;
+    border: 1px dashed #ddd;
+    border-radius: 5px;
+    background: #f8f9fa;
+    width: 100%;
+    cursor: pointer;
+}
+
+.contact-form input[type="file"]:hover {
+    border-color: var(--primary-color);
+    background: #fff;
+}
+
+/* Success State */
+.contact-form input:valid:not(.error) {
+    border-color: #28a745;
+}
+
+/* Loading State */
+.contact-form input[type="submit"]:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+/* Captcha Styles */
+.submit__generated {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submit__generated input {
+    width: 50px !important;
+    text-align: center;
+}
+
+.fa-refresh {
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.fa-refresh:hover {
+    transform: rotate(180deg);
+}
+    </style>
 </head>
 <body>
  <!-- Header Section -->  

@@ -4,49 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Sojar Research Service Pvt Ltd</title>
+    <link rel="stylesheet" href="web.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #d8dcff;
             color: #333;
         }
-        header {
-            background-color: #004aad;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        nav {
-            background-color: #003087;
-            padding: 10px 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            display: inline-block;
-        }
-        nav a:hover {
-            background-color: #004aad;
-        }
+       
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 20px auto;
             padding: 0 20px;
+            
         }
         .contact-section {
-            background-color: white;
+            background-color: rgb(255, 255, 255);
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 10 10 10px rgb(55, 55, 55);
         }
-        .contact-section h2 {
+        .contact-section h1 {
             color: #004aad;
             margin-bottom: 20px;
             text-align: center;
@@ -70,8 +50,8 @@
             transform: perspective(600px) translateZ(0);
         }
         .service-box:hover {
-            box-shadow: 0 12px 32px 0 rgba(30, 64, 175, 0.22), 0 4px 16px 0 rgba(0,0,0,0.14);
-            transform: perspective(600px) translateY(-8px) scale(1.03) rotateX(2deg);
+            box-shadow: 0 19px 30px 0 rgba(30, 64, 175, 0.22), 0 12px 19px 0 rgba(0,0,0,0.14);
+             transform: perspective(600px) translateY(-8px)  rotateX(2deg); 
         }
         .service-box h3 {
             color: #004aad;
@@ -130,8 +110,8 @@
             position: relative;
         }
         .captcha-code {
-            background: #e0e7ef;
-            color: #1746a2;
+            background: #dbe3ff;
+            color: #f76927;
             font-weight: bold;
             font-size: 1.1em;
             letter-spacing: 2px;
@@ -220,18 +200,17 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Sojar Research Service Pvt Ltd</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About Us</a>
-        <a href="contact-us.html">Contact Us</a>
-    </nav>
+   
+    <br>
+    <br>
+                <div class="title-box" style="text-align: center;color: #1446a3;font-size: 20px;">
+                    <h1 style="color: #fd6c29;">GET IN TOUCH</h1>
+                    <div class="text">For general enquiries you can touch with our front desk supporting team <br> at
+                        <a href="mailto:info@sojarresearch.com">info@sojarresearch.com</a></div>
+                </div>
+                <br>
     <div class="container">
-        <div class="contact-section">
-            <div class="services-boxes">
+         <div class="services-boxes">
                 <div class="service-box">
                     <div style="display:flex;align-items:center;justify-content:center;margin-bottom:6px;">
                         <!-- Email icon: envelope -->
@@ -257,10 +236,17 @@
                     <p>+91 8793 939 229</p>
                 </div>
             </div>
-            <h2>Contact Us</h2>
+
+            <br>
+            <br>
+            <br>
+        <div class="contact-section">
+
+            <h1 style="color: #f76927;">Contact Us</h1>
             <p style="text-align: center">We are here to assist you with your pharmacovigilance needs. Please fill out the form below or reach out to us directly.</p>
             
-            <form class="contact-form" action="submit-contact-form" method="post" enctype="multipart/form-data" onsubmit="return validateCaptcha();">
+         <form id="contact-form" class="contact-form" onsubmit="return sendEmail(event);">
+
                 <div class="contact-form-col1">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
@@ -308,28 +294,52 @@
     </div>
     <footer>
     </footer>
-    <script>
-        function generateCaptcha() {
-            const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-            let code = '';
-            for (let i = 0; i < 5; i++) {
-                code += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
-            document.getElementById('captchaCode').textContent = code;
-            document.getElementById('captchaCode').setAttribute('data-captcha', code);
-        }
-        function validateCaptcha() {
-            const entered = document.getElementById('captcha').value.trim().toUpperCase();
-            const actual = document.getElementById('captchaCode').getAttribute('data-captcha');
-            if (entered !== actual) {
-                alert('Incorrect CAPTCHA. Please try again.');
-                generateCaptcha();
-                document.getElementById('captcha').value = '';
-                return false;
-            }
-            return true;
-        }
-        document.addEventListener('DOMContentLoaded', generateCaptcha);
-    </script>
+    
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init("aL8NgmbqsqMP-jUJj"); // Replace with your public key
+
+    function generateCaptcha() {
+      const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+      let code = '';
+      for (let i = 0; i < 5; i++) {
+        code += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      document.getElementById('captchaCode').textContent = code;
+      document.getElementById('captchaCode').setAttribute('data-captcha', code);
+    }
+
+    function validateCaptcha() {
+      const entered = document.getElementById('captcha').value.trim().toUpperCase();
+      const actual = document.getElementById('captchaCode').getAttribute('data-captcha');
+      if (entered !== actual) {
+        alert('Incorrect CAPTCHA. Please try again.');
+        generateCaptcha();
+        return false;
+      }
+      return true;
+    }
+
+    function sendEmail(e) {
+      e.preventDefault();
+      if (!validateCaptcha()) return false;
+
+      emailjs.sendForm("service_04y3xsv", "template_vyx28lq", document.getElementById("contact-form"))
+        .then(() => {
+          alert("Message sent successfully!");
+          document.getElementById("contact-form").reset();
+          generateCaptcha();
+        }, (error) => {
+          console.error(error);
+          alert("Failed to send message. Please try again.");
+        });
+      return false;
+    }
+
+    document.addEventListener('DOMContentLoaded', generateCaptcha);
+  </script>
+   
+
+
 </body>
 </html>

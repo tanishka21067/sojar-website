@@ -16,57 +16,6 @@ body {
 }
 
 /* Header Styles */
-.topbar {
-    background-color: var(--secondary-color);
-    padding: 4px 0;
-    color: var(--white);
-    transition: var(--transition);
-    font-size: 16px;
-}
-
-.topbar p {
-    margin: 0;
-}
-
-.topbar a {
-    color: var(--white);
-    margin-left: 20px;
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.topbar a:hover {
-    color: var(--primary-color);
-}
-
-.topbar .left-content {
-    display: flex;
-    align-items: center;
-}
-
-.topbar .right-content {
-    text-align: right;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.topbar i {
-    margin-right: 5px;
-    font-size: 12px;
-}
-
-@media (max-width: 991px) {
-    .topbar .left-content,
-    .topbar .right-content {
-        justify-content: center;
-        text-align: center;
-    }
-    
-    .topbar .right-content {
-        margin-top: 5px;
-    }
-}
 /* Container for dropdown */
 ul.dropdown-menu {
     list-style: none;
@@ -81,10 +30,6 @@ ul.dropdown-menu {
     width: 395px;
     transition: all 0.3s ease-in-out;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
-    /* font color as white */
-    
-
 }
 .dropdown-menu {
     max-height: 520px;
@@ -92,25 +37,20 @@ ul.dropdown-menu {
     scrollbar-width: thin;
     scrollbar-color: #626262 #f8f9fa;
 }
-
 .dropdown-menu::-webkit-scrollbar {
     width: 8px;
 }
-
 .dropdown-menu::-webkit-scrollbar-track {
     background: #f8f9fa;
     border-radius: 10px;
 }
-
 .dropdown-menu::-webkit-scrollbar-thumb {
     background: #626262;
     border-radius: 10px;
 }
-
 .dropdown-menu::-webkit-scrollbar-thumb:hover {
     background: #626262;
 }
-
 /* Add horizontal line after each dropdown item */
 .dropdown-menu li::after {
     content: '';
@@ -122,12 +62,10 @@ ul.dropdown-menu {
     background: linear-gradient(90deg, #232323, #8E2DE2);
     opacity: 0.8;
 }
-
 /* Remove the line after the last dropdown item */
 .dropdown-menu li:last-child::after {
     content: none;
 }
-
 /* Ensure the li has relative positioning for the ::after element */
 .dropdown-menu li {
     position: relative;
@@ -206,10 +144,6 @@ ul.dropdown-menu.show {
     font-weight: 700;
     margin-bottom: 20px;
 }
-
-
-
-
 
 /* Main Slider Styles */
 .main-slider {
@@ -292,8 +226,6 @@ ul.dropdown-menu.show {
 .fadeOut {
     animation: fadeOut 0.7s ease forwards;
 }
-
-
 
 /* Update Owl Carousel Navigation */
 .main-slider .owl-nav {
@@ -598,7 +530,7 @@ ul.dropdown-menu.show {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 24px;
-    background-color: #fa792e;
+    background-color: #f87428;
     color: white;
     border: none;
     border-radius: 8px;
@@ -610,7 +542,6 @@ ul.dropdown-menu.show {
 .find-out-btn:hover {
     background-color: #19a80c;
 }
-
 
 .stats-container {
     display: flex;
@@ -652,7 +583,7 @@ ul.dropdown-menu.show {
 /* Footer */
 /* Footer background */
 .main-footer {
-    background-color: #05057e;
+    background-color: #050579;
     color: #ffffff;
     position: relative;
     padding: 48px 0 10px; /* reduced padding to shrink footer height */
@@ -952,136 +883,6 @@ font-size: 13px;
     font-size: 16px;
     line-height: 1.6;
     color: #666;
-}
-
-/* Contact Form Styles */
-.contact-form-wrapper {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="number"],
-.contact-form textarea {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: var(--transition);
-    font-size: 15px;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
-    box-shadow: 0 0 10px rgba(251, 109, 21, 0.1);
-}
-
-.contact-form .submit {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 12px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.contact-form .submit:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
-}
-
-.contact-form .textheading {
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-}
-
-/* Form Validation Styles */
-.contact-form input.error {
-    border-color: #dc3545;
-    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-}
-
-.contact-form input.error:focus {
-    border-color: #dc3545;
-    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-}
-
-.contact-form.submitting {
-    opacity: 0.7;
-    pointer-events: none;
-}
-
-.submit__error,
-.submit__error--empty {
-    color: #dc3545;
-    font-size: 14px;
-    margin-top: -15px;
-    margin-bottom: 15px;
-}
-
-.hide {
-    display: none;
-}
-
-/* Improve File Upload Appearance */
-.contact-form input[type="file"] {
-    padding: 8px;
-    border: 1px dashed #ddd;
-    border-radius: 5px;
-    background: #f8f9fa;
-    width: 100%;
-    cursor: pointer;
-}
-
-.contact-form input[type="file"]:hover {
-    border-color: var(--primary-color);
-    background: #fff;
-}
-
-/* Success State */
-.contact-form input:valid:not(.error) {
-    border-color: #28a745;
-}
-
-/* Loading State */
-.contact-form input[type="submit"]:disabled {
-    background-color: #6c757d;
-    cursor: not-allowed;
-}
-
-/* Captcha Styles */
-.submit__generated {
-    background: #f8f9fa;
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.submit__generated input {
-    width: 50px !important;
-    text-align: center;
-}
-
-.fa-refresh {
-    color: var(--primary-color);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.fa-refresh:hover {
-    transform: rotate(180deg);
 }
 
 
@@ -1791,42 +1592,8 @@ body {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 8px 32px rgba(35,102,209,0.18);
 }
-.why-choose {
-  background: #eaf2fb;
-  padding: 2.5rem 1rem 2rem 1rem;
-  text-align: center;
-}
-.why-choose h2 {
-  color: #2366d1;
-  font-size: 1.7rem;
-  margin-bottom: 1.2rem;
-  font-weight: 700;
-}
-.why-choose ul {
-  list-style: disc inside;
-  color: #222;
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: left;
-  font-size: 1.08rem;
-}
-.why-choose li {
-  margin-bottom: 0.7rem;
-}
-@media (max-width: 900px) {
-  .service-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 600px) {
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-  .service-hero h1 {
-    font-size: 2rem;
-  }
-}
 /* End of GVP Audits/Inspection Preparedness for Pharmacovigilance */
+
 /* Service: Medical Information and Call Center */
 .service-hero {
   background: #2366d1;
@@ -1884,40 +1651,6 @@ body {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 8px 32px rgba(35,102,209,0.18);
 }
-.why-choose {
-  background: #eaf2fb;
-  padding: 2.5rem 1rem 2rem 1rem;
-  text-align: center;
-}
-.why-choose h2 {
-  color: #2366d1;
-  font-size: 1.7rem;
-  margin-bottom: 1.2rem;
-  font-weight: 700;
-}
-.why-choose ul {
-  list-style: disc inside;
-  color: #222;
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: left;
-  font-size: 1.08rem;
-}
-.why-choose li {
-  margin-bottom: 0.7rem;
-}
-@media (max-width: 900px) {
-  .service-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 600px) {
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-  .service-hero h1 {
-    font-size: 2rem;
-  }
-}
+
 /* End of Service: Medical Information and Call Center */
 
