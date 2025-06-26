@@ -26,8 +26,9 @@
 
 </head>
 <body>
-     <!-- Header Section -->   <header class="main-header">    
-            <div class="topbar">
+    <!-- Header Section -->
+    <header class="main-header">    
+        <div class="topbar">
             <div class="container">
                 <div class="row align-items-center">
                    
@@ -73,9 +74,92 @@
                 </div>
             </div>
         </nav>   
-</header>
-<!-- add gif -->
-<img src="https://t4.ftcdn.net/jpg/02/78/52/25/360_F_278522594_67gVrQNdBVyuLzCSxAILO5D0o2D6foEc.jpg" alt="" class="career-header-img" style="width: 100%; height: 400px; display: block; margin-top: 0; padding-top: 0;">
+    </header>
+    <div class="career-band">Career</div>
+    <br><br><br>
+<!-- Company Overview -->
+<section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="about-why-title text-2xl font-semibold text-left mb-6">About Sojar Research Service Pvt Ltd</h2>
+            <div class="about-sojar-flex">
+                <p class="about-sojar-text">
+                    Sojar Research Service Pvt Ltd is a leader in pharmacovigilance, providing end-to-end solutions for pharmaceutical and biopharmaceutical companies. We are dedicated to developing and implementing efficient pharmacovigilance systems, acting as a trusted partner to competent authorities and the pharmaceutical industry. Join us to promote a culture of safety and innovation in healthcare, where your expertise will make a global impact.
+                </p>
+                <img src="https://i.postimg.cc/fR4RZ1mr/career-img.jpg" alt="Sojar Research" class="about-sojar-img" />
+            </div>
+            <div class="service-boxes-row">
+                <div class="service-box">
+                    <div class="service-icon">
+                        <svg width="32" height="32" fill="#2563eb" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm1 17.93V20a1 1 0 0 1-2 0v-.07A8.006 8.006 0 0 1 4.07 13H6a1 1 0 0 1 0 2H4.07A8.006 8.006 0 0 1 11 4.07V6a1 1 0 0 1 2 0V4.07A8.006 8.006 0 0 1 19.93 11H18a1 1 0 0 1 0-2h1.93A8.006 8.006 0 0 1 13 19.93z"/></svg>
+                    </div>
+                    <h4>Global Expertise</h4>
+                    <p>Our team brings international experience and best practices to every project.</p>
+                </div>
+                <div class="service-box">
+                    <div class="service-icon">
+                        <svg width="32" height="32" fill="#60a5fa" viewBox="0 0 24 24"><path d="M12 22a1 1 0 0 1-1-1V7.41l-3.29 3.3a1 1 0 0 1-1.42-1.42l5-5a1 1 0 0 1 1.42 0l5 5a1 1 0 0 1-1.42 1.42L13 7.41V21a1 1 0 0 1-1 1z"/></svg>
+                    </div>
+                    <h4>Innovation Driven</h4>
+                    <p>We leverage technology and creativity to deliver advanced pharmacovigilance solutions.</p>
+                </div>
+                <div class="service-box">
+                    <div class="service-icon">
+                        <svg width="32" height="32" fill="#1e40af" viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg>
+                    </div>
+                    <h4>Trusted Partnership</h4>
+                    <p>We work closely with clients to ensure compliance and patient safety worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .benefit-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .benefit-card:nth-child(1) { animation-delay: 0.1s; }
+        .benefit-card:nth-child(2) { animation-delay: 0.2s; }
+        .benefit-card:nth-child(3) { animation-delay: 0.3s; }
+    </style><br>
+    <!-- Benefits -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="about-why-title text-4xl font-semibold text-center mb-8">Why Work With Us?</h2>
+            <div class="service-boxes-row">
+                <div class="service-box">
+                    <div class="service-icon">
+                        <svg width="32" height="32" fill="#2563eb" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                    </div>
+                    <h4>Impactful Work</h4>
+                    <p>Contribute to patient safety by supporting cutting-edge pharmacovigilance systems.</p>
+                </div>
+                <div class="service-box">
+                    <div class="service-icon">
+                        <svg width="32" height="32" fill="#60a5fa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm1 17.93V20a1 1 0 0 1-2 0v-.07A8.006 8.006 0 0 1 4.07 13H6a1 1 0 0 1 0 2H4.07A8.006 8.006 0 0 1 11 4.07V6a1 1 0 0 1 2 0V4.07A8.006 8.006 0 0 1 19.93 11H18a1 1 0 0 1 0-2h1.93A8.006 8.006 0 0 1 13 19.93z"/></svg>
+                    </div>
+                    <h4>Collaborative Environment</h4>
+                    <p>Work with a global network of experts in a dynamic and inclusive team.</p>
+                </div>
+                <div class="service-box">
+                    <div class="service-icon">
+                        <svg width="32" height="32" fill="#1e40af" viewBox="0 0 24 24"><path d="M12 22a1 1 0 0 1-1-1V7.41l-3.29 3.3a1 1 0 0 1-1.42-1.42l5-5a1 1 0 0 1 1.42 0l5 5a1 1 0 0 1-1.42 1.42L13 7.41V21a1 1 0 0 1-1 1z"/></svg>
+                    </div>
+                    <h4>Professional Growth</h4>
+                    <p>Access continuous learning opportunities to advance your career in pharmacovigilance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
 
 <!-- Career Highlight Section -->
 <div class="career-highlight-section">
@@ -221,31 +305,201 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <style>
+.about-why-title {
+    color: #ff712f;
+    font-weight: 700;
+}    
 .career-highlight-section {
-            width: 60%;
-            min-height: 220px;
-            margin: 30px auto 0 auto;
-            margin-bottom: 30px;
-            background: #f8fafc;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px 0 rgba(30, 64, 175, 0.18), 0 2px 8px 0 rgba(0,0,0,0.10);
-            padding: 32px 36px 28px 36px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            transition: box-shadow 0.3s, transform 0.3s;
-            transform: perspective(600px) translateZ(0);
-        }
-        .career-highlight-section:hover {
-    box-shadow: 0 16px 48px 0 rgba(30, 64, 175, 0.28), 0 4px 16px 0 rgba(0,0,0,0.16);
-   
+    width: 60%;
+    min-height: 240px;
+    margin: 30px auto 0 auto;
+    margin-bottom: 36px;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 36px 0 rgba(30, 64, 175, 0.22), 0 4px 16px 0 rgba(0,0,0,0.13);
+    padding: 40px 44px 36px 44px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s, background 0.3s;
+    position: relative;
+    overflow: hidden;
 }
+.career-highlight-section::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #a5b4fc 0%, transparent 70%);
+    opacity: 0.25;
+    z-index: 0;
+}
+.career-highlight-section::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #60a5fa 0%, transparent 70%);
+    opacity: 0.18;
+    z-index: 0;
+}
+.career-highlight-section h3 {
+    color: #1e40af;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+.career-highlight-section p {
+    color: #334155;
+    font-size: 1.13rem;
+    margin-bottom: 18px;
+    z-index: 1;
+}
+.career-highlight-section a.btn, .career-highlight-section a.btn-primary {
+    background: linear-gradient(90deg, #194cb9 0%, #0a4792 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 32px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(30, 64, 175, 0.13);
+    transition: background 0.2s, transform 0.2s;
+    z-index: 1;
+}
+.career-highlight-section a.btn:hover, .career-highlight-section a.btn-primary:hover {
+    background: linear-gradient(90deg, #194cb9 0%, #0a4792 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+}
+@media (max-width: 900px) {
+    .career-highlight-section {
+        width: 95%;
+        padding: 22px 8px;
+    }
+}
+/* --- Service Boxes Styles --- */
+.service-boxes-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+    margin: 36px 0 24px 0;
+}
+.service-box {
+    background: linear-gradient(120deg, #f5f6f7 60%, #e0e7ff 100%);
+    border-radius: 14px;
+    box-shadow: 0 6px 24px 0 rgba(30, 64, 175, 0.13), 0 2px 8px 0 rgba(0,0,0,0.07);
+    padding: 28px 24px 22px 24px;
+    min-width: 240px;
+    max-width: 320px;
+    flex: 1 1 260px;
+    text-align: center;
+    transition: box-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+}
+.service-box:hover {
+    box-shadow: 0 16px 48px 0 rgba(30, 64, 175, 0.22), 0 4px 16px 0 rgba(0,0,0,0.14);
+    transform: translateY(-8px) rotateX(2deg);
+}
+.service-box .service-icon {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.service-box h4 {
+    color: #1746a2;
+    font-size: 1.32rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+.service-box p {
+    color: #3b4252;
+    font-size: 1.08rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+@media (max-width: 900px) {
+    .service-boxes-row {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .service-box {
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+.about-sojar-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 36px;
+            margin-bottom: 24px;
+        }
+        .about-sojar-text {
+            color: #3b4252;
+            font-size: 1.25rem;
+            font-weight: 500;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            max-width: 54%;
+            text-align: left;
+            margin-top: -60px;
+        }
+        .about-sojar-img {
+            max-width: 44%;
+            min-width: 220px;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(30,64,175,0.10);
+            object-fit: cover;
+            height:350px;
+            margin-top: -30px;
+        }
         @media (max-width: 900px) {
-            .career-highlight-section {
-                width: 90%;
-                padding: 20px 10px;
+            .about-sojar-flex {
+                flex-direction: column;
+                gap: 18px;
+            }
+            .about-sojar-text, .about-sojar-img {
+                max-width: 100%;
+                width: 100%;
+                text-align: left;
+            }
+            .about-sojar-img {
+                height: 180px;
+            }
+        }
+        .career-band {
+            width: 100%;
+            background: linear-gradient(90deg, #1d52c5 0%, #1746a2 100%);
+            color: #fff;
+            padding: 30px 0 26px 0;
+            text-align: center;
+            font-size: 2.1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 12px rgba(30,64,175,0.10);
+            margin-bottom: 0;
+            z-index: 2;
+            position: relative;
+        }
+        @media (max-width: 900px) {
+            .career-band {
+                font-size: 1.3rem;
+                padding: 14px 0 10px 0;
             }
         }
 </style>
