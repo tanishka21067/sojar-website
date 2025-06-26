@@ -349,3 +349,323 @@ $(document).ready(function(){
     animateIn: 'fadeIn'
   });
 });
+
+// why sojar js
+
+ document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Accordion (Auto-close others)
+    document.querySelectorAll('.accordion-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const isVisible = content.classList.contains('visible');
+        
+        // Close all other accordions
+        document.querySelectorAll('.accordion-content').forEach(otherContent => {
+          otherContent.classList.remove('visible');
+          otherContent.previousElementSibling.querySelector('span').textContent = '▼';
+        });
+        
+        // Toggle current accordion
+        if (!isVisible) {
+          content.classList.add('visible');
+          button.querySelector('span').textContent = '▲';
+        }
+      });
+    });
+
+    // Carousel
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+    let currentIndex = 0;
+
+    function showCarouselItem(index) {
+      carouselItems.forEach((item, i) => {
+        item.classList.toggle('visible', i === index);
+        item.classList.toggle('hidden', i !== index);
+      });
+    }
+
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+      showCarouselItem(currentIndex);
+    });
+
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % carouselItems.length;
+      showCarouselItem(currentIndex);
+    });
+
+    // Auto-advance carousel every 5 seconds
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % carouselItems.length;
+      showCarouselItem(currentIndex);
+    }, 5000);
+
+    // Contact Form Validation
+    document.getElementById('submit-contact').addEventListener('click', () => {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const formMessage = document.getElementById('form-message');
+
+      if (!name || !email || !message) {
+        formMessage.textContent = 'Please fill in all fields.';
+        formMessage.classList.remove('hidden', 'text-green-200');
+        formMessage.classList.add('text-red-200');
+        return;
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        formMessage.textContent = 'Please enter a valid email address.';
+        formMessage.classList.remove('hidden', 'text-green-200');
+        formMessage.classList.add('text-red-200');
+        return;
+      }
+
+      formMessage.textContent = 'Thank you! We will get back to you soon.';
+      formMessage.classList.remove('hidden', 'text-red-200');
+      formMessage.classList.add('text-green-200');
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('message').value = '';
+    });
+
+    // Quick Contact Button
+    document.getElementById('quick-contact').addEventListener('click', () => {
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // services js
+    // 1. local literature service code
+ 
+ // JavaScript for form submission and smooth scrolling
+    document.addEventListener('DOMContentLoaded', () => {
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.querySelector(anchor.getAttribute('href'));
+          target.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Form submission simulation
+      const submitBtn = document.getElementById('submit-btn');
+      const formMessage = document.getElementById('form-message');
+      const formContainer = document.getElementById('form-container');
+
+      submitBtn.addEventListener('click', () => {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (name && email && message) {
+          formContainer.classList.add('hidden');
+          formMessage.classList.remove('hidden');
+          setTimeout(() => {
+            formContainer.classList.remove('hidden');
+            formMessage.classList.add('hidden');
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+          }, 2000);
+        } else {
+          alert('Please fill out all fields.');
+        }
+      });
+    });
+
+
+
+    // PSMF Service Page JS - Sojar Research
+// --------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+  // Fade-in effect for PSMF service cards
+  const serviceCards = document.querySelectorAll('.service-card');
+  const fadeInOnScroll = () => {
+    serviceCards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 60) {
+        card.classList.add('visible');
+      }
+    });
+  };
+  fadeInOnScroll();
+  window.addEventListener('scroll', fadeInOnScroll);
+
+  // Optional: Touch-friendly hover effect for mobile
+  serviceCards.forEach(card => {
+    card.addEventListener('touchstart', () => {
+      card.classList.add('hover');
+    });
+    card.addEventListener('touchend', () => {
+      card.classList.remove('hover');
+    });
+  });
+});
+// End PSMF Service Page JS
+
+// Aggregate Reporting 
+// ----------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+  // Fade-in effect for Aggregate Reporting service cards
+  const serviceCards = document.querySelectorAll('.service-card');
+  const fadeInOnScroll = () => {
+    serviceCards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 60) {
+        card.classList.add('visible');
+      }
+    });
+  };
+  fadeInOnScroll();
+  window.addEventListener('scroll', fadeInOnScroll);
+
+  // Optional: Touch-friendly hover effect for mobile
+  serviceCards.forEach(card => {
+    card.addEventListener('touchstart', () => {
+      card.classList.add('hover');
+    });
+    card.addEventListener('touchend', () => {
+      card.classList.remove('hover');
+    });
+  });
+});
+// End Aggregate Reporting Page JS
+
+// PV Services for Distributors JS - Sojar Research
+// -----------------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+  // Fade-in effect for PV Services for Distributors service cards
+  const serviceCards = document.querySelectorAll('.service-card');
+  const fadeInOnScroll = () => {
+    serviceCards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 60) {
+        card.classList.add('visible');
+      }
+    });
+  };
+  fadeInOnScroll();
+  window.addEventListener('scroll', fadeInOnScroll);
+
+  // Optional: Touch-friendly hover effect for mobile
+  serviceCards.forEach(card => {
+    card.addEventListener('touchstart', () => {
+      card.classList.add('hover');
+    });
+    card.addEventListener('touchend', () => {
+      card.classList.remove('hover');
+    });
+  });
+});
+// End PV Services for Distributors JS
+
+// Dossier Preparation & Regulatory Affairs JS - Sojar Research
+// ----------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+  // Fade-in effect for Dossier service cards
+  const serviceCards = document.querySelectorAll('.service-card');
+  const fadeInOnScroll = () => {
+    serviceCards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 60) {
+        card.classList.add('visible');
+      }
+    });
+  };
+  fadeInOnScroll();
+  window.addEventListener('scroll', fadeInOnScroll);
+
+  // Optional: Touch-friendly hover effect for mobile
+  serviceCards.forEach(card => {
+    card.addEventListener('touchstart', () => {
+      card.classList.add('hover');
+    });
+    card.addEventListener('touchend', () => {
+      card.classList.remove('hover');
+    });
+  });
+});
+// End Dossier Preparation & Regulatory Affairs JS
+
+// QPPV & Local Contact Person for PV JS - Sojar Research
+// -----------------------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+  // Fade-in effect for QPPV & Local Contact service cards
+  const serviceCards = document.querySelectorAll('.service-card');
+  const fadeInOnScroll = () => {
+    serviceCards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 60) {
+        card.classList.add('visible');
+      }
+    });
+  };
+  fadeInOnScroll();
+  window.addEventListener('scroll', fadeInOnScroll);
+
+  // Optional: Touch-friendly hover effect for mobile
+  serviceCards.forEach(card => {
+    card.addEventListener('touchstart', () => {
+      card.classList.add('hover');
+    });
+    card.addEventListener('touchend', () => {
+      card.classList.remove('hover');
+    });
+  });
+});
+// End QPPV & Local Contact Person for PV JS
+// Service: GVP Audits/Inspection Preparedness for Pharmacovigilance
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelectorAll('.service-card');
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  cards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.transform = 'translateY(40px)';
+    observer.observe(card);
+  });
+});
+//End of GVP Audits/Inspection Preparedness for Pharmacovigilance
+// Service: Medical Information and Call Center
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelectorAll('.service-card');
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  cards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.transform = 'translateY(40px)';
+    observer.observe(card);
+  });
+});
+// End of Service: Medical Information and Call Center
+
+    // end of services js
+
