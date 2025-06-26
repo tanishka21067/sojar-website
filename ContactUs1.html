@@ -332,4 +332,348 @@
         document.addEventListener('DOMContentLoaded', generateCaptcha);
     </script>
 </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sojar Research Service Pvt Ltd</title>
+    <link rel="stylesheet" href="web.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d8dcff;
+            color: #333;
+        }
+       
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 20px;
+            
+        }
+        .contact-section {
+            background-color: rgb(255, 255, 255);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 10 10 10px rgb(55, 55, 55);
+        }
+        .contact-section h1 {
+            color: #004aad;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .services-boxes {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .service-box {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+            width: 32%;
+            box-shadow: 0 6px 18px 0 rgba(30, 64, 175, 0.14), 0 2px 6px 0 rgba(0,0,0,0.08);
+            margin-bottom: 0;
+            transition: box-shadow 0.3s, transform 0.3s;
+            transform: perspective(600px) translateZ(0);
+        }
+        .service-box:hover {
+            box-shadow: 0 19px 30px 0 rgba(30, 64, 175, 0.22), 0 12px 19px 0 rgba(0,0,0,0.14);
+             transform: perspective(600px) translateY(-8px)  rotateX(2deg); 
+        }
+        .service-box h3 {
+            color: #004aad;
+            margin-bottom: 10px;
+        }
+        .service-box p {
+            margin: 0;
+        }
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 30px;
+            align-items: start;
+        }
+        .contact-form-col1, .contact-form-col2 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-form label {
+            margin-bottom: 2px;
+            font-weight: bold;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+            grid-column: 1 / -1;
+        }
+        .contact-form button {
+            background-color: #004aad;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            grid-column: 1 / -1;
+            margin-top: 10px;
+        }
+        .contact-form button:hover {
+            background-color: #003087;
+        }
+        .captcha-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            position: relative;
+        }
+        .captcha-code {
+            background: #dbe3ff;
+            color: #f76927;
+            font-weight: bold;
+            font-size: 1.1em;
+            letter-spacing: 2px;
+            padding: 6px 16px;
+            border-radius: 5px;
+            user-select: none;
+        }
+        .captcha-input-refresh {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .captcha-input-refresh input[type="text"] {
+            flex: 1;
+            padding-right: 38px;
+            min-width: 0;
+            width: 100%;
+            box-sizing: border-box;
+            height: 47px;
+            margin-top: 30px;
+            margin-right: 250px;
+        }
+        input[type="file"] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .refresh-btn {
+            background: none;
+            border: none;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            margin-right: 165px;
+            height: 38px;
+        }
+        .refresh-btn svg {
+            width: 22px;
+            height: 22px;
+            fill: #fefeff;
+        }
+        footer {
+            background-color: white;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            nav a {
+                padding: 10px;
+            }
+            .container {
+                padding: 0 10px;
+            }
+            .service-box {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+        @media (max-width: 900px) {
+            .services-boxes {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .service-box {
+                width: 100%;
+            }
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+            .contact-form-col1, .contact-form-col2 {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <br>
+    <br>
+                <div class="title-box" style="text-align: center;color: #1446a3;font-size: 20px;">
+                    <h1 style="color: #fd6c29;">GET IN TOUCH</h1>
+                    <div class="text">For general enquiries you can touch with our front desk supporting team <br> at
+                        <a href="mailto:info@sojarresearch.com">info@sojarresearch.com</a></div>
+                </div>
+                <br>
+    <div class="container">
+         <div class="services-boxes">
+                <div class="service-box">
+                    <div style="display:flex;align-items:center;justify-content:center;margin-bottom:6px;">
+                        <!-- Email icon: envelope -->
+                        <svg width="28" height="28" fill="#004aad" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8.41l8 6.59 8-6.59V18z"/></svg>
+                        <h3 style="margin:0 0 0 10px; color:#004aad; font-size:1.15rem; font-weight:700;">Email</h3>
+                    </div>
+                    <p><a href="mailto:info@sojarresearch.com">info@sojarresearch.com</a></p>
+                </div>
+                <div class="service-box">
+                    <div style="display:flex;align-items:center;justify-content:center;margin-bottom:6px;">
+                        <!-- Address icon: map marker -->
+                        <svg width="28" height="28" fill="#004aad" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+                        <h3 style="margin:0 0 0 10px; color:#004aad; font-size:1.15rem; font-weight:700;">Address</h3>
+                    </div>
+                    <p>Office 201, Creative’s Orchid, Hinjawadi-Punawale Link Road, Beside Lotus Business School. Pune- 411033 Maharashtra (India).</p>
+                </div>
+                <div class="service-box">
+                    <div style="display:flex;align-items:center;justify-content:center;margin-bottom:6px;">
+                        <!-- Phone icon: phone -->
+                        <svg width="28" height="28" fill="#004aad" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.35.27 2.67.76 3.88a1 1 0 0 1-.21 1.11l-2.2 2.2z"/></svg>
+                        <h3 style="margin:0 0 0 10px; color:#004aad; font-size:1.15rem; font-weight:700;">Phone</h3>
+                    </div>
+                    <p>+91 8793 939 229</p>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+        <div class="contact-section">
+
+            <h1 style="color: #f76927;">Contact Us</h1>
+            <p style="text-align: center">We are here to assist you with your pharmacovigilance needs. Please fill out the form below or reach out to us directly.</p>
+            
+         <form id="contact-form" class="contact-form" onsubmit="return sendEmail(event);">
+
+                <div class="contact-form-col1">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone" placeholder="Enter Phone Number" required>
+
+                    <label for="service">Service</label>
+                    <input type="text" id="service" name="service" placeholder="Enter Service Name(Optional)">
+                </div>
+                <div class="contact-form-col2">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Enter Company Name(Optional)">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email" required>
+
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="Enter City Name(Optional)">
+                </div>
+                <label for="message" style="grid-column: 1 / -1;">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required style="grid-column: 1 / -1;"></textarea>
+                <div style="display: flex; grid-column: 1 / -1; gap: 30px; align-items: flex-end;">
+                    <div style="flex: 1; display: flex; flex-direction: column;">
+                        
+                        <div class="captcha-box">
+                            <span class="captcha-code" id="captchaCode"></span>
+                        </div>
+                        <div class="captcha-input-refresh">
+                            <input type="text" id="captcha" name="captcha" placeholder="Enter CAPTCHA code" required autocomplete="off">
+                            <button type="button" class="refresh-btn" onclick="generateCaptcha()" aria-label="Refresh CAPTCHA">
+                                <svg viewBox="0 0 24 24"><path d="M17.65 6.35A7.95 7.95 0 0 0 12 4V1l-4 4 4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46A7.932 7.932 0 0 0 20 12c0-2.21-.9-4.21-2.35-5.65zM6.35 17.65A7.95 7.95 0 0 0 12 20v3l4-4-4-4v3c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8l-1.46-1.46A7.932 7.932 0 0 0 4 12c0 2.21.9 4.21 2.35 5.65z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div style="flex: 1; display: flex; flex-direction: column;">
+                        <label for="file">Upload File</label><br>
+                        <input type="file" id="file" name="file">
+                    </div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            
+        </div>
+    </div>
+    <footer>
+    </footer>
+    
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init("aL8NgmbqsqMP-jUJj"); // Replace with your public key
+
+    function generateCaptcha() {
+      const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+      let code = '';
+      for (let i = 0; i < 5; i++) {
+        code += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      document.getElementById('captchaCode').textContent = code;
+      document.getElementById('captchaCode').setAttribute('data-captcha', code);
+    }
+
+    function validateCaptcha() {
+      const entered = document.getElementById('captcha').value.trim().toUpperCase();
+      const actual = document.getElementById('captchaCode').getAttribute('data-captcha');
+      if (entered !== actual) {
+        alert('Incorrect CAPTCHA. Please try again.');
+        generateCaptcha();
+        return false;
+      }
+      return true;
+    }
+
+    function sendEmail(e) {
+      e.preventDefault();
+      if (!validateCaptcha()) return false;
+
+      emailjs.sendForm("service_04y3xsv", "template_vyx28lq", document.getElementById("contact-form"))
+        .then(() => {
+          alert("Message sent successfully!");
+          document.getElementById("contact-form").reset();
+          generateCaptcha();
+        }, (error) => {
+          console.error(error);
+          alert("Failed to send message. Please try again.");
+        });
+      return false;
+    }
+
+    document.addEventListener('DOMContentLoaded', generateCaptcha);
+  </script>
+   
+
+
+</body>
 </html>
