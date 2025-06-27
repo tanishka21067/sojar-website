@@ -1,6 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sojar Research - Pharmacovigilance Solutions</title>
@@ -23,284 +24,369 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+/* reduce size */
 <style>
-    
-        .hero-section {
-            background: linear-gradient(to right, #1e3a8a, #1d6cea);
-            color: white;
-            padding: 150px 0;
-            position: relative;
-            z-index: 1;
-            height: 80vh;
-        }
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 2rem;
-        }
-        .card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .accordion-button {
-            background-color: white !important;
-            color: #1e3a8a !important;
-            font-weight: bold;
-        }
-        .accordion-button:not(.collapsed) {
-            background-color: #e9ecef !important;
-            color: #1e3a8a !important;
-        }
-        .accordion-button::after {
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            content: "\f078"; /* Down arrow */
-            color: white; /* Set arrow color to white */
-            background-color: #1e3a8a; /* Background for visibility */
-            border-radius: 50%;
-            padding: 5px;
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .accordion-button:not(.collapsed)::after {
-            content: "\f077"; /* Up arrow */
-            color: white; /* Set arrow color to white */
-            background-color: #1e3a8a; /* Background for visibility */
-            border-radius: 50%;
-            padding: 5px;
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }
-        .hover-scale {
-            transition: transform 0.3s ease;
-        }
-        .hover-scale:hover {
-            transform: scale(1.05);
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeInUp {
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
-        .quick-contact {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #2825c1;
-            color: white;
-            padding: 15px;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-        }
-        /* Override Bootstrap's text-success to white */
-        .text-success {
-            color: white !important;
-        }
-    </style>
+/* reduce size */
+.hero-section {
+    background: linear-gradient(to right, #1e3a8a, #1d6cea);
+    color: white;
+    padding: 150px 0;
+    position: relative;
+    z-index: 1;
+    height: 80vh;
+}
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.accordion-button {
+    background-color: white !important;
+    color: #1e3a8a !important;
+    font-weight: bold;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #e9ecef !important;
+    color: #1e3a8a !important;
+}
+.accordion-button::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f078"; /* Down arrow */
+    color: white; /* Set arrow color to white */
+    background-color: #1e3a8a; /* Background for visibility */
+    border-radius: 50%;
+    padding: 5px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.accordion-button:not(.collapsed)::after {
+    content: "\f077"; /* Up arrow */
+    color: white; /* Set arrow color to white */
+    background-color: #1e3a8a; /* Background for visibility */
+    border-radius: 50%;
+    padding: 5px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+.quick-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2825c1;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+/* Override Bootstrap's text-success to white */
+.text-success {
+    color: white !important;
+}
+.why-sojar-card-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto); /* Ensures consistent row heights */
+    gap: 32px;
+    justify-items: center;
+    align-items: stretch; /* Ensures cards stretch to fill row height */
+}
+.why-sojar-card-row + .why-sojar-card-row {
+    margin-top: 32px; /* Consistent gap between rows */
+}
+.why-sojar-card {
+    background: #f4f7fa;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px 0 rgba(30, 64, 175, 0.10);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    text-align: left;
+    min-width: 260px;
+    max-width: 350px;
+    width: 100%;
+    color: #111;
+    transition: box-shadow 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.why-sojar-card:hover {
+    box-shadow: 0 8px 32px 0 rgba(30, 64, 175, 0.18);
+    transform: translateY(-6px) scale(1.03);
+}
+.why-sojar-card-title {
+    color: #1746a2 !important;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.7em;
+}
+.why-sojar-card-text {
+    color: #222;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    font-weight: 400;
+}
+.technology-card-title {
+    color: #1e3a8a;
+}
+.technology-card-text {
+    color: #4B5563;
+    font-size: 18px;
+}
+.engagement-text {
+    color: #4B5563;
+    font-size: 18px;
+}
+@media (max-width: 900px) {
+    .why-sojar-card-row {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(200px, auto);
+        gap: 32px;
+    }
+}
+@media (max-width: 600px) {
+    .why-sojar-card-row {
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(200px, auto);
+        gap: 32px;
+    }
+}
+/* Custom Owl Carousel Arrow Size and Style */
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 2.0rem !important;
+    background: #1e3a8a !important;
+    color: #fff !important;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 12px rgba(30,58,138,0.15);
+    transition: background 0.2s, transform 0.2s;
+    margin: 0 10px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.95;
+}
+.owl-nav button.owl-prev:hover,
+.owl-nav button.owl-next:hover {
+    background: #3b82f6 !important;
+    color: #fff !important;
+    transform: scale(1.08);
+}
+.owl-nav {
+    position: static !important;
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px !important;
+    margin-bottom: 0 !important;
+    text-align: center;
+    z-index: 1;
+}
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+    display: inline-flex !important;
+    vertical-align: middle;
+}
+.technology-card-title.card {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+/* Decrease gap between Our Technology title and cards */
+#technology .row.mt-5 {
+    margin-top: 1.5rem !important;
+}
+/* Orange-600 for section titles */
+.section-title.orange-title {
+    color: #ea580c !important;
+}
+</style>
 </head>
 <body>
-    <!-- Header Section -->  
-     <header class="main-header">    
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="topbar">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="right-content text-end">
+                            <a href="tel:+912266155700"><i class="icon-telephone-call-1"></i> +91 22 6615 5700</a>
+                            <a href="mailto:info@sojarresearch.com"><i class="icon-email"></i> info@sojarresearch.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="abt.html" style="display: flex; margin-left: -40px;">
-                    <i class="fas fa-bars"></i>
+                <div>
+                    <img src="https://cdn-icons-png.flaticon.com/128/1828/1828859.png" loading="lazy" alt="Menu" title="Menu" width="20" height="20" style="margin-left: -28px;">
+                </div>
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/logo.png" alt="Sojar Research">
                 </a>
-                <!-- logo -->
-             <a href="web.html">
-               <img src="https://i.postimg.cc/1zPSP6KG/sojarimg-removebg-preview-1.png" alt="" title="">
-             </a>
-
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link active" href="web.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="abt.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="pvsystemandSOPsServices.html">PV System And SOP's</a></li>
-                                <li><a class="dropdown-item" href="pvconsultancy.html">PV Consultancy</a></li>
-                                <li><a class="dropdown-item" href="AggregateReports.html">Aggregate Reports</a></li>
-                                <li><a class="dropdown-item" href="Medical Services.html">Medical Services</a></li>
-                                <li><a class="dropdown-item" href="ICSR End To End Case Processing.html">ICSR End To End Case Processing</a></li>
-                                <li><a class="dropdown-item" href="MICC.html">Medical Information And Call Center (MICC)</a></li>
-                                <li><a class="dropdown-item" href="PSMF.html">Pharmacovigilance System Master File (PSMF)</a></li>
-                                <li><a class="dropdown-item" href="locallliteraturesearch.html">Local Literature Search</a></li>
-                                <li><a class="dropdown-item" href="globalliteraturesearch.html">Global Literature Search</a></li>
-                                <li><a class="dropdown-item" href="SDEA Services.html">SDEA Services</a></li>
-                                <li><a class="dropdown-item" href="Regulatory Intelligence In PV.html">Regulatory Intelligence In PV</a></li>
-                                <li><a class="dropdown-item" href="PVServices.html">PV Services For Distributors</a></li>
-                                <li><a class="dropdown-item" href="ICSR Collection Services.html">ICSR Collection Services 24/7</a></li>
-                                <li><a class="dropdown-item" href="Medical Device Service Support.html">Medical Device Service Support</a></li>
-                                <li><a class="dropdown-item" href="DOSSIER.html">DOSSIER Preparation And Regulatory Affairs Services</a></li>
-                                <li><a class="dropdown-item" href="QPPVandLocalContact.html">QPPV And Local Contact Person For Pharmacovigilance</a></li>
-                                <li><a class="dropdown-item" href="GVPAudits.html">GVP Audits/Inspection Preparedness</a></li>
-                                <li><a class="dropdown-item" href="Drug Safety Mailbox Management.html">Drug Safety Mailbox Management</a></li>
+                                <li><a class="dropdown-item" href="#">PV System And SOP's</a></li>
+                                <li><a class="dropdown-item" href="#">PV Consultancy</a></li>
+                                <li><a class="dropdown-item" href="#">Aggregate Reporting</a></li>
+                                <li><a class="dropdown-item" href="#">Medical Services</a></li>
+                                <li><a class="dropdown-item" href="#">ICSR End To End Case Processing</a></li>
+                                <li><a class="dropdown-item" href="#">Medical Information And Call Center (MICC)</a></li>
+                                <li><a class="dropdown-item" href="#">Pharmacovigilance System Master File (PSMF)</a></li>
+                                <li><a class="dropdown-item" href="#">Local Literature Search</a></li>
+                                <li><a class="dropdown-item" href="#">Global Literature Search</a></li>
+                                <li><a class="dropdown-item" href="#">SDEA Services</a></li>
+                                <li><a class="dropdown-item" href="#">Regulatory Intelligence In PV</a></li>
+                                <li><a class="dropdown-item" href="#">PV Services For Distributors</a></li>
+                                <li><a class="dropdown-item" href="#">ICSR Collection Services 24/7</a></li>
+                                <li><a class="dropdown-item" href="#">Medical Device Service Support</a></li>
+                                <li><a class="dropdown-item" href="#">DOSSIER Preparation And Regulatory Affairs Services</a></li>
+                                <li><a class="dropdown-item" href="#">QPPV And Local Contact Person For Pharmacovigilance</a></li>
+                                <li><a class="dropdown-item" href="#">GVP Audits/Inspection Preparedness</a></li>
+                                <li><a class="dropdown-item" href="#">Drug Safety Mailbox Management</a></li>
                             </ul>
                         </li>
-                          <li class="nav-item"><a class="nav-link nav-link-career" href="career1.html">Career</a></li>
-                          <li class="nav-item"><a class="nav-link" href="ContactUs1.html">Contact Us</a></li>
-                        <ul class="navbar-nav ms-auto d-flex align-items-center">
-                          <li class="nav-item ms-2"><a href="enquiry.html" class="theme-btn btn-style-one"><span class="txt">Enquiry Now</span></a></li>
-                       </ul>
-                       
-                      </ul>
+                        <li class="nav-item"><a class="nav-link nav-link-career" href="career.html">Career</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                        <li class="nav-item ms-2"><a href="enquiry.html" class="theme-btn btn-style-one"><span class="txt">Enquiry Now</span></a></li>
+                    </ul>
                 </div>
             </div>
-        </nav>   
+        </nav>
     </header>
+
     <!-- Hero Section -->
     <section class="hero-section text-center">
         <div class="container">
-            <h2 class="section-title animate__animated animate__fadeIn">Why Choose Sojar Research?</h2>
+            <h2 class="section-title animate_animated animate_fadeIn">Why Choose Sojar Research?</h2>
             <br>
-            <p class="lead mb-5 animate__animated animate__fadeIn" style="animation-delay: 0.2s;">
+            <p class="lead mb-5 animate_animated animate_fadeIn" style="animation-delay: 0.2s;">
                 Empowering pharma and biopharma with world-class pharmacovigilance services, ensuring 100% regulatory compliance and patient safety through innovative, cost-effective solutions.
             </p>
-            <a href="#contact" class="btn btn-light btn-lg smooth-scroll animate__animated animate__fadeIn" style="animation-delay: 0.4s;">Get Started</a>
-            <a href="#contact" class="btn btn-outline-light btn-lg smooth-scroll ms-2 animate__animated animate__fadeIn" style="animation-delay: 0.4s;">Contact Us</a>
+            <a href="#contact" class="btn btn-light btn-lg smooth-scroll animate_animated animate_fadeIn" style="animation-delay: 0.4s;">Get Started</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg smooth-scroll ms-2 animate_animated animate_fadeIn" style="animation-delay: 0.4s;">Contact Us</a>
         </div>
     </section>
 
     <!-- Why Sojar Section -->
     <section id="why-sojar" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center animate__animated animate__fadeIn">Why Sojar?</h2>
-            <div class="row mt-5">
-                <div class="col-md-3 mb-4">
-                    <div class="card p-4 hover-scale animate__animated animate__fadeIn">
-                        <h3 class="h5 fw-bold mb-3">Mission-Driven</h3>
-                        <p>Delivering high-quality PV services with full regulatory compliance.</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-3 mb-4">
-                    <div class="card p-4 hover-scale animate__animated animate__fadeIn" style="animation-delay: 0.1s;">
-                        <h3 class="h5 fw-bold mb-3">Expert Team</h3>
-                        <p>Global PV associates tackling complex challenges with expertise.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card p-4 hover-scale animate__animated animate__fadeIn" style="animation-delay: 0.2s;">
-                        <h3 class="h5 fw-bold mb-3">Robust QMS</h3>
-                        <p>Uninterrupted service delivery with our strong Quality Management System.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card p-4 hover-scale animate__animated animate__fadeIn" style="animation-delay: 0.3s;">
-                        <h3 class="h5 fw-bold mb-3">Customized Solutions</h3>
-                        <p>Flexible operational models tailored to your unique needs.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="container">
 
-    <!-- Services Section -->
-    <section id="services" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center animate__animated animate__fadeIn">Our Services</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="accordion" id="servicesAccordion">
-                        <div class="accordion-item mb-3">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    PV System Setup
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#servicesAccordion">
-                                <div class="accordion-body">
-                                    Development of PSMF, SOPs, and operational guidelines for compliance.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-3">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    ICSR Processing
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#servicesAccordion">
-                                <div class="accordion-body">
-                                    End-to-end case management, from data collection to submission.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-3">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Aggregate Reports
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#servicesAccordion">
-                                <div class="accordion-body">
-                                    Expertise in PSUR, PBRER, DSUR, RMP, and more for all molecule types.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-3">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Regulatory Intelligence
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#servicesAccordion">
-                                <div class="accordion-body">
-                                    Continuous monitoring of regulatory updates for compliance.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-3">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Specialized Services
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#servicesAccordion">
-                                <div class="accordion-body">
-                                    QPPV, LPPV, signal management, XEVMPD, and audit readiness.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- First Row -->
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-4">
+        <div class="why-sojar-card margin-left: -10px; p-4 hover-scale animate_animated animate_fadeIn">
+          <h3 class="h5 why-sojar-card-title text-center fw-bold mb-3">Mission-Driven</h3>
+          <p class="why-sojar-card-text text-center">We are committed to delivering high-quality pharmacovigilance (PV) services with full regulatory compliance, ensuring patient safety and maintaining data integrity at every stage of the drug development and monitoring process. </p>
         </div>
-    </section>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="why-sojar-card card p-4 hover-scale animate_animated animate_fadeIn" style="animation-delay: 0.1s;">
+          <h3 class="h5 why-sojar-card-title text-center fw-bold mb-3">Expert Team</h3>
+          <p class="why-sojar-card-text text-center">Global PV associates tackling complex challenges with expertise. We bring deep scientific knowledge, regulatory insight, and real-world experience to every project with a commitment to innovation and quality </p>
+        </div>
+      </div>
+
+      <div class="hero aggregate-hero" style="background-image: url('https://imatsolutions.com/assets/uploads/2022/10/blog_10_5_22.jpg'); min-height: 5px; background-size:cover; background-position:center; border-radius:19px;width: 30%;margin-top: -15px;margin-right: 0PX; margin-left: 10px; margin-bottom: 20px;">
+                </div>
+
+    <!-- Second Row -->
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-4">
+        <div class="why-sojar-card card p-4 hover-scale animate_animated animate_fadeIn" style="animation-delay: 0.2s;">
+          <h3 class="h5 why-sojar-card-title text-center fw-bold mb-3">Innovative Solutions</h3>
+          <p class="why-sojar-card-text text-center">Leveraging cutting-edge technology to streamline drug safety monitoring, enhance signal detection, ensure regulatory compliance, and deliver timely and accurate pharmacovigilance reporting.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="why-sojar-card card p-4 hover-scale animate_animated animate_fadeIn" style="animation-delay: 0.3s; height: 90%;">
+          <h3 class="h5 why-sojar-card-title text-center fw-bold mb-3">Global Reach</h3>
+          <p class="why-sojar-card-text text-center">Serving clients worldwide with tailored pharmacovigilance services, we provide end-to-end drug safety solutions that meet global regulatory standards. Through dedication, we deliver excellence in global drug safety and patient care. </p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="why-sojar-card card p-4 hover-scale animate_animated animate_fadeIn" style="animation-delay: 0.4s;">
+          <h3 class="h5 why-sojar-card-title text-center fw-bold mb-3">Industry Excellence</h3>
+          <p class="why-sojar-card-text text-center">Sojar is committed to advancing the culture of pharmacovigilance by implementing validated, efficient systems and best practices. Our proactive approach empowers your organization to stay compliant.</p>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Third Row: Single Centered Card -->
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-4">
+        <div class="why-sojar-card card p-4 hover-scale animate_animated animate_fadeIn" style="animation-delay: 0.5s;">
+          <h3 class="h5 why-sojar-card-title text-center fw-bold mb-3">Trusted Mediator</h3>
+          <p class="why-sojar-card-text text-center">We streamline communication with competent authorities, ensuring compliance with global pharmacovigilance standards and acting as a reliable partner for your organization.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
     <!-- Technology Section -->
     <section id="technology" class="py-5">
         <div class="container">
-            <h2 class="section-title text-center animate__animated animate__fadeIn">Our Technology</h2>
-            <div class="row mt-5">
+            <h2 class="section-title orange-title text-center animate_animated animate_fadeIn">Our Technology</h2>
+            <div class="row mt-3">
                 <div class="col-md-4 mb-4">
-                    <div class="card p-4 hover-scale animate__animated animate__fadeIn">
-                        <h3 class="h5 fw-bold mb-3">Oracle Argus Safety</h3>
-                        <p>Industry-standard database hosted in-house, trusted by top pharma companies.</p>
+                    <div class="technology-card-title card technology-card p-4 hover-scale animate_animated animate_fadeIn">
+                        <h3 class="h5 technology-card-title text-center fw-bold mb-3">Oracle Argus Safety</h3>
+                        <p class="technology-card-text text-center">Industry-standard database hosted in-house, trusted by top pharma companies.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card p-4 hover-scale animate__animated animate__fadeIn" style="animation-delay: 0.1s;">
-                        <h3 class="h5 fw-bold mb-3">PV Edge & Clinevo</h3>
-                        <p>Cloud-based platforms for PV intake, processing, and analytics.</p>
+                    <div class="technology-card-title card technology-card p-4 hover-scale animate_animated animate_fadeIn" style="animation-delay: 0.1s;">
+                        <h3 class="h5 technology-card-title text-center fw-bold mb-3">PV Edge & Clinevo</h3>
+                        <p class="technology-card-text text-center">Cloud-based platforms for PV intake, processing, and analytics.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card p-4 hover-scale animate__animated animate__fadeIn" style="animation-delay: 0.2s;">
-                        <h3 class="h5 fw-bold mb-3">Database Implementation</h3>
-                        <p>Full setup for user, product, and reporting configurations.</p>
+                    <div class="technology-card-title card technology-card p-4 hover-scale animate_animated animate_fadeIn" style="animation-delay: 0.2s;">
+                        <h3 class="h5 technology-card-title text-center fw-bold mb-3">Database Implementation</h3>
+                        <p class="technology-card-text text-center">Full setup for user, product, and reporting configurations.</p>
                     </div>
                 </div>
             </div>
@@ -310,21 +396,21 @@
     <!-- Current Engagements Carousel -->
     <section id="engagements" class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title text-center animate__animated animate__fadeIn">Our Current Engagements</h2>
+            <h2 class="section-title orange-title text-center animate_animated animate_fadeIn">Our Current Engagements</h2>
             <div class="owl-carousel owl-theme mt-5">
                 <div class="item">
                     <div class="card p-4 text-center">
-                        <p class="mb-0">Providing ICSR processing, medical review, and writing for US-based pharma companies.</p>
+                        <p class="engagement-text mb-0">Providing ICSR processing, medical review, and writing for US-based pharma companies.</p>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card p-4 text-center">
-                        <p class="mb-0">Delivering 100 ICSRs/day for a leading EU-based client.</p>
+                        <p class="engagement-text mb-0">Delivering 100 ICSRs/day for a leading EU-based client.</p>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card p-4 text-center">
-                        <p class="mb-0">Supporting a top Japanese company’s subsidiary in India with PV solutions.</p>
+                        <p class="engagement-text mb-0">Supporting a top Japanese company's subsidiary in India with PV solutions.</p>
                     </div>
                 </div>
             </div>
@@ -334,8 +420,8 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5  text-white"style="background: linear-gradient(to right, #1e3a8a, #3b82f6);">
         <div class="container text-center">
-            <h2 class="section-title animate__animated animate__fadeIn">Get in Touch</h2>
-            <p class="lead mb-5 animate__animated animate__fadeIn" style="animation-delay: 0.2s;">
+            <h2 class="section-title animate_animated animate_fadeIn">Get in Touch</h2>
+            <p class="lead mb-5 animate_animated animate_fadeIn" style="animation-delay: 0.2s;">
                 Discover how Sojar Research can support your pharmacovigilance needs with tailored, compliant solutions.
             </p>
             <div class="row justify-content-center">
@@ -368,7 +454,7 @@
     <br>
     <br>
     <br>
-    <br>
+    <br> 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -537,14 +623,6 @@
 
 </body>
 </html>
-<!-- hii -->
-
-
-
-
-
-
-
 
 
 
