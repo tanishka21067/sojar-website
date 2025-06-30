@@ -910,7 +910,7 @@ font-size: 13px;
 }
 
 .main-header .navbar {
-    padding: 2px ;
+    padding: 11px ;
     font-size: 17px;  /* Increased font size */
     font-weight: 600;  /* Made text bold */
 }
@@ -1385,43 +1385,6 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
-/* career css */
-
-/* Career Page Custom Styles */
-.career-highlight-section {
-  max-width: 700px;
-  margin: 32px auto 24px auto;
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 24px 0 rgba(30, 64, 175, 0.10), 0 1.5px 6px 0 rgba(30, 64, 175, 0.08);
-  padding: 2rem 2rem 1.5rem 2rem;
-}
-.career-highlight-section h3 {
-  font-size: 1.4rem;
-  color: #1e40af;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-.career-highlight-section p {
-  color: #4b5563;
-  font-size: 1rem;
-  margin-bottom: 0;
-}
-@media (max-width: 600px) {
-  .career-highlight-section {
-    padding: 1.2rem 0.8rem 1rem 0.8rem;
-  }
-  .career-highlight-section h3 {
-    font-size: 1.1rem;
-  }
-}
-/* Remove extra gap below image if any */
-.career-header-img {
-  margin-bottom: 0;
-  display: block;
-}
-/*career ended  */
 
 
 /* services css */
