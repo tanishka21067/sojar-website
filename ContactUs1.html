@@ -271,6 +271,336 @@
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
 
+=======
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sojar Research </title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+    <link rel="icon" type="image/png" sizes="540x540" href="data:image/png;base64,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">
+    <link rel="icon" type="image/png" sizes="540x540" href="data:image/png;base64,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">
+     <link rel="manifest" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABxpJREFUWEftln9QVNcVx+99b9/bHyy7C/uT5ZcsEBQEIgF/jjGG0gatqTRSY2pHps1Y46hNosPPNeGHLCymmkbTiDUGUx1TYGycxKhpaxImOtVAqkUEKrrLsuwuu+yyK7vL7vt1O8sUm3ZSM9hx/Mf333vn3O/53HPOu/dA8JAf+JDjg0cADz8D11tWvIJxvsUEwACAEHAYAizEAQYgwEEYUOI5HVlbTnc+qF6BlpaMdyCL+gDHQhxikOIojkUMCxGJQ5whWEnalbTtn118YABmY2r9nIpbrz2oAN+lC22N8/doa67rI47u48USQAfWoVBYxQnQRZ9afiV91dnwvUTM+5aUBMNeeWZV/5HvCvZtduhsTmlUVZpqXO8+Gw1d1/6EAq6FOMdAliA4Vpx4UrNrYOO9hG312vMkYnMUr4/F3ReArSl9j7bqpt7enFouuGM2UpgI4ZDleByD01GqPmW1df69hC17k39LIixPU25aPFsA1N6OQ6shuyGhune3s1Z+kQfpeSg+uxwXyYcDLutSjKaL43b13lO4u3WNKD1GJZD+5F3PbAF63372V9BqyGhIqB7cPV4rMQEMdCleu7NpRsj50Y501Zq3bkbeba1PKUIhegcedEpF0oRTyq2ffRH5bn6/ZJ6MQyJZ2Yc99qOlShTy/Ixw3UoD0XF+JJEcVr14fgi1l+JORL7McbwBPOyapDyWMlKpM/ittzZAS1PGnqSqQb2tMbZfxOCkMPX7a/gbT9z45m5G2kuFcOjyF6KAq4DBMQAhHgopMn+cuP2vZ+17MzoxKpChrrFmm1oyK0VTjkYA4STG0FJaGG3htIV5PIhC0HzexwqjTgIqtJQXduvCsoynUJh7Elqa5zYmVQ7U2AxJbYKgfRPDl9/hiRVnOWnyEbml4AKsreUsB/N/HuXoO8KKEo20IPYS4R9s5SBpVevHFnmb4zvokC9VVedfMHiwqEQtgj5+nO72nYHuMmL82ushRdbGuPi1He6+/U4gVd6mKI5hBaqrrEjexnkcT0NH41yDpmagevhQYabAdf0CEXarIQcAIkVsWDG/Jm7bJaO1Mf4kwUxl3kA5T6ys/ZwZa5n3EjFpPRhKeyZFaL38a4bypSnrfAsQAjB4arMGI6YEPi9w8kx/dEBS9oYpdpUhyX7ChqLiIaXKzU3c1DEa8R02LqiBtqYcg7bq79WRlLuOrX+MnjC/CoKjPySDTi1LiEMoZcUcYrjrzwwu+lJdPbI14jdyqChdaOsapBWPrcT9vm1Y2J2qqAvkOY+sKOXsQ0choHFKrqsQuQZeoSD5e83yrQ3uC2/YWL64S613rJspr8WQq4fWphxDwr8AZgye9lIpPdJvJCb6fxlQLl4tmOj7DeQL/6Cosk8fWK7T27Tg6/dGoHLBOuC3vICmPKkKuCvfSRy6AVlGjguj3wsI5AvFEzezWQ4/oMgsbPD2nrExUdrjysqhnTNxzBEAy970PcHY5UYZsq3WvHjugxmj/c2CAv741SsTsuznpFOWKpwn6oupspRF7EPvlMyX2D7tpRU5y/jB0VfRlEfnj8l/OmbispsVaLbIq02/c7aXabD+UyYWCYyqzBUN7usf25BY3aYsN1fMxLjdnKuHdsPcuqA8ap/QaXVg0uRjQnny0ZDPM84Exwx838B6v7aokHRf20By9CpsSUlmbNFhn2t/Vj0+MVxFPvF8QujGp2+DkCdlSppcxPea3LgksVS+a7Czu3UzkTLWbuc47KAC7NjjZVpsdJTqqKrKXPkfAP2tP9gZLRC18Yf+4oIoADlcxAEMQzgdwlkidhw+XqwLj5qeFNoufURpsrsxoewrONJdBnniLqXeWjzelNQZARjLKl4SO/i5leQRdn769/YF3KZc3Nm3neEIo3reS/XjffucTJSsNa7ccjcD5kgGIodEz0QMpvV9eYAXHiuDVIDPYSxAhCQMFfmb1VvOvx/xcVivfgAnHM8hyEBWKBvnx+U9oyw70zMNMOXRKer9edb9jxtIz1AlyyMAik48i4c8BSwZfdqlWv2ycvi4hyLFh+dUDG2/24TN2fq7E1Hkt3B1/CKVcpsLueAYJtWt7JGsPfAVhABFFqD2UtLm8ZXQgVGFTJd/TlZy7Nb0DdqY0Ikor05R589DrZsJO/uP9QLWKwHqhScYgSBbJBD7P/He7F3GyhbxIBxTP394et30KdqUtfv/HsnctZoziKBUihpPwWzvAosx/f4B3Od2Z7HWnkTCcrGdIiUfq/UjL8wWwNqc8e8SzHax6c2lFaLxvzWxPJaF0Tk/itvZ/cl/a9jfWr6QmnQsgizLUgTHAIADHNGQACRGQR5LMqHM+y7BcNtPl8FJ+1aK83am7vj6w5le+SbEUOuatezk2AbAIoAwFkAOAgxQ0+Mug0iAAHb5vgFmm7H/5f8I4FEG/gljK0bIzRoWkgAAAABJRU5ErkJggg==">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <!-- Custom CSS -->
+    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="css/service-page.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom Icon Font -->
+    <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e7e9fe;
+            color: #333;
+        }
+       
+        .container {
+            max-width: 1100px;
+           
+            
+        }
+        .contact-section {
+            background-color: rgb(253, 253, 253);
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 10 10 10px rgb(237, 237, 237);
+        }
+        .contact-section h1 {
+            color: #004aad;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .services-boxes {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .service-box {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+            width: 32%;
+            box-shadow: 0 6px 18px 0 rgba(30, 64, 175, 0.14), 0 2px 6px 0 rgba(0,0,0,0.08);
+            margin-bottom: 0;
+            transition: box-shadow 0.3s, transform 0.3s;
+            transform: perspective(600px) translateZ(0);
+        }
+        .service-box:hover {
+            box-shadow: 0 19px 30px 0 rgba(30, 64, 175, 0.22), 0 12px 19px 0 rgba(0,0,0,0.14);
+             transform: perspective(600px) translateY(-8px)  rotateX(2deg); 
+        }
+        .service-box h3 {
+            color: #004aad;
+            margin-bottom: 10px;
+        }
+        .service-box p {
+            margin: 0;
+        }
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 30px;
+            align-items: start;
+        }
+        .contact-form-col1, .contact-form-col2 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-form label {
+            margin-bottom: 2px;
+            font-weight: bold;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+            grid-column: 1 / -1;
+        }
+        .contact-form button {
+            background-color: #004aad;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            grid-column: 1 / -1;
+            margin-top: 10px;
+        }
+        .contact-form button:hover {
+            background-color: #003087;
+        }
+        .captcha-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            position: relative;
+        }
+        .captcha-code {
+            background: #dbe3ff;
+            color: #f76927;
+            font-weight: bold;
+            font-size: 1.1em;
+            letter-spacing: 2px;
+            padding: 6px 16px;
+            border-radius: 5px;
+            user-select: none;
+        }
+        .captcha-input-refresh {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .captcha-input-refresh input[type="text"] {
+            flex: 1;
+            padding-right: 38px;
+            min-width: 0;
+            width: 100%;
+            box-sizing: border-box;
+            height: 47px;
+            margin-top: 30px;
+            margin-right: 250px;
+        }
+        input[type="file"] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .refresh-btn {
+            background: none;
+            border: none;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            margin-right: 165px;
+            height: 38px;
+        }
+        .refresh-btn svg {
+            width: 22px;
+            height: 22px;
+            fill: #fefeff;
+        }
+        footer {
+            background-color: white;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            nav a {
+                padding: 10px;
+            }
+            .container {
+                padding: 0 10px;
+            }
+            .service-box {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+        @media (max-width: 900px) {
+            .services-boxes {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .service-box {
+                width: 100%;
+            }
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+            .contact-form-col1, .contact-form-col2 {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>   <!-- Header Section -->  
+     <header class="main-header">    
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="abt.html" style="display: flex; margin-left: -40px;">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <!-- logo -->
+             <a href="web.html">
+               <img src="https://i.postimg.cc/1zPSP6KG/sojarimg-removebg-preview-1.png" alt="" title="">
+             </a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="web.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="abt.html">About Us</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="pvsystemandSOPsServices.html">PV System And SOP's</a></li>
+                                <li><a class="dropdown-item" href="pvconsultancy.html">PV Consultancy</a></li>
+                                <li><a class="dropdown-item" href="AggregateReports.html">Aggregate Reports</a></li>
+                                <li><a class="dropdown-item" href="Medical Services.html">Medical Services</a></li>
+                                <li><a class="dropdown-item" href="ICSR End To End Case Processing.html">ICSR End To End Case Processing</a></li>
+                                <li><a class="dropdown-item" href="MICC.html">Medical Information And Call Center (MICC)</a></li>
+                                <li><a class="dropdown-item" href="PSMF.html">Pharmacovigilance System Master File (PSMF)</a></li>
+                                <li><a class="dropdown-item" href="locallliteraturesearch.html">Local Literature Search</a></li>
+                                <li><a class="dropdown-item" href="globalliteraturesearch.html">Global Literature Search</a></li>
+                                <li><a class="dropdown-item" href="SDEA Services.html">SDEA Services</a></li>
+                                <li><a class="dropdown-item" href="Regulatory Intelligence In PV.html">Regulatory Intelligence In PV</a></li>
+                                <li><a class="dropdown-item" href="PVServices.html">PV Services For Distributors</a></li>
+                                <li><a class="dropdown-item" href="ICSR Collection Services.html">ICSR Collection Services 24/7</a></li>
+                                <li><a class="dropdown-item" href="Medical Device Service Support.html">Medical Device Service Support</a></li>
+                                <li><a class="dropdown-item" href="DOSSIER.html">DOSSIER Preparation And Regulatory Affairs Services</a></li>
+                                <li><a class="dropdown-item" href="QPPVandLocalContact.html">QPPV And Local Contact Person For Pharmacovigilance</a></li>
+                                <li><a class="dropdown-item" href="GVPAudits.html">GVP Audits/Inspection Preparedness</a></li>
+                                <li><a class="dropdown-item" href="Drug Safety Mailbox Management.html">Drug Safety Mailbox Management</a></li>
+                            </ul>
+                        </li>
+                          <li class="nav-item"><a class="nav-link nav-link-career" href="career1.html">Career</a></li>
+                          <li class="nav-item"><a class="nav-link" href="ContactUs1.html">Contact Us</a></li>
+                        <ul class="navbar-nav ms-auto d-flex align-items-center">
+                          <li class="nav-item ms-2"><a href="enquiry.html" class="theme-btn btn-style-one"><span class="txt">Enquiry Now</span></a></li>
+                       </ul>
+                       
+                      </ul>
+                </div>
+            </div>
+        </nav>   
+    </header>
+   <br>
+   <br>
+    <br>
+    <br>
+    
+            <div>
+                <div class="title-box" style="text-align: center;color: #1446a3;font-size: 20px;">
+                    <h1 style="color: #f46929;font-weight: 600;">GET IN TOUCH</h1>
+                     <br>
+                    <div class="text">For general enquiries you can touch with our front desk supporting team <br> at
+                        <a href="mailto:info@sojarresearch.com">info@sojarresearch.com</a></div>
+                </div>
+                <br>
+                 <br>
+                 <br>
+    <div class="container">
+         <div class="services-boxes">
+                <div class="service-box">
+                    <div style="display:flex;align-items:center;justify-content:center;margin-bottom:6px;">
+                        <!-- Email icon: envelope -->
+                        <svg width="28" height="28" fill="#004aad" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8.41l8 6.59 8-6.59V18z"/></svg>
+                        <h3 style="margin:0 0 0 10px; color:#004aad; font-size:1.15rem; font-weight:700;">Email</h3>
+                    </div>
+                    <p><a href="mailto:info@sojarresearch.com">info@sojarresearch.com</a></p>
+                </div>
+                <div class="service-box">
+                    <div style="display:flex;align-items:center;justify-content:center;margin-bottom:6px;">
+                        <!-- Address icon: map marker -->
+                        <svg width="28" height="28" fill="#004aad" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+                        <h3 style="margin:0 0 0 10px; color:#004aad; font-size:1.15rem; font-weight:700;">Address</h3>
+                    </div>
+                    <p>Office 201, Creative’s Orchid, Hinjawadi-Punawale Link Road, Beside Lotus Business School. Pune- 411033 Maharashtra (India).</p>
+                </div>
+                <div class="service-box">
+                    <div style="display:flex;align-items:center;justify-content:center;margin-bottom:6px;">
+                        <!-- Phone icon: phone -->
+                        <svg width="28" height="28" fill="#004aad" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.35.27 2.67.76 3.88a1 1 0 0 1-.21 1.11l-2.2 2.2z"/></svg>
+                        <h3 style="margin:0 0 0 10px; color:#004aad; font-size:1.15rem; font-weight:700;">Phone</h3>
+                    </div>
+                    <p>+91 8793 939 229</p>
+                </div>
+            </div>
+
+            
+            <br>
+            <br>
+        <div class="contact-section">
+
+            <h1 style="color: #f06524;font-weight: 570;">Contact Us</h1>
+            <p style="text-align: center">We are here to assist you with your pharmacovigilance needs. Please fill out the form below or reach out to us directly.</p>
+            
+         <form id="contact-form" class="contact-form" onsubmit="return sendEmail(event);">
+
+                <div class="contact-form-col1">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+
                     <label for="phone">Phone Number</label>
                     <input type="text" id="phone" name="phone" placeholder="Enter Phone Number" required>
 
@@ -337,5 +667,65 @@
         }
         document.addEventListener('DOMContentLoaded', generateCaptcha);
     </script>
+    </div>
+    <footer>
+    </footer>
+    
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init("aL8NgmbqsqMP-jUJj"); // Replace with your public key
+
+    function generateCaptcha() {
+      const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+      let code = '';
+      for (let i = 0; i < 5; i++) {
+        code += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      document.getElementById('captchaCode').textContent = code;
+      document.getElementById('captchaCode').setAttribute('data-captcha', code);
+    }
+
+    function validateCaptcha() {
+      const entered = document.getElementById('captcha').value.trim().toUpperCase();
+      const actual = document.getElementById('captchaCode').getAttribute('data-captcha');
+      if (entered !== actual) {
+        alert('Incorrect CAPTCHA. Please try again.');
+        generateCaptcha();
+        return false;
+      }
+      return true;
+    }
+
+    function sendEmail(e) {
+      e.preventDefault();
+      if (!validateCaptcha()) return false;
+
+      emailjs.sendForm("service_04y3xsv", "template_vyx28lq", document.getElementById("contact-form"))
+        .then(() => {
+          alert("Message sent successfully!");
+          document.getElementById("contact-form").reset();
+          generateCaptcha();
+        }, (error) => {
+          console.error(error);
+          alert("Failed to send message. Please try again.");
+        });
+      return false;
+    }
+
+    document.addEventListener('DOMContentLoaded', generateCaptcha);
+  </script>
+   
+ <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="web.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+
 </body>
 </html>
