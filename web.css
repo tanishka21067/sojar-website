@@ -1216,6 +1216,7 @@ body {
     position: relative;
     overflow: hidden;
     height: 250px;
+    margin-right: -100px;
 }
 
 .service-card__thumb__item img {
@@ -1223,6 +1224,7 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    
 }
 
 .service-card:hover .service-card__thumb__item img {
