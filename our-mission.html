@@ -7,13 +7,30 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      
+      color: #111;
+      font-family: 'Inter', sans-serif; 
+      overflow-x: hidden;
+
     }
     .hero-bg {
-      background: linear-gradient(to right, #1e3a8a, #3b82f6);
+      width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background: #1342a5;
+            color: #fff;
+            padding: 64px 0 48px 0;
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            z-index: 1;
     }
     .section-bg {
-      background-color: #f9fafb;
+      background-color: #ebedff;
     }
     .card {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -39,10 +56,26 @@
   <!-- Main Content -->
   <section class="section-bg py-16">
     <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-blue-900 text-3xl font-semibold mb-6">Our Commitment to Excellence</h2>
-        <p class="text-gray-600 text-lg mb-8">At Sojar Research Service Pvt Ltd</strong>, our mission is to provide pharmacovigilance services with exceptional quality and follow through on our promises. We are dedicated to supporting pharmaceutical and biopharmaceutical companies by addressing their challenges, enhancing work efficiency, and ensuring on-time delivery of high-quality solutions.</p>
+      <div class="max-w-6xl mx-auto px-4 py-8">
+  <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+    
+    <!-- Text Section -->
+    <div class="lg:w-1/2 text-left">
+      <h2 class="text-blue-900 text-3xl font-semibold mb-6" style="margin-top: -30px; margin-left: 10;">Our Commitment to Excellence</h2>
+      <p class="text-gray-600 text-lg">
+        At Sojar Research Service Pvt Ltd, our mission is to deliver pharmacovigilance services marked by exceptional quality, integrity, and reliability. We believe in building long-term partnerships with our clients by consistently honoring our commitments and delivering on what we promise. Our work is rooted in a deep understanding of the pharmaceutical landscape, allowing us to effectively support companies in navigating the complexities of drug safety and regulatory requirements. By staying attuned to evolving industry demands, we continuously refine our approaches to maximize accuracy, responsiveness, and relevance. We aim to be a dependable extension of your team—focused on minimizing risks, safeguarding patient well-being, and driving operational success. Through strategic collaboration and a commitment to continuous improvement, we help organizations meet their goals with confidence and clarity.
+      </p>
+    </div>
+
+    <!-- Image Section -->
+    <div class="lg:w-1/2">
+      <div class="hero" style="background-image: url('https://i.postimg.cc/Jn0pH9NN/image.png'); min-height: 400px; width: 110%; background-size: cover; background-position: center; border-radius: 19px; margin-top: 0px; ">
       </div>
+    </div>
+
+  </div>
+</div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
         <!-- Card 1 -->
         <div class="card bg-white p-6 rounded-lg shadow-md">
