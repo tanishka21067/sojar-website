@@ -11,8 +11,21 @@
       font-family: Arial, sans-serif;
       background-color: #fff;
     }
+   /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100vh;
+      overflow: hidden !important; /* Force hide all scrollbars */
+    }
     body {
       margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ebedff;
+      /* overflow-y: hidden;  Already handled above */
     }
 
     .sidebar-nav {
@@ -21,7 +34,7 @@
       left: 0;
       width: 450px; /* Increased width from 380px to 460px */
       height: 100vh;
-      background: linear-gradient(to right, #201e8a, #2362c7);
+      background: linear-gradient(to right,  #201e8a, #2362c7);
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -44,7 +57,8 @@
     }
 
     .sidebar-nav a:hover {
-      background: #2b9fec;
+      background: #2587c9;
+      /* width: 160px; */
     }
 
     .sidebar-logo {
@@ -55,7 +69,7 @@
     }
 
     .sidebar-logo span {
-      font-size: 30px;
+      font-size: 38px;
       font-weight: bold;
       color: #fff;
       letter-spacing: 2px;
@@ -71,8 +85,6 @@
       background: none;
       color: #b3e0ff;
       width: 100%;
-      position: absolute;
-      bottom: 20px; /* Position at the bottom */
     }
 
     .sidebar-contact-info p,
@@ -111,18 +123,16 @@
 
     .container {
       margin-left: 450px; /* Match sidebar width */
-      padding: 25px 25px;
+      padding: 30px 30px;
       background-color: #1e3a8a;
       color: #fff;
-      min-height: 70vh;
+      min-height: 100vh;
       box-sizing: border-box;
-      font-size: 20px;
-      overflow-y: auto; /* Enable vertical scrollbar when content overflows */
       /* Remove any border or box-shadow that could create a white partition */
-      
     }
 
     .columns {
+      
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -132,7 +142,6 @@
       flex: 1;
       min-width: 200px;
       margin: 20px;
-      margin-top: -20px;
       background: none;
       border-radius: 10px;
       padding: 24px 18px;
@@ -143,8 +152,7 @@
       border-bottom: 1px solid #80dfff;
       padding-bottom: 5px;
       margin-bottom: 15px;
-      margin-top: -20px;
-      font-size: 20px;
+      font-size: 25px;
     }
 
     .column a {
@@ -152,7 +160,7 @@
       color: white;
       text-decoration: none;
       margin: 30px 0; /* Increased space between sub topics */
-      font-size: 17px;
+      font-size: 18px;
     }
 
     .column a:hover {
@@ -181,12 +189,9 @@
         align-items: center;
         margin: 10px 0 0 0;
         width: auto;
-        position: static;
-        bottom: auto;
       }
       .container {
         margin-left: 0;
-        overflow-y: auto; /* Ensure scrollbar works on mobile */
       }
     }
 
@@ -202,30 +207,176 @@
       margin-top: 8px;
       gap: 12px;
     }
-    .neu-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 38px;
-      height: 38px;
-      border-radius: 8px; /* Square/rectangle shape */
-      background: #00384d;
-      box-shadow: 2px 2px 8px #002233, -2px -2px 8px #005b80;
-      color: #fff;
-      font-size: 18px;
-      transition: background 0.2s, box-shadow 0.2s, color 0.2s;
-      border: none;
-      outline: none;
-      text-decoration: none;
-    }
-    .neu-button:hover {
-      background: #005b80;
-      color: #b3e0ff;
-      box-shadow: 2px 2px 12px #002233, -2px -2px 12px #0077b6;
-    }
+   
+   .neu-button:hover {
+    transform: translateY(-5px) scale(1.12);
+    color: #ffffff;
+
+}
+
+.neu-button i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.neu-button:hover i {
+    transform: scale(1.1);
+}
+
+
+/* new */
+.social-neumorphic {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.neu-button {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin: 10px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #5979b5, #194694);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), -4px -4px 10px rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
     /* Use a fallback for X (Twitter) icon if Font Awesome 5 doesn't support it */
     .fa-x-twitter:before {
       content: "\f099"; /* fallback to fa-twitter icon */
+    }
+
+    /* Add styles for the new navigation bar */
+    .about-navbar {
+      position: fixed;
+      top: 40px;
+      left: 0;
+      width: 100vw;
+      background: #fff; /* Set navbar background to white */
+      z-index: 10000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 0;
+      flex-direction: column;
+    }
+    .about-navbar .right-content {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      padding: 8px 0 8px 50px;
+      background: #fff;
+    }
+    .about-navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 32px;
+      min-height: 54px;
+    }
+    .about-navbar .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+    .about-navbar .navbar-brand img {
+      height: 38px;
+    }
+    .about-navbar .navbar-nav {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 18px;
+    }
+    .about-navbar .nav-item .nav-link {
+      color: #22506a;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .about-navbar .nav-item .nav-link:hover {
+      text-decoration: underline;
+      color: #009FDF;
+    }
+    .about-navbar .nav-item.ms-2 .theme-btn.btn-style-one {
+      background: #22506a;
+      color: #fff;
+    }
+    .about-navbar .nav-item.dropdown {
+      position: relative;
+    }
+    .about-navbar .nav-item.dropdown .dropdown-toggle::after {
+      content: none;
+    }
+    .about-navbar .nav-item.dropdown .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 8px 0;
+      margin: 0;
+      list-style: none;
+      min-width: 210px;
+      z-index: 10001;
+    }
+    .about-navbar .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .about-navbar .nav-item.dropdown .dropdown-item {
+      color: #22506a;
+      padding: 8px 24px;
+      display: block;
+      text-decoration: none;
+    }
+    .about-navbar .nav-item.dropdown .dropdown-item:hover {
+      background: #f0f0f0;
+    }
+
+    .about-section {
+      background: #ebedff !important;
+    }
+    #about-sojar-section .auto-container {
+      background: #ebedff !important;
+    }
+    #about-sojar-section .row,
+    #about-sojar-section .content-column,
+    #about-sojar-section .images-column,
+    #about-sojar-section .inner-column {
+      background: #ebedff !important;
+    }
+    .features-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 0px;
+    }
+    .feature-box {
+      flex: 1;
+      min-width: 450px;
+      margin: 10px;
+      background: #f7fbfd;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 8px 32px 0 rgba(34, 80, 106, 0.18), 0 1.5px 6px 0 rgba(0, 0, 0, 0.10);
+      transition: transform 0.2s;
+    }
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+    .feature-box h2 {
+      font-size: 25px;
+      margin-bottom: 10px;
+      color: #df6824;
+    }
+    .feature-box p {
+      font-size: 18px;
+      color: #464646;
     }
 
     /* Close button styles */
@@ -245,10 +396,14 @@
       text-decoration: none;
       cursor: pointer;
       transition: background 0.2s;
+      
     }
     .close-btn:hover {
       background: #f0f0f0;
     }
+    
+
+   
   </style>
   <!-- Add Font Awesome CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -259,23 +414,29 @@
     <div class="sidebar-logo" style="margin-bottom: 30px; text-align: left; width: 100%; padding-left: 24px;">
       <span style="font-size: 38px; font-weight: bold; color: #fff; letter-spacing: 2px;">Sojar</span>
     </div>
-    <a href="web.html">Home</a>
+     <a href="web.html">Home</a>
     <a href="abt.html">About Us</a>
     <a href="MenuOfServices.html">Services</a>
-    <a href="career.html">Career</a>
-    <a href="contactus.html">Contact Us</a>
+    <a href="career1.html">Career</a>
+    <a href="ContactUs1.html">Contact Us</a>
     <div class="sidebar-contact-info">
-      <p>UK: +44 (0)1483 503 205<br>US: +1 (919) 841 3005</p>
-      <p><a href="mailto:info@sojar.com">info@sojar.com</a></p>
-      <ul class="social-box">
-        <li><a href="https://x.com" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
-        <li><a href="mailto:info@sojarresearch.com" class="mail"><i class="fas fa-envelope"></i></a></li>
-        <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-        <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-      </ul>
-    </div>
-  </div>
-
+      <p style="margin-top: -21px;margin-left: -11px;"> +91 8793 939 229<br>+91 9960 977 905</p>
+      <!-- i want this span to bottom of the page -->
+       <div class="social-neumorphic mt-2"style="margin-top: 30px;margin-left: -29px;margin-bottom: 1px;">
+                           <a href="https://wa.me/+91 8793 939 229" target="_blank" class="neu-button"><i class="fab fa-whatsapp"></i></a>
+                           <a href="https://mail.google.com/mail/?view=cm&to=info@sojarresearch.com" target="_blank" class="neu-button">
+                             <i class="fas fa-envelope"></i>
+                            </a>
+                                         <script>
+                                             function showEmailWarning() {
+                                                alert("If your email did not open, please set a default email app in your system settings.");
+                                                }
+                                         </script>
+                            <a href="https://www.linkedin.com/company/sojar-research-services-pvt-ltd/?originalSubdomain=in" target="_blank" class="neu-button"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.facebook.com/people/Sojar-Rspl/pfbid02kvh2U89kUXduVTiTx5J256YUFQ7ye6eaXguk6yri3X5QbJ2HZzJo4fFCewNwvBYrl/" target="_blank" class="neu-button"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
   <div class="container">
     <h2>Post Marketing Pharmacovigilance Services... </h2>
     <div class="columns">
