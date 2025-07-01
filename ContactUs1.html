@@ -44,19 +44,16 @@
     }
 
    
-
+/* 
     .container {
 
-        max-width: 1100px;
-
-    }
+    } */
 
     .contact-section {
 
         background-color: rgb(255, 255, 255);
 
-        padding: 30px;
-
+        padding: 90px;
         border-radius: 8px;
 
         box-shadow: 10 10 10px rgb(55, 55, 55);
@@ -211,8 +208,7 @@
 
     .contact-form button:hover {
 
-        background-color: #003087;
-
+        background-color:var(--primary-color);
     }
 
     .captcha-box {
@@ -221,9 +217,7 @@
 
         align-items: center;
 
-        gap: 10px;
-
-        width: 100%;
+        width: 140%;
 
         position: relative;
 
@@ -253,7 +247,7 @@
 
         position: relative;
 
-        width: 100%;
+        width: 140%;
 
         display: flex;
 
@@ -364,34 +358,24 @@
             flex-direction: column;
 
             gap: 15px;
-
         }
-
         .service-box {
-
             width: 100%;
-
         }
-
         .contact-form {
-
             grid-template-columns: 1fr;
-
         }
-
         .contact-form-col1, .contact-form-col2 {
-
             gap: 10px;
-
         }
-
     }
+
     
 
 </style>
 
 </head>
-<body><!-- Header Section -->  
+<section>
         <!-- Header Section -->  
      <header class="main-header">    
         <nav class="navbar navbar-expand-lg">
@@ -441,7 +425,8 @@
             </div>
         </nav>   
     </header>
-
+    </section>
+<section>
             <div class="title-box" style="text-align: center;color: #1446a3;font-size: 20px;margin-top:  80px;">
 
                 <h1 style="color: #fd6c29;">GET IN TOUCH</h1>
@@ -454,7 +439,7 @@
 
             <br>
 
-<div class="container">
+ <div class="container">
 
      <div class="services-boxes">
 
@@ -520,15 +505,12 @@
 
 
 
-        <h1 style="color: #f76927;">Contact Us</h1>
-
-        <p style="text-align: center">We are here to assist you with your pharmacovigilance needs. Please fill out the form below or reach out to us directly.</p>
-
+        <h1 style="color: #f76927;margin-top: -48px;">Contact Us</h1>
+        <br>
+       
         
-
      <form id="contact-form" class="contact-form" onsubmit="return sendEmail(event);">
 
- 
                 <div class="contact-form-col1">
                     <label for="name" style="margin-bottom: -7px;">Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
@@ -569,7 +551,7 @@
 
                     <div class="captcha-input-refresh">
 
-                        <input type="text" id="captcha" name="captcha" placeholder="Enter CAPTCHA code" required autocomplete="off">
+                        <input type="text" id="captcha" name="captcha" placeholder="Enter CAPTCHA" required autocomplete="off" style="font-size: 16px;">
 
                         <button type="button" class="refresh-btn" onclick="generateCaptcha()" aria-label="Refresh CAPTCHA">
 
@@ -579,28 +561,17 @@
 
                     </div>
 
-                </div>
-
-                <div style="flex: 1; display: flex; flex-direction: column;">
-
-                    <label for="file">Upload File</label><br>
-
-                    <input type="file" id="file" name="file">
-
-                </div>
+               
 
             </div>
-
-            <button type="submit">Submit</button>
+          
+            <button type="submit" style="width: 180px;margin-bottom: -80px;margin-right:  340px ;">Submit</button>
 
         </form>
-
-        
-
     </div>
 
-</div>
-
+  </div>
+</section>
 
 <script src="web.js"></script>  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>  <script>
   
@@ -686,7 +657,7 @@
 <br>
 <br>
 <br>
-    
+    <section>
     <!-- Footer start-->
    <footer class="main-footer">
     <!-- Background Patterns -->
@@ -779,6 +750,7 @@
         </div>
     </div>
 </footer>
+</section>
     <!-- Scripts -->    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
