@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Semantic Comparison Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .file-input {
+            border: 2px dashed #d1d5db;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            cursor: pointer;
+        }
+        .file-input:hover {
+            background-color: #f9fafb;
+        }
+        #result {
+            margin-top: 2rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            display: none;
+        }
+        #loading {
+            display: none;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-3xl font-bold text-center mb-6">PDF Semantic Comparison Tool</h1>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-4">Upload Two PDFs to Compare</h2>
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2">First PDF</label>
+                <input type="file" id="file1" accept=".pdf" class="file-input w-full">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2">Second PDF</label>
+                <input type="file" id="file2" accept=".pdf" class="file-input w-full">
+            </div>
+            <button id="compareBtn" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Compare Documents</button>
+            <div id="loading" class="text-center">
+                <svg class="animate-spin h-8 w-8 text-blue-600 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8h8a8 8 0 01-16 0z"></path>
+                </svg>
+                <p>Processing...</p>
+            </div>
+            <div id="result" class="bg-green-100 text-green-800"></div>
+            <div id="error" class="bg-red-100 text-red-800 mt-4 p-4 rounded-lg" style="display: none;"></div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('compareBtn').addEventListener('click', async () => {
+            const file1 = document.getElementById('file1').files[0];
+            const file2 = document.getElementById('file2').files[0];
+            const resultDiv = document.getElementById('result');
+            const errorDiv = document.getElementById('error');
+            const loadingDiv = document.getElementById('loading');
+
+            // Reset UI
+            resultDiv.style.display = 'none';
+            errorDiv.style.display = 'none';
+            loadingDiv.style.display = 'block';
+
+            if (!file1 || !file2) {
+                loadingDiv.style.display = 'none';
+                errorDiv.textContent = 'Please upload two PDF files.';
+                errorDiv.style.display = 'block';
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file1', file1);
+            formData.append('file2', file2);
+
+            try {
+                const response = await fetch('http://localhost:8000/compare-documents/', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+
+                loadingDiv.style.display = 'none';
+
+                if (response.ok) {
+                    resultDiv.textContent = data.message;
+                    resultDiv.style.display = 'block';
+                } else {
+                    errorDiv.textContent = data.error || 'An error occurred while comparing documents.';
+                    errorDiv.style.display = 'block';
+                }
+            } catch (error) {
+                loadingDiv.style.display = 'none';
+                errorDiv.textContent = 'Failed to connect to the server. Please ensure the backend is running.';
+                errorDiv.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
