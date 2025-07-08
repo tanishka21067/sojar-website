@@ -567,6 +567,15 @@
   </div>
 </section>
 
+<div id="thankYouModal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.4);align-items:center;justify-content:center;">
+      <div style="background:#fff;padding:40px 30px 30px 30px;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.18);text-align:center;max-width:350px;width:90%;position:relative;">
+        <button onclick="closeThankYouModal()" style="position:absolute;top:10px;right:15px;background:none;border:none;font-size:1.5rem;color:#888;cursor:pointer;">&times;</button>
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" style="margin-bottom:10px;"><circle cx="12" cy="12" r="12" fill="#e6f7ee"/><path d="M7 13l3 3 7-7" stroke="#1bc47d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h2 style="color:#1446a3;margin-bottom:10px;">Thank You!</h2>
+        <div style="color:#444;font-size:1.1rem;">Your message has been sent successfully.</div>
+      </div>
+    </div>
+
 <script src="web.js"></script>  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>  <script>
   
     emailjs.init("aL8NgmbqsqMP-jUJj"); // Replace with your public key
@@ -615,34 +624,30 @@
   
 
   
+    function showThankYouModal() {
+      var modal = document.getElementById('thankYouModal');
+      modal.style.display = 'flex';
+      setTimeout(function(){
+        closeThankYouModal();
+      }, 4000);
+    }
+    function closeThankYouModal() {
+      var modal = document.getElementById('thankYouModal');
+      modal.style.display = 'none';
+    }
     function sendEmail(e) {
-  
       e.preventDefault();
-  
       if (!validateCaptcha()) return false;
-  
-
-  
       emailjs.sendForm("service_04y3xsv", "template_vyx28lq", document.getElementById("contact-form"))
-  
         .then(() => {
-  
-          alert("Message sent successfully!");
-  
+          showThankYouModal();
           document.getElementById("contact-form").reset();
-  
           generateCaptcha();
-  
         }, (error) => {
-  
           console.error(error);
-  
           alert("Failed to send message. Please try again.");
-  
         });
-  
       return false;
-  
     }
     document.addEventListener('DOMContentLoaded', generateCaptcha);
   
