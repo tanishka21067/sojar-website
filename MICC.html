@@ -48,7 +48,7 @@
     z-index: 1;
         }
         .hero h1 {
-            font-size: 2.8rem;
+            font-size: 1.8rem;
             font-weight: 400;
             margin-bottom: 0.5em;
         }
@@ -104,16 +104,21 @@
             box-shadow: 0 8px 32px 0 rgba(30, 64, 175, 0.18);
             transform: translateY(-6px) scale(1.03);
         }
-        @media (max-width: 900px) {
-            .service-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+
+         .hero.aggregate-hero {
+        
+            background-size: cover;
+            background-position: center;
+            border-radius: 19px;
+            width: 100%; /* Make it responsive */
+            height: 300px; /* Set a base height */
+            min-width: 260px; /* Match service-card min-width */
+            margin: 30 auto; /* Center it */
         }
-        @media (max-width: 600px) {
-            .service-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        @media (max-width: 900px) 
+        { .service-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 600px) 
+        { .service-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -176,7 +181,7 @@
 
 <section class="service-section" style="background-color: #c6ccff;">
   <div class="service-grid">
-    <div class="hero aggregate-hero" style="background-image: url('https://i.postimg.cc/VLWHL8w6/image.png'); min-height: 85px; background-size:cover; background-position:center; border-radius:19px;width: 100%; max-width: 350px; margin-left: -1020px;">
+    <div class="hero aggregate-hero" style="background-image: url('https://i.postimg.cc/VLWHL8w6/image.png');min-height: 85px; background-size:cover; background-position:center; border-radius:19px;width: 390px;margin-top: -15px; margin-right: 175px;">
     </div>
     <div class="service-card">
       <h3>24/7 Medical Inquiry Handling</h3>

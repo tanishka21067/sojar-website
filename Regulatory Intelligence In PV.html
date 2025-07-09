@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
 <style>
-          body { background: #c6ccff; color: #111; font-family: sans-serif; overflow-x: hidden;}
+          body { background: #c6ccff; color: #111; font-family: sans-serif; }
         .hero-pvservices-hero {width: 100vw;
     position: relative;
     left: 50%;
@@ -41,7 +41,7 @@
     font-weight: 100;
     letter-spacing: 1px;
     z-index: 1; }
-        .hero-pvservices-hero h1 { font-size: 2.8rem; font-weight: 400; margin-bottom: 0.5em; }
+        .hero-pvservices-hero h1 { font-size: 1.7rem; font-weight: 400; margin-bottom: 0.5em; }
         .hero-pvservices-hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto; font-weight: 400; }
         .section { max-width: 1200px; margin: 0 auto; padding: 40px 16px 0 16px; }
         .section h2 { color: #1746a2; text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 2em; }
@@ -50,6 +50,17 @@
         .service-card h3 { color: #1746a2; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.7em; }
         .service-card p { color: #222; font-size: 1.05rem; line-height: 1.7; font-weight: 400; }
         .service-card:hover { box-shadow: 0 8px 32px 0 rgba(30, 64, 175, 0.18); transform: translateY(-6px) scale(1.03); }
+      
+       .hero.aggregate-hero {
+        
+            background-size: cover;
+            background-position: center;
+            border-radius: 19px;
+            width: 100%; /* Make it responsive */
+            height: 300px; /* Set a base height */
+            min-width: 260px; /* Match service-card min-width */
+            margin: 30 auto; /* Center it */
+        }
         @media (max-width: 900px) { .service-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 600px) { .service-grid { grid-template-columns: 1fr; } }
     </style>

@@ -31,7 +31,7 @@
         body {
             background: #c6ccff;
             color: #111;
-            font-family: sans-serif;overflow-x: hidden;
+            font-family: sans-serif;
         }
         .hero {
             width: 100vw;
@@ -50,7 +50,7 @@
     z-index: 1;
         }
         .hero h1 {
-            font-size: 2.8rem;
+            font-size: 1.7rem;
             font-weight: 400;
             margin-bottom: 0.5em;
         }
@@ -105,6 +105,17 @@
         .service-card:hover {
             box-shadow: 0 8px 32px 0 rgba(30, 64, 175, 0.18);
             transform: translateY(-6px) scale(1.03);
+        }
+
+        .hero.aggregate-hero {
+        
+            background-size: cover;
+            background-position: center;
+            border-radius: 19px;
+            width: 100%; /* Make it responsive */
+            height: 300px; /* Set a base height */
+            min-width: 260px; /* Match service-card min-width */
+            margin: 30 auto; /* Center it */
         }
         @media (max-width: 900px) {
             .service-grid {
@@ -173,7 +184,7 @@
     </div>
     <div class="section">
         <div class="service-grid">
-            <div class="hero aggregate-hero" style="background-image: url('https://i.postimg.cc/ncFG2Q8F/image.png'); min-height: 80px; background-size:cover; background-position:center; border-radius:19px;width: 350px;margin-top: -5px; margin-left: -1010px;">
+            <div class="hero aggregate-hero" style="background-image: url('https://i.postimg.cc/ncFG2Q8F/image.png');min-height: 85px; background-size:cover; background-position:center; border-radius:19px;width: 390px;margin-top: -15px; margin-right: 175px;">
     </div>
             <div class="service-card">
                 <h3>PSMF Creation & Maintenance</h3>
