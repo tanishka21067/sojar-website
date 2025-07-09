@@ -1495,62 +1495,7 @@ body {
 }
 /* End QPPV & Local Contact Person for PV Styles */
 /* Service: GVP Audits/Inspection Preparedness for Pharmacovigilance */
-.service-hero {
-  background: #2366d1;
-  color: #fff;
-  text-align: center;
-  padding: 3rem 1rem 2rem 1rem;
-}
-.service-hero h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-.service-hero p {
-  font-size: 1.2rem;
-  margin-bottom: 0;
-}
-.service-section {
-  background: #fff;
-  padding: 2.5rem 1rem 1.5rem 1rem;
-  text-align: center;
-}
-.service-section h2 {
-  color: #2366d1;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  font-weight: 700;
-}
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.service-card {
-  background: #f8fafc;
-  border-radius: 1rem;
-  box-shadow: 0 4px 18px rgba(35,102,209,0.08);
-  padding: 2rem 1.2rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-  color: #222;
-  text-align: left;
-}
-.service-card h3 {
-  color: #111;
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 0.7rem;
-}
-.service-card p {
-  color: #333;
-  font-size: 1rem;
-}
-.service-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(35,102,209,0.18);
-}
+
 /* End of GVP Audits/Inspection Preparedness for Pharmacovigilance */
 
 /* Service: Medical Information and Call Center */

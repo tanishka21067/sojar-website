@@ -28,13 +28,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
 
     <style>
-       body {
+     
+
+  body {
             background: #c6ccff;
             color: #111;
-            font-family: sans-serif;overflow-x: hidden;
+            font-family: sans-serif;
+            
         }
-        .hero-aggregate-hero {
-            width: 100vw;
+        .hero.pvservices-hero {
+            background: #2563eb;
+            color: #fff;
+            padding: 64px 0 48px 0;
+            text-align: center;
+        }
+        .hero.pvservices-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+        }
+        .hero.pvservices-hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+.section h2 {
+ width: 100vw;
             position: relative;
             left: 50%;
             right: 50%;
@@ -42,55 +71,19 @@
             margin-right: -50vw;
             background: #164093;
             color: #fff;
-            padding: 110px 0 70px 0; /* Increased height: more top and bottom padding */
+            padding: 64px 0 48px 0;
             text-align: center;
             font-size: 2.8rem;
             font-weight: 400;
             letter-spacing: 1px;
             z-index: 1;
-            margin-top: -32px; /* Shift band slightly upward */
-        }
-       .hero-pvservices-hero h1 {
-            font-size: 2.8rem;
-            font-weight: 400;
-            margin-bottom: 0.5em;
-        }
-        .hero-aggregate-hero p {
-            font-size: 1.25rem;
-            max-width: 700px;
-            margin: 0 auto;
-            font-weight: 400;
-        }
-        .section {
-            max-width: 2300px;
-            margin: 0 auto;
-            padding: 40px 16px 0 16px;
-            margin-top: -22px;
-            margin-left: -50px;
-            margin-right: -50px;
-            text-align: center;
-        }
-        /* Center the h2 heading in the blue bar */
-        .section h2 {
-            color: #fff;
-            background: #164093;
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 2em;
-            padding: 64px 0 48px 0;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            letter-spacing: 1px;
-            margin-top: -20px;
-        }
-        .service-grid {
+}
+ .service-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 32px;
             justify-items: center;
+            margin-top: 40px;
         }
         .service-card {
             background: #f4f7fa;
@@ -120,15 +113,34 @@
             box-shadow: 0 8px 32px 0 rgba(30, 64, 175, 0.18);
             transform: translateY(-6px) scale(1.03);
         }
+
+ .hero.aggregate-hero {
+            width: 100%;
+            margin: 0;
+            border-radius: 19px;
+        }
+        
         @media (max-width: 900px) {
+            .dossier-heading-band {
+                font-size: 1.3rem;
+                padding: 36px 0 24px 0;
+            }
             .service-grid {
                 grid-template-columns: 1fr 1fr;
+                gap: 18px;
             }
+            
         }
         @media (max-width: 600px) {
+            .dossier-heading-band {
+                font-size: 1.1rem;
+                padding: 22px 0 14px 0;
+            }
             .service-grid {
                 grid-template-columns: 1fr;
+                gap: 12px;
             }
+            
         }
     </style>
 </head>
@@ -187,7 +199,7 @@
     </div> -->
     <div class="section">
         
-        <h2 style="font-size: 2.6rem;">Aggregate Reports</h2>
+        <h2 style="font-size: 2.1rem;">Aggregate Reports</h2>
         <div class="service-grid">
             <div class="hero aggregate-hero" style="background-image: url('https://i.postimg.cc/pXKS5bz1/image.png'); height: 310px; background-size:cover; background-position:center; border-radius:19px;width: 350px;"></div>
             <div class="service-card">
