@@ -127,20 +127,7 @@
             margin: 0;
             border-radius: 19px;
         }
-        .service-grid .service-card:last-child {
-            justify-self: center;
-            grid-column: 2 / 3;
-        }
-        @media (max-width: 900px) {
-            .service-grid .service-card:last-child {
-                grid-column: 1 / -1;
-            }
-        }
-        @media (max-width: 600px) {
-            .service-grid .service-card:last-child {
-                grid-column: 1 / 2;
-            }
-        }
+        
         @media (max-width: 900px) {
             .dossier-heading-band {
                 font-size: 1.3rem;
@@ -150,10 +137,7 @@
                 grid-template-columns: 1fr 1fr;
                 gap: 18px;
             }
-            .service-card:last-child {
-                grid-column: 1 / 3;
-                justify-self: center;
-            }
+            
         }
         @media (max-width: 600px) {
             .dossier-heading-band {
@@ -164,10 +148,7 @@
                 grid-template-columns: 1fr;
                 gap: 12px;
             }
-            .service-card:last-child {
-                grid-column: 1 / 2;
-                justify-self: center;
-            }
+            
         }
     </style>
 </head>
@@ -226,7 +207,8 @@
     <div class="section">
         <div class="dossier-heading-band">Our Dossier Preparation & Regulatory Affairs Services</div>
         <div class="service-grid">
-            <div class="service-card">
+            <div class="hero aggregate-hero" style="background-image: url('https://i.postimg.cc/g0c9nTMZ/image.png'); height: 310px; background-size:cover; background-position:center; border-radius:19px;width: 350px;"></div>
+            <div class="service-card">           
                 <h3>CTD/eCTD Dossier Compilation</h3>
                 <p>Preparation and formatting of Common Technical Document (CTD) and electronic CTD (eCTD) dossiers for global regulatory submissions, ensuring accuracy and compliance with international standards.</p>
             </div>
@@ -234,8 +216,6 @@
                 <h3>Regulatory Strategy & Intelligence</h3>
                 <p>Strategic guidance and up-to-date regulatory intelligence to optimize submission pathways, accelerate approvals, and maintain compliance in all target markets.</p>
             </div>
-            <div class="hero aggregate-hero" style="background-image: url('https://i.postimg.cc/25MWfVXZ/image.png'); min-height: 85px; background-size:cover; background-position:center; border-radius:19px;width: 113%;margin-top: -10px;margin-right: -45PX;">
-    </div> 
             <div class="service-card">
                 <h3>Gap Analysis & Document Review</h3>
                 <p>Comprehensive review and gap analysis of existing documentation to ensure submission readiness, identify deficiencies, and support successful approvals.</p>
@@ -259,10 +239,6 @@
             <div class="service-card">
                 <h3>Global Market Access</h3>
                 <p>Support for product registrations and approvals in emerging and established markets worldwide, ensuring rapid and compliant market entry.</p>
-            </div>
-            <div class="service-card">
-                <h3>Regulatory Training & Support</h3>
-                <p>Customized training and ongoing support for your teams on regulatory requirements, dossier preparation, and best practices for compliance.</p>
             </div>
         </div>
         
