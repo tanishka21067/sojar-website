@@ -23,7 +23,7 @@ git checkout tanishka_development
 
 
 
-
+<!-- old code without responsive -->
 
 :root {
     --primary-color: #fb7915;

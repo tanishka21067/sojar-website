@@ -578,7 +578,7 @@
 
 <script src="web.js"></script>  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>  <script>
   
-    emailjs.init("aL8NgmbqsqMP-jUJj"); // Replace with your public key
+    emailjs.init("o7gZQTA04ls_bJq_B"); // Replace with your public key
   
 
   
@@ -638,7 +638,7 @@
     function sendEmail(e) {
       e.preventDefault();
       if (!validateCaptcha()) return false;
-      emailjs.sendForm("service_04y3xsv", "template_vyx28lq", document.getElementById("contact-form"))
+      emailjs.sendForm("service_04y3xsv", "template_w336p3m", document.getElementById("contact-form"))
         .then(() => {
           showThankYouModal();
           document.getElementById("contact-form").reset();

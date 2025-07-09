@@ -1,3 +1,8 @@
+
+
+/*  new code with responsive */
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -185,9 +190,7 @@
     <a href="web.html">
       <img src="https://i.postimg.cc/d3hYgnfm/SOJAR-Copy.png" alt="Sojar Logo" title="Sojar Logo" style="width: 140px;">
     </a>
-    <button class="navbar-toggler" type="button" aria-label="Toggle navigation" onclick="toggleNavbar()">
-      <i class="fas fa-bars"></i>
-    </button>
+   
     <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link active" href="web.html">Home</a></li>
@@ -663,7 +666,7 @@ function toggleNavbar() {
     --white: #ffffff;
     --dark: #1a1a1a;
     --transition: all 0.3s ease;
-    --font-family: 'Poppins', sans-serif;
+    --font-family: sans-serif;
     --font-size: 16px;
 }
 
