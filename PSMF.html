@@ -116,17 +116,11 @@
             height: 300px; /* Set a base height */
             min-width: 260px; /* Match service-card min-width */
             margin: 30 auto; /* Center it */
+           
         }
-        @media (max-width: 900px) {
-            .service-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        @media (max-width: 600px) {
-            .service-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+     
+        @media (max-width: 900px) { .service-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 600px) { .service-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -185,7 +179,7 @@
     </div>
     <div class="section">
         <div class="service-grid">
-            <div class="hero aggregate-hero" style="background-image: url('https://i.postimg.cc/ncFG2Q8F/image.png');min-height: 85px; background-size:cover; background-position:center; border-radius:19px;width: 390px;margin-top: -15px; margin-right: 175px;">
+            <div class="hero aggregate-hero" style="background-image: url('https://i.postimg.cc/ncFG2Q8F/image.png');min-height: 85px; background-size:cover; background-position:center; border-radius:19px;width: 350px;margin-top: -15px;margin-right: -280px;">
     </div>
             <div class="service-card">
                 <h3>PSMF Creation & Maintenance</h3>
