@@ -1027,7 +1027,7 @@ font-size: 13px;
 
 /* Add padding to body to prevent content jump */
 body {
-    padding-top: 76px; /* Adjusted for navbar height */
+    padding-top: 96px; /* Adjusted for navbar height */
 }
 
 @media (max-width: 991px) {
@@ -1049,6 +1049,7 @@ body {
 
 .navbar-nav{
     margin-right: -10px; /* Aligns the navbar items to the left */
+   margin-bottom: 10px;
 }
 .btn-style-one {
     position: relative;
@@ -1058,7 +1059,7 @@ body {
     border-radius: 5px;
     font-weight: 500;
     border: 2px solid var(--primary-color);
-    margin-bottom: -32px;
+   
 }
 
 .btn-style-one:hover {
@@ -1128,9 +1129,12 @@ body {
 }
 
 /* Navigation Enquiry Button Styles */
+
+/* Navigation Enquiry Button Styles */
 .navbar-nav .theme-btn {
     padding: 9px 20px;
-    margin-top: 32px;
+    margin-top: 35px;
+    transform: translateY(-5px);
 }
 
 .navbar-nav .theme-btn:hover {
@@ -1139,13 +1143,24 @@ body {
     border-color: var(--secondary-color);
 }
 
+@media (max-width: 991px) {
+    .navbar-nav .theme-btn {
+        margin: 10px 15px;
+        transform: none;
+    }
+}
+
+
+
+
+
 /* Updated navigation link styles */
 .navbar-nav .nav-link {
     font-weight: 600;
     transition: var(--transition);
     color: #171717;
     font-size: 19px; /* Increased font size */
-    margin-top: 17px;
+    margin-top: 31px;
 }
 
 .navbar-nav .nav-link:hover {
