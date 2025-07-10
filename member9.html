@@ -25,21 +25,58 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
-
+<style>
+/* Leadership Team Card & Navigation Enhancements */
+.body{
+  font-family: sans-serif;
+}
+.card .nav-link {
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  font-size: 1.08rem;
+  position: relative;
+}
+.card .nav-link:hover:not(.active-member) {
+  background: #f0f4ff;
+  color: #164093;
+  box-shadow: 0 2px 8px 0 rgba(22,64,147,0.07);
+  font-weight: 600;
+}
+.card .nav-link.active-member {
+  background: #e3e9f7;
+  color: #164093;
+  font-weight: 700;
+  box-shadow: 0 2px 8px 0 rgba(22,64,147,0.10);
+}
+.card .nav-link .active-bar {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 5px;
+  border-radius: 4px;
+  background: linear-gradient(180deg,#164093,#346fed);
+  content: '';
+  display: inline-block;
+}
+.card .nav-link:not(.active-member) .active-bar {
+  display: none;
+}
+    
+    </style>
 </head>
-<body>
-    <!-- Header Section -->  
+<body style="background-color: #c6ccff;">
+        <!-- Header Section -->  
      <header class="main-header">    
         <nav class="navbar navbar-expand-lg">
-  <div class="container">
-    <a class="navbar-brand" href="abt.html" style="display: flex; margin-left: -10px;">
-      <i class="fas fa-bars"></i>
-    </a>
-    <a href="web.html">
-      <img src="https://i.postimg.cc/d3hYgnfm/SOJAR-Copy.png" alt="Sojar Logo" title="Sojar Logo" style="width: 160px;height: 65px;">
-    </a>
-   
-    <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="container">
+                <a class="navbar-brand" href="abt.html" style="display: flex; margin-left: -40px;">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <!-- logo -->
+             <a href="web.html">
+               <img src="https://i.postimg.cc/d3hYgnfm/SOJAR-Copy.png" alt="" title="" style="width: 200px;"></a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link active" href="web.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="abt.html">About Us</a></li>
@@ -66,226 +103,94 @@
                                 <li><a class="dropdown-item" href="Drug Safety Mailbox Management.html">Drug Safety Mailbox Management</a></li>
                             </ul>
                         </li>
-                          <li class="nav-item"><a class="nav-link nav-link-career" href="career1.html" >Career</a></li>
-                          <li class="nav-item"><a class="nav-link" href="ContactUs1.html" >Contact Us</a></li>
-                        <ul class="navbar-nav ms-auto d-flex align-items-center ">
-                          <li class="nav-item ms-2 " ><a href="enquiry.html" class="theme-btn btn-style-one"><span class="txt" >Enquiry Now</span></a></li>
+                          <li class="nav-item"><a class="nav-link nav-link-career" href="career1.html">Career</a></li>
+                          <li class="nav-item"><a class="nav-link" href="ContactUs1.html">Contact Us</a></li>
+                        <ul class="navbar-nav ms-auto d-flex align-items-center">
+                          <li class="nav-item ms-2"><a href="enquiry.html" class="theme-btn btn-style-one"><span class="txt">Enquiry Now</span></a></li>
                        </ul>
                        
                       </ul>
                 </div>
-  </div>
-</nav>   
+            </div>
+        </nav>   
     </header>
 
-    <!-- Main Slider Section -->   
-<section class="main-slider" >
-  <div class="owl-carousel main-slider-carousel">
-    <div class="slide">
-      <div class="image-layer" style="background-image: url('https://i.postimg.cc/W1wjDnkD/image.png'); min-height: 230px; background-size:cover; background-position:center; border-radius:19px;">
-        <div class="container h-100 d-flex align-items-center justify-content-center">
-           
-            <h2 class="mb-2" style="font-size: 52px;color: #ffffff;margin-left: 60%;">Excellence in<br> Pharmacovigilance</h2>
-         
+    <!-- Team Member Profile Banner -->
+<section class="w-100" style="background: linear-gradient(90deg, #164093 60%, #346fed 100%); min-height: 340px; display: flex; align-items: flex-end; position: relative; box-shadow: 0 8px 32px 0 rgba(22,64,147,0.12);">
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row align-items-end">
+      <div class="col-md-3 d-flex flex-column align-items-center justify-content-end">
+        <div class="rounded-circle overflow-hidden border border-4 border-white shadow-lg position-relative" style="width: 280px; height: 280px; margin-bottom: -60px; background: #fff;">
+          <img src="https://i.postimg.cc/XqSJ9gnT/image.png" alt="Shubham Warkhade" style="width: 150%; height: 170%; object-fit: contain; object-position: center; display: block; margin: 0 auto; margin-left: -60px;margin-top: -70px;">
         </div>
+      </div>
+      <div class="col-md-9 text-white pb-4 ps-md-5">
+        <h1 class="display-4 fw-bold mb-2" style="font-size: 2.5rem; letter-spacing: 1px;">Shubham Warkhade</h1>
+        <h3 class="h5 fw-normal mb-0" style="font-size: 1.3rem; opacity: 0.95;">Drug Safety Associate</h3>
+        <div class="mt-3" style="height: 4px; width: 120px; background: linear-gradient(90deg,#fff,#346fed); border-radius: 2px;"></div>
       </div>
     </div>
-    <div class="slide">
-      <div class="image-layer" style="background-image: url('https://i.postimg.cc/zDLr0866/image.png'); min-height: 230px; background-size:cover; background-position:center; border-radius:18px;">
-        <div class="container h-100 d-flex align-items-center justify-content-center">
-          <!-- <div class="content text-center bg-opacity-75 p-4 rounded-4 shadow">
-            <h2 class="mb-2">Advanced Case Management</h2>
-            <p>Comprehensive solutions for the pharmaceutical industry</p>
-          </div> -->
-        </div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="image-layer" style="background-image: url('https://globalforum.diaglobal.org/wp-content/uploads/2022/03/dia-pharmacovigilance-2022-icon.jpg'); min-height: 230px; background-size:cover; background-position:center; border-radius:18px;">
-        <div class="container h-100 d-flex align-items-center justify-content-center">
-          <!-- <div class="content text-center  bg-opacity-75 p-4 rounded-4 shadow">
-            <h2 class="mb-2">Your Trusted Pharmacovigilance Partner</h2>
-            <p>Delivering excellence in drug safety and compliance</p>
-          </div> -->
-        </div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="image-layer" style="background-image: url('https://i.postimg.cc/sxBsWrCF/image.png'); min-height: 230px; background-size:cover; background-position:center; border-radius:18px;">
-        <div class="container h-100 d-flex align-items-center justify-content-center">
-          <!-- <div class="content text-center bg-opacity-75 p-4 rounded-4 shadow">
-            <h2 class="mb-2">Empowering Pharmacovigilance</h2>
-            <p>Innovative solutions for a safer healthcare environment</p>
-          </div> -->
-        </div>
-      </div>
   </div>
 </section>
-        <!-- Services Section -->
-    <section id="services" class="service-page" >
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="sec-title wow fadeInUp" data-wow-duration="1000ms">
-                        <h2 class="sec-title__title" style="text-align: center;">Our Services</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row gutter-y-30" style="margin-top: -50px;">
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="190ms">
-                        <div class="service-card__inner">
-                            <div class="service-card__top">
-                                <h3 class="service-card__title"><a href="pvsystemandSOPsServices.html">PV System and SOP’s</a></h3>
-                                <div class="service-card__icon">
-                                    <i class="fas fa-file-medical"></i>
-                                </div>
-                            </div>
-                            <div class="service-card__thumb">
-                                <div class="service-card__thumb__item">
-                                    <img src="https://i.postimg.cc/XJxnmSGB/case4.jpg" alt="PV System and SOP’s">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 <div class="col-md-6 col-lg-4">
-                    <div class="service-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="390ms">
-                        <div class="service-card__inner">
-                            <div class="service-card__top">
-                                <h3 class="service-card__title"><a href="pvconsultancy.html">PV Consultancy</a></h3>
-                                <div class="service-card__icon">
-                                    <i class="fas fa-comments"></i>
-                                </div>
-                            </div>
-                            <div class="service-card__thumb">
-                                <div class="service-card__thumb__item">
-                                    <img src="https://i.postimg.cc/8c5fnb5D/case5.jpg" alt="PV Consultancy" style="width: 330px; height: 250px; object-fit: cover; border-radius: 12px; display: block; margin: 0 auto; margin-left: -20px;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="590ms">
-                        <div class="service-card__inner">
-                            <div class="service-card__top">
-                                <h3 class="service-card__title"><a href="AggregateReports.html">Aggregate Reports</a></h3>
-                                <div class="service-card__icon">
-                                    <i class="fas fa-user-md"></i>
-                                </div>
-                            </div>
-                            <div class="service-card__thumb">
-                                <div class="service-card__thumb__item">
-                                    <img src="https://i.postimg.cc/W3dpxprF/image.png" alt="Aggregate Reporting" style="height: 350px; margin-top: -55px;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="190ms">
-                        <div class="service-card__inner">
-                            <div class="service-card__top">
-                                <h3 class="service-card__title"><a href="MedicalServices.html">Medical Services</a></h3>
-                                <div class="service-card__icon">
-                                    <i class="fas fa-clipboard-check"></i>
-                                </div>
-                            </div>
-                            <div class="service-card__thumb">
-                                <div class="service-card__thumb__item">
-                                    <img src="https://i.postimg.cc/sXBvYg0D/case3.jpg" alt="Medical Services">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                  <div class="col-md-6 col-lg-4">
-                    <div class="service-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="390ms">
-                        <div class="service-card__inner">
-                            <div class="service-card__top">
-                                <h3 class="service-card__title"><a href="ICSR End To End Case Processing.html">ICSR end to end case processing </a></h3>
-                                <div class="service-card__icon">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                            </div>
-                            <div class="service-card__thumb">
-                                <div class="service-card__thumb__item">
-                                    <img src="https://i.postimg.cc/s2QnbpMY/case2.jpg" alt="ICSR end to end case processing" style="width: -30px; height: -50px; object-fit: cover; border-radius: 12px; display: block; margin: 0 auto; margin-left: -20px;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="590ms">
-                        <div class="service-card__inner">
-                            <div class="service-card__top">
-                                <h3 class="service-card__title"><a href="MICC.html">Medical information and call center (MICC)</a></h3>
-                                <div class="service-card__icon">
-                                    <i class="fas fa-cogs"></i>
-                                </div>
-                            </div>
-                            <div class="service-card__thumb">
-                                <div class="service-card__thumb__item">
-                                    <img src="https://i.postimg.cc/QNbq466L/case6.jpg" alt="Medical information and call center (MICC)">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        <div class="row">
-            <div class="col-12 text-center mt-4">
-                <a class="Discover" href="allservices.html">Discover all Services</a>
-            </div>
+<br>
+<br>
+<!-- Team Member Profile Main Content -->
+<section class="container my-5">
+  <div class="row" style="margin-top: 80px;">
+    <!-- Side Navigation -->
+    <aside class="col-lg-3 mb-14 mb-lg-0">
+      <div class="card shadow-sm border-0 p-0" style="border-radius: 20px; background: linear-gradient(180deg, #e3e9f7 60%, #c6ccff 100%);height: 100%;">
+        <div class="card-body p-4 pb-3">
+            
+          <div class="d-flex align-items-center mb-3">
+           
+            <span class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 38px; height: 38px; font-size: 1.3rem; box-shadow: 0 2px 8px 0 rgba(22,64,147,0.10);">
+              <i class="fas fa-users"></i>
+            </span>
+            <span class="fw-bold text-primary" style="font-size: 1.18rem; letter-spacing: 0.5px;">Leadership Team</span>
+          </div>
+          <div style="height: 4px; width: 155px; background: linear-gradient(90deg,#2051b2,#346fed); border-radius: 2px; margin-bottom: 18px;"></div>
+         <a class="nav-link py-2 px-3 text-dark" href="member1.html" style="border-radius: 8px; margin-bottom: 23px;letter-spacing: 0.9px;">Raju Bangar</a>
+         <a class="nav-link py-2 px-3 text-dark" href="member2.html" style="border-radius: 8px; margin-bottom: 23px;letter-spacing: 0.9px;">Dr.Sunil Shinde</a>   
+         <a class="nav-link py-2 px-3 text-dark" href="member3.html" style="border-radius: 8px; margin-bottom: 23px;letter-spacing: 0.9px;">Pooja Saruk</a>
+            <a class="nav-link py-2 px-3 text-dark" href="member4.html" style="border-radius: 8px; margin-bottom: 23px;letter-spacing: 0.9px;">Ashwini Gite</a>
+            <a class="nav-link py-2 px-3 text-dark" href="member5.html" style="border-radius: 8px; margin-bottom: 23px;letter-spacing: 0.9px;">Dr.Jigar Parmar</a>
+            <a class="nav-link py-2 px-3 text-dark" href="member6.html" style="border-radius: 8px; margin-bottom: 23px;letter-spacing: 0.9px;">Shrutika Dande</a>
+            <a class="nav-link py-2 px-3 text-dark" href="member7.html" style="border-radius: 8px; margin-bottom: 23px;letter-spacing: 0.9px;">Nikita Sanap</a>
+            <a class="nav-link py-2 px-3 text-dark" href="member8.html" style="border-radius: 8px; margin-bottom: 23px;letter-spacing: 0.9px;">Neha Ghule</a>
+            <a class="nav-link py-2 px-3 fw-semibold position-relative active-member" href="member9.html" style="color: #164093; background: #e3e9f7; border-radius: 8px; margin-bottom: 4px; font-weight: 600;">
+              <span class="active-bar"></span>Shubham Warkhade
+            </a><a class="nav-link py-2 px-3 text-dark" href="member10.html" style="border-radius: 8px; margin-bottom: 23px;letter-spacing: 0.9px;">Rushikesh Bansode</a>
+            </nav>
         </div>
-    </section><!-- Contact Section -->
-    <!-- Include Google Fonts (Optional) -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+      </div>
+    </aside>
+    <!-- Main Profile Content -->
+    <div class="col-lg-9">
+      <div class="bg-white rounded shadow-sm p-5" style="min-height: 420px; box-shadow: 0 2px 12px 0 rgba(22,64,147,0.07);">
+        <h2 class="h3 text-primary mb-4" style="font-weight: 700; letter-spacing: 0.5px;">About Shubham  </h2>
+        <p class="lead mb-4" style="color:#164093; font-size:1.18rem;">Mr. Shubham Warkhade has been serving as a Drug Safety Associate at Sojar Research Services Pvt. Ltd. With a strong academic background and hands-on industry exposure, he brings a detail-oriented and analytical approach to pharmacovigilance and safety operations.</p>
 
-
-<div class="why-section">
-    <h2>Why Sojar?</h2>
-    <p class="description">
-        Sojar stands out as a trusted partner in Pharmacovigilance by offering 
-        comprehensive, end-to-end safety solutions tailored to the needs of
-         pharmaceutical and biopharmaceutical companies.</p>
-
-<div class="stats-container">
-  <div class="stat-box">
-    <div class="stat-number" data-target="50000" data-suffix="K">0K</div>
-    <div class="stat-label">ICSRs<br>Processed</div>
+        <ul style="font-size:1.08rem; color:#222; line-height:1.7; padding-left:1.2em;">
+          <li>He holds a Postgraduate Diploma in Pharmacovigilance and Clinical Data Management from Symbiosis International University .This one-year specialized program equipped him with in-depth knowledge of drug safety, adverse event reporting, regulatory compliance, and clinical data integrity.</li>
+          <li> He also holds a Bachelor of Pharmacy degree from Pune University, where he built a strong foundation in pharmaceutical sciences.</li>
+          <li>In his current role, he is responsible for monitoring product safety and evaluating adverse event reports, conducting literature screening for safety signals, assisting in the preparation of aggregate reports (PBRER, DSUR) and ensuring regulatory compliance through accurate and timely documentation</li>
+          <li>He has deep expertise in drug safety, regulatory compliance, and global pharmacovigilance operations.</li>
+          <li>Under his leadership, Sojar delivers comprehensive PV and technology services such as case processing, signal detection, PSURs, risk management, QPPV services, and regulatory intelligence worldwide.</li>
+          </ul>
+        <div class="mt-5 text-end">
+          <a href="https://mail.google.com/mail/?view=cm&to=info@sojarresearch.com" class="btn btn-outline-primary me-2"><i class="fas fa-envelope"></i> Contact</a>
+          <a href="web.html" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="stat-box">
-    <div class="stat-number" data-target="230" data-suffix="+">0+</div>
-    <div class="stat-label">Aggregate<br>Reports</div>
-  </div>
-  <div class="stat-box">
-    <div class="stat-number" data-target="250" data-suffix="+">0+</div>
-    <div class="stat-label">Safety<br>Signals</div>
-  </div>
-  <div class="stat-box">
-    <div class="stat-number" data-target="300" data-suffix="+">0+</div>
-    <div class="stat-label">Literature<br>Surveillance</div>
-  </div>
-</div>
-    <a href="whysojar.html" class="find-out-btn">Find out more</a>
-</div>
-<!-- // end  -->
-
-
-    <section id="contact" class="contact-info-section">
-        <div class="auto-container">
-            <!-- Sec Title -->
-    </section>
-    
+</section>
     <!-- Footer Section -->
     <footer class="main-footer ">
       <div class="container" style="margin-top: 12px;">
         <div class="row widgets-section align-items-start">
-          <div class="footer-logo-social col-12 col-md-auto mb-4 mb-md-0 d-flex flex-column align-items-start pe-md-4" style="min-width:180px;">
+          <div class="footer-logo-social col-12 col-md-auto mb-4 mb-md-0 d-flex flex-column align-items-start pe-md-4" style="width: 160px;height: 65px;">
             <div class="logo-widget mb-2 mb-md-3 me-md-0">
               <img src="https://i.postimg.cc/d3hYgnfm/SOJAR-Copy.png" alt="Sojar Logo" style="width: 160px;height: 65px;">
             </div>
@@ -346,9 +251,7 @@
       </div>
     </footer>
 
-    
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Scripts -->    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- Wow.js -->
@@ -357,17 +260,5 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script>
-function toggleNavbar() {
-  var nav = document.getElementById('navbarNav');
-  nav.classList.toggle('show');
-}
-</script>
 </body>
 </html>
-
-
-
-
-
-
