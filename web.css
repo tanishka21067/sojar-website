@@ -199,9 +199,10 @@ ul.dropdown-menu.show {
 .main-slider .content h2 {
     font-size: 24px; /* Reduced for mobile */
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 100;
     margin-bottom: 10px;
     color: #fff;
+    text-align: right;
 }
 
 .main-slider .content p {
@@ -301,7 +302,7 @@ ul.dropdown-menu.show {
 .section-title h2 {
     font-size: 36px;
     font-weight: 700;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 15px;
 }
 
@@ -667,7 +668,7 @@ ul.dropdown-menu.show {
           height: 160px;
         }
         .main-footer {
-          padding: 24px 0 0 0;
+          padding: 34px 0 0 0;
         }
         .main-footer .footer-widget h6 {
           font-size: 1.01rem;
@@ -736,7 +737,7 @@ ul.dropdown-menu.show {
 }
 
 .footer-widget {
-    margin-bottom: 10px; /* less margin between widgets */
+    margin-bottom: 2px; /* less margin between widgets */
 }
 
 .footer-widget h5 {
@@ -857,7 +858,7 @@ ul.dropdown-menu.show {
     margin-top: 20px;  /* less margin to reduce height */
     text-align: center;
     font-size: 13px;
-    color: #aaaaaa;
+    color: #f7f6f6;
 }
 
 .copyright {
@@ -1383,6 +1384,7 @@ body {
     font-family:  sans-serif; /* Matches the Google Font in your web.html */
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin-bottom: 40px;
 }
 
 .Discover:hover {
@@ -1395,9 +1397,7 @@ body {
     text-align: center;
 }
 
-.mt-4 {
-    margin-top: 1.5rem; /* Adds spacing above the button */
-}
+
 /* Animation Classes */
 @keyframes fadeInUp {
     from {
