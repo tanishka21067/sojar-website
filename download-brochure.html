@@ -4,13 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download Our Brochure</title>
+     <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+    <link rel="icon" type="image/png" sizes="540x540" href="data:image/png;base64,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">
+    <link rel="icon" type="image/png" sizes="540x540" href="data:image/png;base64,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">
+     <link rel="manifest" href="data:image/png;base64,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">
+   
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="css/service-page.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom Icon Font -->
+    <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+   
     <style>
         body {
             font-family: sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 120vh;
             margin: 0;
             background-image: url('https://i.postimg.cc/y8SKD10B/image.png');
             background-size: cover;
@@ -22,8 +45,9 @@
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
+            width: 160%;
+            height: 100%;
+            max-width: 500px;
         }
         h1 {
             text-align: center;
@@ -89,7 +113,7 @@
         }
     </style>
 </head>
-<body>
+<sect>
     <!-- Header Section -->  
      <header class="main-header">    
         <nav class="navbar navbar-expand-lg">
@@ -139,6 +163,7 @@
   </div>
 </nav>   
     </header>
+    <section>
     <div class="form-container">
         <h1>Fill Out the Form to Download Our Brochure</h1>
         <div class="form-group">
@@ -158,73 +183,12 @@
         </div>
         <button id="submit-btn" onclick="validateForm()">Submit</button>
         <div id="download-link" class="download-link">
-            <a href="Sojar_Global Pharmacovigilance capability (4).pdf" download><button>Download Brochure</button></a>
+            <a href="Global Pharmacovigilance capability_Sojar.pdf" download><button>Download Brochure</button></a>
         </div>
     </div>
-        <!-- Footer Section -->
-    <footer class="main-footer ">
-      <div class="container" style="margin-top: 12px;">
-        <div class="row widgets-section align-items-start">
-          <div class="footer-logo-social col-12 col-md-auto mb-4 mb-md-0 d-flex flex-column align-items-start pe-md-4" style="min-width:180px;">
-            <div class="logo-widget mb-2 mb-md-3 me-md-0">
-              <img src="https://i.postimg.cc/d3hYgnfm/SOJAR-Copy.png" alt="Sojar Logo" style="max-width:175px;">
-            </div>
-            <div class="social-neumorphic">
-              <a href="https://mail.google.com/mail/?view=cm&to=info@sojarresearch.com" class="neu-button" aria-label="Mail"><i class="fas fa-envelope"></i></a>
-              <a href="https://wa.me/919960977905" class="neu-button" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-              <a href="https://www.linkedin.com/company/sojar-research-services-pvt-ltd/?originalSubdomain=in" class="neu-button" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://www.facebook.com/sojarresearch/" class="neu-button" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            </div>
-          </div>
-          <div class="footer-column col-12 col-md-3 mb-4 mb-md-0 ">
-            <div class="footer-widget">
-              <h6 class="fw-bold mb-2">Quick Links</h6>
-              <ul class="list-unstyled ">
-                <li><a href="web.html">Home</a></li>
-                <li><a href="abt.html">About Us</a></li>
-                <li><a href="MenuOfServices.html">Services</a></li>
-                <li><a href="career1.html">Career</a></li>
-                <li><a href="ContactUs1.html">Contact Us</a></li>
-                <li><a href="enquiry.html">Enquiry Now</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-column col-12 col-md-3 mb-4 mb-md-0">
-            <div class="footer-widget mb-2">
-              <h6 class="fw-bold mb-2">Services and Solutions</h6>
-              <ul class="list-unstyled mb-0">
-                <li><a href="pvsystemandSOPsServices.html">PV System and SOP's</a></li>
-                <li><a href="AggregateReports.html">Aggregate Reports</a></li>
-                <li><a href="SDEA Services.html">SDEA Services</a></li>
-                <li><a href="PVServices.html">PV Services for Distributors</a></li>
-                <li><a href="pvconsultancy.html">PV Consultancy</a></li>
-                <li><a href="Medical Services.html">Medical Services</a></li>
-                <br>
-                <li><a href="MenuOfServices.html"><strong>View All Services</strong></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-column col-12 col-md-3">
-            <div class="footer-widget ">
-              <h6 class="fw-bold mb-2">Contact Us</h6>
-              <div class="footer-contact mb-2">
-                <div class="mb-1"><strong>Address:</strong></div>
-                <div style="font-size:0.83em;line-height: 1.5;">Office 201, Creative's Orchid,<br>Hinjawadi-Punawale Link Road,<br>Beside Lotus Business School,<br>Pune-411033, Maharashtra (India).</div>
-                <div class="mt-2"><strong>Phone:</strong> <a href="tel:+919960977905">+91 9960977905</a><br> <a href="tel:+918793939229" style="margin-left: 56px;">+91 8793939229</a>
-                </div><div><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&to=info@sojarresearch.com">info@sojarresearch.com</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-divider my-3"></div>
-        <div class="footer-widget--time ">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.019234073964!2d73.7557253148927!3d18.57337068738659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b8e2e2e2e2e2%3A0x2e2e2e2e2e2e2e2e!2sSojar%20Research%20Services%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1688999999999!5m2!1sen!2sin" width="100%" height="180" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="footer-divider my-3"></div>
-        <div class="text-center pb-2 small" style="color:#e7e8ed;">© 2025 Sojar Research Services Pvt. Ltd. All Rights Reserved</div>
-      </div>
-    </footer>
-
+   
+    </section>
+      
     
     <script>
         function validateForm() {
