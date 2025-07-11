@@ -240,6 +240,18 @@
     color: #ea580c !important;
     font-weight: 5 !important;
 }
+ .hero.aggregate-hero {
+        
+            background-size: cover;
+            background-position: center;
+            border-radius: 19px;
+            width: 100%; /* Make it responsive */
+            height: 300px; /* Set a base height */
+            min-width: 260px; /* Match service-card min-width */
+            margin: 30 auto; /* Center it */
+        }
+        @media (max-width: 900px) { .service-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 600px) { .service-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body style="background-color: #ebedff;">
@@ -308,12 +320,17 @@
     <!-- Why Sojar Section -->
      <br>
     <section id="why-sojar" class="py-5">
+      
   <div class="container">
 
     <!-- First Row -->
     <div class="row justify-content-center">
+       <div class="hero aggregate-hero" style="background-image: url('https://imatsolutions.com/assets/uploads/2022/10/blog_10_5_22.jpg'); min-height: 100px; background-size:cover; background-position:center; border-radius:19px;width: 390px;margin-top: -15px;margin-left: 20px;margin-right: 24px;margin-bottom: 25px;">
+                </div>
+     <br>
       <div class="col-md-4 mb-4">
-        <div class="why-sojar-card margin-left: -10px; p-4 hover-scale animate_animated animate_fadeIn">
+
+        <div class="why-sojar-card"style="margin-left: 4px;">
           <h3 class="h5 why-sojar-card-title text-center fw-bold mb-3">Mission-Driven</h3>
           <p class="why-sojar-card-text text-center">We are committed to delivering high-quality pharmacovigilance (PV) services with full regulatory compliance, ensuring patient safety and maintaining data integrity at every stage of the drug development and monitoring process. </p>
         </div>
@@ -326,28 +343,26 @@
         </div>
       </div>
 
-      <div class="hero aggregate-hero" style="background-image: url('https://imatsolutions.com/assets/uploads/2022/10/blog_10_5_22.jpg'); min-height: 5px; background-size:cover; background-position:center; border-radius:19px;width: 30%;margin-top: -15px;margin-right: 0PX; margin-left: 10px; margin-bottom: 20px;">
-                </div>
      
 
     <!-- Second Row -->
     <div class="row justify-content-center">
       <div class="col-md-4 mb-4">
-        <div class="why-sojar-card card p-4 hover-scale animate_animated animate_fadeIn" style="animation-delay: 0.2s;">
+        <div class="why-sojar-card card p-4 hover-scale animate_animated animate_fadeIn" style="animation-delay: 0.2s;margin-top: 23px;">
           <h3 class="h5 why-sojar-card-title text-center fw-bold mb-3">Innovative Solutions</h3>
           <p class="why-sojar-card-text text-center">Leveraging cutting-edge technology to streamline drug safety monitoring, enhance signal detection, ensure regulatory compliance, and deliver timely and accurate pharmacovigilance reporting.</p>
         </div>
       </div>
 
       <div class="col-md-4 mb-4">
-        <div class="why-sojar-card card p-4 hover-scale animate_animated animate_fadeIn" style="animation-delay: 0.3s; height: 90%;">
+        <div class="why-sojar-card card p-4 hover-scale animate_animated animate_fadeIn" style="animation-delay: 0.3s; height: 82%;margin-top: 23px;">
           <h3 class="h5 why-sojar-card-title text-center fw-bold mb-3">Global Reach</h3>
           <p class="why-sojar-card-text text-center">Serving clients worldwide with tailored pharmacovigilance services, we provide end-to-end drug safety solutions that meet global regulatory standards. Through dedication, we deliver excellence in global drug safety and patient care. </p>
         </div>
       </div>
 
       <div class="col-md-4 mb-4">
-        <div class="why-sojar-card card p-4 hover-scale animate_animated animate_fadeIn" style="animation-delay: 0.4s;">
+        <div class="why-sojar-card card p-4 hover-scale animate_animated animate_fadeIn" style="animation-delay: 0.4s;margin-top: 23px;">
           <h3 class="h5 why-sojar-card-title text-center fw-bold mb-3">Industry Excellence</h3>
           <p class="why-sojar-card-text text-center">Sojar is committed to advancing the culture of pharmacovigilance by implementing validated, efficient systems and best practices. Our proactive approach empowers your organization to stay compliant.</p>
         </div>
