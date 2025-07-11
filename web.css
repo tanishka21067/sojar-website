@@ -1016,12 +1016,12 @@ font-size: 13px;
     display: none;
 }
 
-.main-header.sticky .navbar {
+/* .main-header.sticky .navbar {
     padding: 15px 0;
-}
+} */
 
 .main-header .navbar {
-    padding: 11px ;
+    padding: 5px ;
     font-size: 17px;  /* Increased font size */
     font-weight: 600;  /* Made text bold */
 }
@@ -1160,12 +1160,12 @@ body {
     font-weight: 600;
     transition: var(--transition);
     color: #171717;
-    font-size: 19px; /* Increased font size */
+    font-size: 24px; /* Increased font size */
     margin-top: 31px;
 }
 
 .navbar-nav .nav-link:hover {
-    color:  var(--primary-color);
+    color:  #009fdf;
     text-decoration: underline;
     
 }
