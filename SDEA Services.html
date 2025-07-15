@@ -62,6 +62,45 @@
         }
         @media (max-width: 900px) { .service-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 600px) { .service-grid { grid-template-columns: 1fr; } }
+         /* Responsive adjustments for mobile devices */
+        @media (max-width: 600px) {
+            .hero-pvservices-hero {
+                font-size: 1.2rem;
+                padding: 36px 0 10px 0;
+            }
+            .hero-pvservices-hero h1 {
+                font-size: 1.1rem;
+            }
+            .hero-pvservices-hero p {
+                font-size: 1rem;
+                padding: 0 8px;
+            }
+            .section {
+                padding: 24px 4px 0 4px;
+            }
+            .section h2 {
+                font-size: 1.2rem;
+                margin-bottom: 1em;
+            }
+            .service-card {
+                min-width: 0;
+                max-width: 100%;
+                padding: 1.2rem 0.7rem 1rem 0.7rem;
+                font-size: 0.98rem;
+            }
+            .service-card h3 {
+                font-size: 1rem;
+            }
+            .service-card p {
+                font-size: 0.95rem;
+            }
+            .hero.aggregate-hero {
+                width: 100%;
+                min-width: 0;
+                height: 150px;
+                margin: 0 auto 10px auto;
+            }
+        }
     </style>
 </head>
 <body>
