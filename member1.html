@@ -308,11 +308,17 @@
   }
 }
 
-/* Ensure side navigation is scrollable on smaller screens */
+/* Ensure side navigation is fully visible and shifted upwards on smaller screens */
 @media (max-width: 991.98px) {
   .card.shadow-sm {
-    max-height: 400px;
-    overflow-y: auto;
+    max-height: none;
+    overflow-y: visible;
+    margin-top: -0px;
+
+  }
+  .card-body {
+    padding-top: 50px !important;
+    margin-top: -10px !important;
   }
 }
 
@@ -326,7 +332,6 @@
   .card.shadow-sm {
     height: 100%;
   }
-  
 }
 
 
@@ -461,7 +466,7 @@
 
     
     <!-- Footer Section -->
-    <!-- Footer Section -->
+    < <!-- Footer Section -->
     <footer class="main-footer ">
       <div class="container" style="margin-top: 12px;">
         <div class="row widgets-section align-items-start">
