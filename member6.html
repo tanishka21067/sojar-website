@@ -96,6 +96,7 @@
   /* Team Member Profile Banner */
   .w-100 {
     min-height: 280px;
+    background-size: cover;
   }
   .rounded-circle {
     width: 180px !important;
@@ -278,12 +279,48 @@
  
 
   /* Team Member Profile Banner */
-  .rounded-circle {
-    width: 40px !important;
-    height: 40px !important;
-    
+  .w-100 {
+    min-height: 280px;
   }
- 
+  .rounded-circle {
+    width: 180px !important;
+    height: 180px !important;
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-top: -60px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .col-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: -30px !important;
+  }
+  /* Remove global .rounded-circle img styles to avoid affecting laptop view */
+  /* Responsive image adjustment for mobile only */
+  @media (max-width: 575.98px) {
+    .rounded-circle img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      display: block;
+      margin: 0 !important;
+      border-radius: 50% !important;
+      box-shadow: none !important;
+    }
+  }
+  .display-4 {
+    font-size: 1.8rem !important;
+  }
   .h5 {
     font-size: 1.2rem !important;
   }
@@ -391,7 +428,7 @@
     <div class="row align-items-end">
       <div class="col-md-3 d-flex flex-column align-items-center justify-content-end">
         <div class="rounded-circle overflow-hidden border border-4 border-white shadow-lg position-relative" style="width: 280px; height: 280px; margin-bottom: -60px; background: #fff;">
-          <img src="https://i.postimg.cc/mkX5t5fV/image.png" alt="Shrutika Dande" style="width: 180%; height: 155%; object-fit: contain; object-position: center; display: block; margin: 0 auto;margin-top: -60px;margin-left: -100px;">
+          <img src="https://i.postimg.cc/mkX5t5fV/image.png" alt="Shrutika Dande" style="width: 100%; height: 155%; object-position: center; display: block; margin: 0 auto;margin-top: -50px;margin-left: 0px;">
         </div>
       </div>
       <div class="col-md-9 text-white pb-4 ps-md-5">
