@@ -120,7 +120,7 @@
       padding: 25px 25px;
       background-color: #1e3a8a;
       color: #fff;
-      min-height: 70vh;
+      min-height: 100vh;
       box-sizing: border-box;
       font-size: 20px;
       overflow-y: auto; /* Enable vertical scrollbar when content overflows */
@@ -261,6 +261,14 @@
 </head>
 <body>
 
+  <!-- JS Script -->
+<script>
+  function closeMenu() {
+    document.querySelector('.your-menu-class').style.display = 'none';
+  }
+</script>
+
+
   <div class="sidebar-nav">
     <div class="sidebar-logo" style="margin-bottom: 30px; text-align: left; width: 100%; padding-left: 24px;">
       <span style="font-size: 38px; font-weight: bold; color: #fff; letter-spacing: 2px;">Sojar</span>
@@ -268,19 +276,27 @@
     <a href="index.html">Home</a>
     <a href="abt.html">About Us</a>
     <a href="MenuOfServices.html">Services</a>
-    <a href="career.html">Career</a>
-    <a href="contactus.html">Contact Us</a>
+    <a href="career1.html" id="career-link-sidebar">Career</a>
+    <a href="ContactUs1.html">Contact Us</a>
     <div class="sidebar-contact-info">
-      <p>UK: +44 (0)1483 503 205<br>US: +1 (919) 841 3005</p>
-      <p><a href="mailto:info@sojar.com">info@sojar.com</a></p>
-      <ul class="social-box">
-        <li><a href="https://x.com" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
-        <li><a href="mailto:info@sojarresearch.com" class="mail"><i class="fas fa-envelope"></i></a></li>
-        <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-        <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-      </ul>
-    </div>
-  </div>
+      <p style="margin-top: -40px;margin-left: -11px;"><br></p>
+      <!-- i want this span to bottom of the page -->
+       <div class="social-neumorphic mt-2"style="margin-top: 8px;margin-left: -29px;margin-bottom: 40%;">
+                           <a href="https://wa.me/918793939229" target="_blank" class="neu-button"><i class="fab fa-whatsapp"></i></a>
+                           <a href="https://mail.google.com/mail/?view=cm&to=info@sojarresearch.com" target="_blank" class="neu-button">
+                             <i class="fas fa-envelope"></i>
+                            </a>
+                                         <script>
+                                             function showEmailWarning() {
+                                                alert("If your email did not open, please set a default email app in your system settings.");
+                                                }
+                                         </script>
+                            <a href="https://www.linkedin.com/company/sojar-research-services-pvt-ltd/?originalSubdomain=in" target="_blank" class="neu-button"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.facebook.com/people/Sojar-Rspl/pfbid02kvh2U89kUXduVTiTx5J256YUFQ7ye6eaXguk6yri3X5QbJ2HZzJo4fFCewNwvBYrl/" target="_blank" class="neu-button"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+
 
   <div class="container">
     <h2>Post Marketing Pharmacovigilance Services... </h2>

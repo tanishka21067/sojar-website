@@ -28,7 +28,7 @@ ul.dropdown-menu {
     height: 480px;
     border-radius: 12px;
     box-shadow: 0 28px 24px rgb(0, 0, 0);
-    width: 395px;
+    width: 405px;
     transition: all 0.3s ease-in-out;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -1310,8 +1310,10 @@ body {
 .sec-title__title {
     font-size: 48px;
     line-height: 1.2;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     color: var(--secondary-color);
+    text-align: center;
+    margin-top: 20px;
 }
 
 .service-card {
