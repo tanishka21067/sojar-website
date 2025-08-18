@@ -588,10 +588,7 @@ ul.dropdown-menu.show {
       .navbar-nav .nav-item {
         width: 100%;
       }
-      .navbar-nav .nav-link {
-        padding: 0.75rem 0;
-        font-size: 1.1rem;
-      }
+    
       .navbar-nav.ms-auto.d-flex.align-items-center {
         flex-direction: row;
         justify-content: flex-start;
@@ -898,6 +895,50 @@ ul.dropdown-menu.show {
     font-size: 14px; /* smaller icon size */
 }
 
+
+
+
+
+
+
+
+
+
+.social-links {
+    display: flex;
+    gap: 10px;         /* equal spacing */
+    flex-wrap: nowrap; /* keeps them in one line */
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;       /* smaller buttons */
+    height: 40px;
+    border-radius: 6px;
+    background: #003366;
+    color: #fff;
+    font-size: 18px;   /* smaller icon */
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #0055aa;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Footer bottom */
 .footer-bottom {
     border-top: 1px solid #333;
@@ -1068,7 +1109,7 @@ font-size: 13px;
 } */
 
 .main-header .navbar {
-    padding: 5px ;
+    padding: 0px ;
     font-size: 17px;  /* Increased font size */
     font-weight: 600;  /* Made text bold */
 }
@@ -1207,7 +1248,7 @@ body {
     font-weight: 600;
     transition: var(--transition);
     color: #171717;
-    font-size: 24px; /* Increased font size */
+    font-size: 23px; /* Increased font size */
     margin-top: 28px;
 }
 
