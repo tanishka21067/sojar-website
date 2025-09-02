@@ -665,10 +665,6 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(card);
   });
 });
-// End of Service: Medical Information and Call Center
-
-    // end of services js
-
     $(document).ready(function() {
     $(".main-slider-carousel").owlCarousel({
         items: 1,
